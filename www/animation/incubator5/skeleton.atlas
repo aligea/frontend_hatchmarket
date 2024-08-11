@@ -1,0 +1,62 @@
+
+skeleton.png
+size: 664,664
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Aura Full
+  rotate: false
+  xy: 416, 416
+  size: 246, 246
+  orig: 246, 246
+  offset: 0, 0
+  index: -1
+Body Only
+  rotate: true
+  xy: 416, 278
+  size: 133, 235
+  orig: 133, 235
+  offset: 0, 0
+  index: -1
+Disc1
+  rotate: true
+  xy: 305, 42
+  size: 206, 42
+  orig: 206, 42
+  offset: 0, 0
+  index: -1
+Disc2
+  rotate: true
+  xy: 352, 42
+  size: 206, 42
+  orig: 206, 42
+  offset: 0, 0
+  index: -1
+Disc3
+  rotate: false
+  xy: 416, 231
+  size: 206, 42
+  orig: 206, 42
+  offset: 0, 0
+  index: -1
+Disc4
+  rotate: false
+  xy: 399, 184
+  size: 206, 42
+  orig: 206, 42
+  offset: 0, 0
+  index: -1
+Frame
+  rotate: false
+  xy: 2, 253
+  size: 409, 409
+  orig: 409, 409
+  offset: 0, 0
+  index: -1
+Lighting
+  rotate: true
+  xy: 2, 4
+  size: 244, 298
+  orig: 244, 299
+  offset: 0, 0
+  index: -1

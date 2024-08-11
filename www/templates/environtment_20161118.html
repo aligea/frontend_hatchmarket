@@ -1,0 +1,777 @@
+﻿<style>
+    .gameLayout {
+        z-index: 10;
+    }
+
+
+
+    #backtoHome {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 10%;
+        margin-top: 10px;
+        margin-left: 10px;
+        opacity: 0.8;
+    }
+
+    #actionMenu {
+        position: fixed;
+        top: 8%;
+        left: 0;
+        z-index: 1;
+        width: 10%;
+        height: 5.5%;
+        margin-top: 10px;
+        margin-left: 10px;
+        border-radius: 20px;
+        box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+        opacity: 0.8;
+    }
+
+    #actionStatus {
+        position: absolute;
+        top: 11%;
+        left: 7%;
+        z-index: 12;
+        width: 70%;
+        margin-top: 10px;
+        margin-left: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    #actionTitle {
+        text-align: center;
+        background-color: #F7B81F;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    #actionBody {
+        line-height: 185%;
+        text-align: center;
+        color: #000000;
+        background-color: #FFFFFF;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #actionNav {
+        list-style-type: none;
+        margin: auto;
+        padding: 0;
+        overflow: hidden;
+        background-color: #C0C0C0;
+        width: 70%;
+        border-radius: 10px;
+        color: #69717d;
+    }
+
+    .actionList {
+        display: inline;
+        padding-right: 6px;
+        padding-right: 10px;
+        padding-left: 5px;
+    }
+
+        .actionList .active {
+        }
+
+
+
+    #captureThis {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        width: 10%;
+        margin-top: 10px;
+        margin-right: 10px;
+        opacity: 0.8;
+    }
+
+    #toggleLifetime {
+        position: fixed;
+        top: 0%;
+        right: 0;
+        z-index: 1;
+        width: 10%;
+        margin-top: 10px;
+        margin-right: 10px;
+        opacity: 0.8;
+    }
+
+    #bottonMenu {
+        position: fixed;
+        bottom: 0;
+        z-index: 1;
+        width: 10%;
+        margin-left: 45%;
+    }
+
+        #bottonMenu img {
+            width: 100%;
+            bottom: 0;
+            position: absolute;
+        }
+
+    .btnClick.activated {
+        transform: scale(0.9);
+    }
+
+    #gameMenu {
+        width: 100%;
+        height: 60%;
+        z-index: 12;
+        position: fixed;
+        bottom: 0;
+        color: #000;
+    }
+
+    #gameTabMenu .col {
+        background: #fff;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+        #gameTabMenu .col.active {
+            background: #f7b81f;
+        }
+
+    #gameTabContent {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        font-size: 10px;
+        line-height: 10px;
+        padding: 5px;
+        position: absolute;
+    }
+
+    #menu-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: 0.1s opacity linear;
+        transition: 0.1s opacity linear;
+    }
+
+        #menu-backdrop.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+    .tab-content {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .section {
+        width: 100%;
+        display: block;
+    }
+
+        .section table,
+        .section td {
+            vertical-align: middle;
+        }
+
+    .section-title {
+        border-bottom: 1px solid #f7b81f;
+        text-align: center;
+    }
+
+    .buy-btn {
+        display: inline-flex;
+        background: #f7b81f;
+        border-radius: 7px;
+        color: #fff;
+        line-height: 1;
+        font-size: 10px;
+        padding: 3px 10px;
+    }
+
+        .buy-btn.activated,
+        .buy-btn:focus {
+            transform: scale(0.9);
+        }
+
+    .not-available {
+    }
+
+    .environtment-area {
+        display: block;
+        background: #000;
+        width: 100%;
+        height: 100%;
+    }
+
+    #swiper-decoration {
+    }
+
+    .section-title {
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+    }
+
+    .purchase-button-wrapper {
+        position:relative ;
+        display: block;
+        bottom: 0;
+        margin-bottom: 15px;
+        text-align: left;
+        width: 100%;
+        line-height: 1;
+    }
+
+    .decorItem-wrapper {
+        height: 100%;
+        position: relative;
+        display: block;
+    }
+
+        
+
+    .decorItem-title {
+        text-align: center;
+        margin-bottom: 3px;
+    }
+
+    .decorItem-wrapper p {
+        text-align: justify;
+        font-size: smaller;
+        display:block;
+        margin-top:auto;
+        margin-bottom:auto;
+    }
+
+    .swiper-slide td img {
+        /*background-color:rgba(0,0,0,0.5);*/
+    }
+
+    .inner .row .col.btnClick {
+        text-align: center;
+    }
+
+        .inner .row .col.btnClick div {
+            width: 50px;
+            height: 50px;
+            background: #e3c08e;
+            border-radius: 7px;
+            text-align: center;
+        }
+
+        .inner .row .col.btnClick img {
+            text-align: center;
+            height: auto;
+            max-height: 50px;
+            display: inline-block;
+            width: auto;
+        }
+
+    button.ok-button[disabled] {
+        background-color: #C0C0C0;
+    }
+
+    button:active {
+        transform: scale(0.9);
+    }
+</style>
+
+
+<section class="container gameLayout" id="gameLayout2" ng-controller="EnvirontmentCtrl">
+
+
+    <div class="swiper-slide2 environtment-area" id="environtment-1" on-swipe-down="onSwipeInActiveEnvi('next')" on-swipe-up="onSwipeInActiveEnvi('prev')">
+        <canvas id="rendererEnvi"></canvas>
+    </div>
+
+    <div id="backtoHome" class="btnClick clickable" on-tap="backtoHome()"><img src="asset/img/icons/menu_home.png" style="width:100%" /></div>
+    <div id="actionMenu" class="btnClick clickable" on-tap="toggleOpenStatusInfo()"><img src="asset/img/icons/Icon_Action.png" style="width:100%" /></div>
+    <div id="actionStatus" ng-show="isOpenStatusInfo">
+        <style>
+            #actionBody {
+                font-size: 10px;
+                padding-bottom: 10px;
+            }
+
+                #actionBody .targetInfo {
+                    font-size: 8px;
+                    line-height: 8px;
+                }
+
+                #actionBody .row {
+                    width: 80%;
+                    margin: auto;
+                }
+
+                #actionBody .col {
+                    padding: 0;
+                }
+
+                    #actionBody .col button {
+                        font-size: 8px;
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                        padding: 5px;
+                        margin: auto;
+                        /*background-color:#e6e7e9;*/
+                        color: #fff;
+                        background-color: #f7b81f;
+                    }
+
+                #actionBody .button-left {
+                    border-left: 1px solid #f7b81f;
+                    border-top-left-radius: 2em;
+                    border-bottom-left-radius: 2em;
+                }
+
+                #actionBody .button-right {
+                    border-right: 1px solid #f7b81f;
+                    border-top-right-radius: 2em;
+                    border-bottom-right-radius: 2em;
+                }
+
+                #actionBody .button-left:disabled {
+                    background-color: #e6e7e9;
+                    border-left: 1px solid #e6e7e9;
+                    color: #aaabaf;
+                }
+
+                #actionBody .button-right:disabled {
+                    background-color: #e6e7e9;
+                    border-right: 1px solid #e6e7e9;
+                    color: #aaabaf;
+                }
+
+                #actionBody .icon-diamond {
+                    width: 8px;
+                    height: 8px;
+                    display: inline-block;
+                    background: url('asset/img/icons/Diamond.png') no-repeat;
+                    background-size: cover;
+                    line-height: 8px;
+                    margin: 0;
+                }
+        </style>
+        <div id="actionTitle">Action Status</div>
+        <div id="actionBody">
+            <section>
+                <div class="targetName">GOLD</div>
+                <div class="targetInfo">{{statusInfo.gold.infoText}}</div>
+                <div class="row">
+                    <div class="col">
+                        <button class="button-left"
+                                ng-disabled="!statusInfo.gold.isCanExploring"
+                                on-tap="infoStatusAction('gold', statusInfo.gold.availableAction)"
+                                ng-bind-html="statusInfo.gold.explorerActionName"></button>
+                    </div>
+                    <div class="col">
+                        <button class="button-right"
+                                ng-disabled="!statusInfo.gold.isCanDestroying"
+                                on-tap="infoStatusAction('gold', statusInfo.gold.availableAction)"
+                                ng-bind-html="statusInfo.gold.destroyerActionName"></button>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="targetName">STONE</div>
+                <div class="targetInfo">{{statusInfo.stone.infoText}}</div>
+                <div class="row">
+                    <div class="col">
+                        <button class="button-left"
+                                ng-disabled="!statusInfo.stone.isCanExploring"
+                                on-tap="infoStatusAction('stone', statusInfo.stone.availableAction)"
+                                ng-bind-html="statusInfo.stone.explorerActionName"></button>
+                    </div>
+                    <div class="col">
+                        <button class="button-right"
+                                ng-disabled="!statusInfo.stone.isCanDestroying"
+                                on-tap="infoStatusAction('stone', statusInfo.stone.availableAction)"
+                                ng-bind-html="statusInfo.stone.destroyerActionName"></button>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="targetName">WOOD</div>
+                <div class="targetInfo">{{statusInfo.wood.infoText}}</div>
+                <div class="row">
+                    <div class="col">
+                        <button class="button-left"
+                                ng-disabled="!statusInfo.wood.isCanExploring"
+                                on-tap="infoStatusAction('wood', statusInfo.wood.availableAction)"
+                                ng-bind-html="statusInfo.wood.explorerActionName"></button>
+                    </div>
+                    <div class="col">
+                        <button class="button-right"
+                                ng-disabled="!statusInfo.wood.isCanDestroying"
+                                on-tap="infoStatusAction('wood', statusInfo.wood.availableAction)"
+                                ng-bind-html="statusInfo.wood.destroyerActionName"></button>
+                    </div>
+                </div>
+            </section>
+
+
+
+        </div>
+    </div>
+
+    <style>
+        #EnvicoinBalance {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        #EnvidiamondBalance {
+            position: absolute;
+            top: 35px;
+            right: 10px;
+        }
+
+        #EnviPoint1 {
+            position: absolute;
+            top: 60px;
+            right: 10px;
+        }
+
+        .sectionPlayerBalance {
+            border-radius: 5px;
+            width: 70px;
+            height: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
+            padding: 5px;
+            line-height: 10px;
+        }
+
+            .sectionPlayerBalance .icon-coin {
+                width: 21px;
+                height: 20px;
+                display: inline-block;
+                background: url('asset/img/icons/Coin.png') no-repeat;
+                background-size: cover;
+                margin-top: -7px;
+                margin-left: -10px;
+                /*width: 28px;
+            height: 28px;
+            background-image: url(asset/img/icons/Coin.png);
+            background-size: cover;
+            margin-right: -5px;
+            margin-top: -4px;*/
+            }
+
+            .sectionPlayerBalance .icon-diamond {
+                width: 21px;
+                height: 20px;
+                display: inline-block;
+                background: url('asset/img/icons/Diamond.png') no-repeat;
+                background-size: cover;
+                margin-top: -7px;
+                margin-left: -10px;
+            }
+
+            .sectionPlayerBalance .value {
+                display: inline-block;
+                margin-left: 12px;
+                font-size: 12px;
+                line-height: 10px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: absolute;
+            }
+    </style>
+    <div id="EnvidiamondBalance" class="sectionPlayerBalance">
+        <div class="icon-diamond"></div>
+        <div class="value">{{playerInfo.diamondBalance}}</div>
+    </div>
+    <div id="EnvicoinBalance" class="sectionPlayerBalance">
+        <div class="icon-coin"></div>
+        <div class="value">{{playerInfo.coinBalance}}</div>
+    </div>
+    <div id="EnviPoint1" class="sectionPlayerBalance">
+        <span style="font-size:15px;margin-left: -7px;">EP</span>
+        <div class="value">{{playerInfo.enviPoint}}</div>
+    </div>
+
+
+    <!--<div id="toggleLifetime" class="btnClick" on-tap="toggleLifetime()"><img src="asset/img/icons/menu_tampil_umur.png" style="width:100%" /></div>-->
+    <!--<div id="captureThis" class="btnClick" on-tap="captureThis()"><img src="asset/img/icons/menu_capture.png" style="width:100%" /></div>-->
+    <div id="bottonMenu" class="btnClick animated slideInUp clickable" on-tap="openMenu()"><img src="asset/img/icons/menu_bawah.png" /></div>
+
+    <div id="menu-backdrop" class="" on-tap="closeMenu()"></div>
+    <div id="gameMenu" class="animated bounceInUp" style="display:none;">
+        <div id="gameTabMenu" class="row" style="padding:0;">
+            <div class="col active" id="tab1" on-tap="setTabMenu(1)">Item</div>
+            <div class="col" id="tab2" on-tap="setTabMenu(2)">Inventory</div>
+            <div class="col" id="tab3" on-tap="setTabMenu(3)">Character</div>
+        </div>
+        <div id="gameTabContent">
+            <div id="tabcontent_1" class="tab-content">
+                <div class="section" style="">
+                    <div class="section-title">Decoration List</div>
+                    <div id="swiper-decoration-parent">
+                        <table cellpadding="0" cellspacing="0" style="width:100%;">
+                            <tr>
+                                <td width="10%">
+                                    <div class="btnClick" id="swiper-decoration-prev"><img ng-src="asset/img/icons/menu_item_kiri.png" style="width:100%" /></div>
+                                </td>
+                                <td>
+                                    <!-- Slider main container -->
+                                    <div class="swiper-container" id="swiper-decoration">
+                                        <!-- Additional required wrapper -->
+                                        <div class="swiper-wrapper">
+                                            <!-- Slides -->
+                                            <div class="swiper-slide" ng-repeat="decor in decorationData">
+                                                <table style="width:100%" cellpadding="0" cellspacing="0">
+                                                    <tr>
+                                                        <td width="40%">
+                                                            <img ng-src="{{decor.imageUrl[0]}}" />
+                                                        </td>
+                                                        <td style="vertical-align:top;">
+                                                            <div class="decorItem-wrapper">
+                                                                <div class="decorItem-title">{{decor.name}}</div>
+                                                                <div style="height: 16vh">
+                                                                    <div id="parent">
+                                                                        <div id="child">
+                                                                            <div style=""><p>{{decor.description}}</p></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="purchase-button-wrapper">
+                                                                <div aria-role="button" on-tap="purchaseDecoration(decor.id)" class="buy-btn">Purchase&nbsp;5&nbsp;<i class="icon-diamond"></i></div>
+                                                            </div>
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </td>
+                                <td width="10%">
+                                    <div class="btnClick" id="swiper-decoration-next"><img src="asset/img/icons/menu_item_kanan.png" style="width:100%" /></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="section" style="">
+                    <div class="section-title">Equipment List</div>
+                    <div id="swiper-equipment-parent">
+                        <table cellpadding="0" cellspacing="0" style="width:100%;">
+                            <tr>
+                                <td width="10%">
+                                    <div class="btnClick" on-tap="" id="swiper-equipment-prev"><img ng-src="asset/img/icons/menu_item_kiri.png" style="width:100%" /></div>
+                                </td>
+                                <td>
+                                    <!-- Slider main container -->
+                                    <div class="swiper-container" id="swiper-equipment">
+                                        <!-- Additional required wrapper -->
+                                        <div class="swiper-wrapper">
+                                            <!-- Slides -->
+                                            <div class="swiper-slide" ng-repeat="decor in equipmentData">
+                                                <table style="width:100%" cellpadding="0" cellspacing="0">
+                                                    <tr>
+                                                        <td width="40%">
+                                                            <img ng-src="{{decor.imageUrl[0]}}" />
+                                                        </td>
+                                                        <td style="vertical-align:top;">
+                                                            <div class="decorItem-wrapper">
+                                                                <div class="decorItem-title" style="margin-top:5px;margin-bottom:5px;">{{decor.name}}</div>
+                                                                <div style="height:15vh;display:table-cell;vertical-align:middle;">
+                                                                    <p>{{decor.description}}</p>
+                                                                </div>
+                                                                <div class="purchase-button-wrapper">
+                                                                    <div on-tap="purchaseEquipment(decor.id)" class="buy-btn">Purchase&nbsp;{{decor.price}}&nbsp;<i class="icon-diamond"></i></div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </td>
+                                <td width="10%">
+                                    <div class="btnClick" on-tap="" id="swiper-equipment-next"><img src="asset/img/icons/menu_item_kanan.png" style="width:100%" /></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="tabcontent_2" class="tab-content">
+                <div class="tab-head" style="padding:0 10px;">
+                    <table style="width:100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="40%">
+                                <div>Slot</div>
+                                <div><span>{{totalItemInSlot}}</span> / <span>{{totalAvailableSlot}}</span></div>
+                            </td>
+                            <td width="60%" align="right" ng-show="isCanBuySlot">
+                                <div on-tap="buyInventorySlot()" class="buy-btn">Purchase 5 Slots &nbsp;20&nbsp;<i class="icon-diamond"></i></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <ion-scroll class="inner">
+                    <div class="row">
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[0].id)">
+                            <div><img ng-src="{{inventorySlot[0].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[1].id)">
+                            <div><img ng-src="{{inventorySlot[1].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[2].id)">
+                            <div><img ng-src="{{inventorySlot[2].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[3].id)">
+                            <div><img ng-src="{{inventorySlot[3].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[4].id)">
+                            <div><img ng-src="{{inventorySlot[4].image}}" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[5].id)">
+                            <div><img ng-src="{{inventorySlot[5].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[6].id)">
+                            <div><img ng-src="{{inventorySlot[6].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[7].id)">
+                            <div><img ng-src="{{inventorySlot[7].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[8].id)">
+                            <div><img ng-src="{{inventorySlot[8].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[9].id)">
+                            <div><img ng-src="{{inventorySlot[9].image}}" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[10].id)">
+                            <div><img ng-src="{{inventorySlot[10].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[11].id)">
+                            <div><img ng-src="{{inventorySlot[11].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[12].id)">
+                            <div><img ng-src="{{inventorySlot[12].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[13].id)">
+                            <div><img ng-src="{{inventorySlot[13].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[14].id)">
+                            <div><img ng-src="{{inventorySlot[14].image}}" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[15].id)">
+                            <div><img ng-src="{{inventorySlot[15].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[16].id)">
+                            <div><img ng-src="{{inventorySlot[16].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[17].id)">
+                            <div><img ng-src="{{inventorySlot[17].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[18].id)">
+                            <div><img ng-src="{{inventorySlot[18].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[19].id)">
+                            <div><img ng-src="{{inventorySlot[19].image}}" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[20].id)">
+                            <div><img ng-src="{{inventorySlot[20].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[21].id)">
+                            <div><img ng-src="{{inventorySlot[21].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[22].id)">
+                            <div><img ng-src="{{inventorySlot[22].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[23].id)">
+                            <div><img ng-src="{{inventorySlot[23].image}}" /></div>
+                        </div>
+                        <div class="col btnClick" on-tap="useItemInInventory(inventorySlot[24].id)">
+                            <div><img ng-src="{{inventorySlot[24].image}}" /></div>
+                        </div>
+                    </div>
+                </ion-scroll>
+            </div>
+            <div id="tabcontent_3" class="tab-content" data-tap-disable="false">
+                <div style="padding:0 10px;margin-bottom:5px;">Population {{charsInEnvi.length}} / {{limitCharsEachEnvi}}</div>
+
+                <div>
+                    <ion-scroll scroll="y">
+                        <div class="row" style="border-bottom: 1px solid #994e08;margin-bottom:5px;" ng-repeat="char in charsInEnvi track by $index">
+                            <div class="col btnClick" on-tap="" style="text-align:center;">
+                                <img ng-src="asset/img/char/{{char.charId}}.png" style="width:100%" />
+                                <div style="text-align:center;">
+                                    <button class="ok-button"
+                                            on-tap="killChar(char.id)"
+                                            style="font-size:10px;" ng-disabled="char.isWorking">
+                                        Kill Me
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col col-50">
+                                <div style="text-align:center;margin-bottom:5px;">{{char.nickname}}</div>
+                                <table class="activeCharInfo">
+                                    <tr>
+                                        <td><i class="infoIcon icon-life"></i></td>
+                                        <td ng-bind-html="char.lifespanCountdownText">&nbsp;</td>
+                                        <td><i class="infoIcon icon-target"></i></td>
+                                        <td>{{char.target}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="infoIcon icon-status"></i></td>
+                                        <td>
+                                            <div>{{char.jobName}}</div>
+                                            <div ng-bind-html="char.jobCountdown">&nbsp;</div>
+                                        </td>
+                                        <td><i class="infoIcon icon-speed"></i></td>
+                                        <td>{{char.speed}}</td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                            <div class="col btnClick clickable" on-tap="showDetailActiveChar(char.id)">
+                                <div style="text-align:center;">
+                                    <img ng-src="asset/img/icons/Icon_Spread_EggCode.png" style="width:100%" />
+                                    <div style="color:#994e08;margin-top:-20px;">{{char.code}}</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </ion-scroll>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

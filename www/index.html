@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>Hatch Market - Splash Screen</title>
+    <style>
+        div#container {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 13;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            color: #000;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body class="platform-ios platform-cordova platform-webview platform-android platform-cordova platform-webview">
+    <audio controls autoplay loop hidden>
+        <!--<source src="asset/audio/Monkey-Island-Band_Looping.mp3" type="audio/mpeg" />-->
+    </audio>
+    <div id="container">
+        <img id="splash" src="img/splash.png" style="height:auto;width:50%;max-width:80vw;" />
+    </div>
+    <script src="cordova.js"></script>
+
+    <script>
+        
+        (function ($) {
+            var audio = new Audio('asset/audio/Splashscreen.mp3');
+            var el = document.getElementById("splash");
+            //var img = document.getElementById('splash');
+            function fadeIn(el) {
+                el.style.opacity = 0;
+
+                var tick = function () {
+                    if (+el.style.opacity < 1) {
+                        ($.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16)
+                    }
+                    el.style.opacity = +el.style.opacity + 0.10;
+                    el.style.transform = 'scale(' + el.style.opacity + ')';
+                };
+
+                tick();
+            }
+
+            fadeIn(el);
+            audio.volume = 1;
+            audio.play();
+
+            document.addEventListener('deviceready', function () {
+               // window.location = 'main.html';
+                window.setTimeout(function () {
+                    $.location = 'main.html';
+                }, 1992);
+            });
+            $.setTimeout(function () {
+                //$.open('main.html', '_self');
+                //$.location = 'main.html';
+                $.location = 'main.html';
+            }, 5000);
+        })(window);
+    </script>
+</body>
+
+</html>

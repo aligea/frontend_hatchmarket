@@ -1,0 +1,61 @@
+﻿<style>
+    .popup-body {
+        background: rgba(255, 255, 255, 0.5);
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    #expandIsland {
+        width: 30vw;
+        display: inline-block;
+        padding: 1px 5px;
+        background: #FEBB2F;
+        border-radius: 15px;
+        color: #fff;
+    }
+
+    #expandIsland.activated, #cancelExpandIsland.activated {
+        transform: scale(0.9);
+    }
+
+    #cancelExpandIsland {
+        width: 30vw;
+        display: inline-block;
+        padding: 5px;
+        color: #FEBB2F;
+    }
+
+    .popup-body .col {
+        padding: 1px;
+        border: 1px solid #FEBB2F;
+        display: inline-block;
+        margin: 1px 2px;
+        border-radius: 10px;
+    }
+
+    .select {
+        text-align:center; 
+        border: 1px solid #FEBB2F; 
+        width: 55vw; 
+        height: 4vh; 
+        border-radius: 15px; 
+        text-align-last: center; 
+        text-align: center; 
+        -ms-text-align-last: center; 
+        -moz-text-align-last: center; 
+        text-align-last: center;
+        text-transform: uppercase;
+    }
+
+
+</style>
+<body>
+    <div>Thanks hatcher for your time. We will top up your phone balance soon
+        after we receive your order. be a good hatcher.</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <span id="expandIsland" ng-click="SuccessPulsa.close()">Good Day!</span>
+</body>

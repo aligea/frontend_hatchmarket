@@ -1,0 +1,120 @@
+<style>
+    .popup-body{ border-bottom-left-radius:1em;border-bottom-right-radius:1em;font-family:inherit;}
+    div.button { border-radius:5px;}
+    button.ok-button, button.cancel-button{
+        line-height:unset;
+    }
+    button.ok-button[disabled]{
+        opacity:0.6;
+        animation:none;
+    }
+    button.ok-button[disabled]:hover,
+    button.ok-button[disabled]:hover{
+        animation:none;
+        transform:none;
+    }
+
+    #thisHelpIsland .title {
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    #thisHelpIsland table td {
+        text-align:left;
+        font-size:9px;
+    }
+</style>
+<div style="font-size: 10px; line-height:12px;" id="thisHelpIsland">
+    <p>In Kraps Ait, although all regions are filled with resources, each has
+        it owns primary resources that is larger in quantity than the other regions.</p>
+
+
+    <div class="row">
+        <div class="col col-50">
+            <div class="title">Atea</div>
+            <table>
+                <tr>
+                    <td>Wood</td><td>&nbsp;:&nbsp;</td>
+                    <td>3-5 Coins</td>
+                </tr>
+                <tr>
+                    <td>Stone</td><td>&nbsp;:&nbsp;</td>
+                    <td>3-5 Coins</td>
+                </tr>
+                <tr>
+                    <td>Gold</td><td>&nbsp;:&nbsp;</td>
+                    <td>3-8 Coins</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col col-50">
+            <div class="title">Oidur</div>
+            <table>
+                <tr>
+                    <td>Wood</td>
+                    <td>&nbsp;:&nbsp;</td>
+                    <td>5-8 Coins</td>
+                </tr>
+                <tr>
+                    <td>Stone</td>
+                    <td>&nbsp;:&nbsp;</td>
+                    <td>3-8 Coins</td>
+                </tr>
+                <tr>
+                    <td>Gold</td>
+                    <td>&nbsp;:&nbsp;</td>
+                    <td>3-10 Coins</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col col-50">
+            <div class="title">Frusht</div>
+            <table>
+                <tr>
+                    <td>Wood</td>
+                    <td>&nbsp;:&nbsp;</td>
+                    <td>3-10 Coins</td>
+                </tr>
+                <tr>
+                    <td>Stone</td>
+                    <td>&nbsp;:&nbsp;</td>
+                    <td>5-10 Coins</td>
+                </tr>
+                <tr>
+                    <td>Gold</td>
+                    <td>&nbsp;:&nbsp;</td>
+                    <td>3-12 Coins</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col col-50">
+            <div class="title">Routh</div>
+            <table>
+                <tr>
+                    <td>Wood</td>
+                    <td>&nbsp;:&nbsp;</td>
+                    <td>3-12 Coins</td>
+                </tr>
+                <tr>
+                    <td>Stone</td>
+                    <td>&nbsp;:&nbsp;</td>
+                    <td>3-12 Coins</td>
+                </tr>
+                <tr>
+                    <td>Gold</td>
+                    <td>&nbsp;:&nbsp;</td>
+                    <td>5-15 Coins</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+   
+
+    <div style="color: #F7B81F; font-size: 9px; margin-top:10px;">
+        <button class="button button-outline button-energized" ng-click="isl.close()">I got it</button>
+    </div>
+    </div>

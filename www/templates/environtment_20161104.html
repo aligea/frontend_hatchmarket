@@ -1,0 +1,451 @@
+﻿<style>
+  .gameLayout {
+    z-index: 10;
+  }
+
+  #backtoHome {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 10%;
+    margin-top: 10px;
+    margin-left: 10px;
+    opacity: 0.8;
+  }
+
+  #captureThis {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 10%;
+    margin-top: 10px;
+    margin-right: 10px;
+    opacity: 0.8;
+  }
+
+  #toggleLifetime {
+    position: fixed;
+    top: 0%;
+    right: 0;
+    z-index: 1;
+    width: 10%;
+    margin-top: 10px;
+    margin-right: 10px;
+    opacity: 0.8;
+  }
+
+  #bottonMenu {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    width: 10%;
+    margin-left: 45%;
+  }
+
+    #bottonMenu img {
+      width: 100%;
+      bottom: 0;
+      position: absolute;
+    }
+
+  .btnClick.activated {
+    transform: scale(0.9);
+  }
+
+  #gameMenu {
+    width: 100%;
+    height: 60%;
+    z-index: 12;
+    position: fixed;
+    bottom: 0;
+    color: #000;
+  }
+
+  #gameTabMenu .col {
+    background: #fff;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+    #gameTabMenu .col.active {
+      background: #f7b81f;
+    }
+
+  #gameTabContent {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 10px;
+    line-height: 10px;
+    padding: 5px;
+    position: absolute;
+  }
+
+  #menu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: 0.1s opacity linear;
+    transition: 0.1s opacity linear;
+  }
+
+    #menu-backdrop.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+  .tab-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .section {
+    width: 100%;
+    display: block;
+  }
+
+    .section table,
+    .section td {
+      vertical-align: middle;
+    }
+
+  .section-title {
+    border-bottom: 1px solid #f7b81f;
+    text-align: center;
+  }
+
+  .buy-btn {
+    display: inline-flex;
+    background: #f7b81f;
+    border-radius: 7px;
+    color: #fff;
+    line-height: 1;
+    font-size: 10px;
+    padding: 3px 10px;
+  }
+
+    .buy-btn.activated,
+    .buy-btn:focus,
+    .buy-btn:hover {
+      transform: scale(0.9);
+    }
+
+  .not-available {
+  }
+
+  .environtment-area {
+    display: block;
+    background: #000;
+    width: 100%;
+    height: 100%;
+  }
+
+  #swiper-decoration {
+  }
+
+  .section-title {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  }
+
+  .purchase-button-wrapper {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+    line-height: 1;
+  }
+
+  .decorItem-wrapper {
+    height: 100%;
+    position: absolute;
+    display: block;
+  }
+
+  .decorItem-title {
+    text-align: center;
+    margin-bottom: 3px;
+  }
+
+  .decorItem-wrapper p {
+    text-align: justify;
+    font-size: smaller;
+  }
+
+  .swiper-slide td img {
+    /*background-color:rgba(0,0,0,0.5);*/
+  }
+
+  .inner .row .col.btnClick {
+    text-align: center;
+  }
+
+    .inner .row .col.btnClick div {
+      width: 50px;
+      height: 50px;
+      background: #e3c08e;
+      border-radius: 7px;
+      text-align: center;
+    }
+
+    .inner .row .col.btnClick img {
+      text-align: center;
+      height: auto;
+      max-height: 50px;
+      display: inline-block;
+      width: auto;
+    }
+</style>
+
+<section class="container gameLayout" id="gameLayout2" ng-controller="IslandCtrl">
+  <div class="swiper-slide2 environtment-area" id="environtment-1" on-swipe-down="onSwipeInActiveEnvi('next')" on-swipe-up="onSwipeInActiveEnvi('prev')">
+    <canvas id="rendererEnvi"></canvas>
+  </div>
+
+  <div id="backtoHome" class="btnClick clickable" ng-click="backtoHome()"><img src="asset/img/icons/menu_home.png" style="width:100%" /></div>
+  <!--<div id="toggleLifetime" class="btnClick" ng-click="toggleLifetime()"><img src="asset/img/icons/menu_tampil_umur.png" style="width:100%" /></div>-->
+  <!--<div id="captureThis" class="btnClick" ng-click="captureThis()"><img src="asset/img/icons/menu_capture.png" style="width:100%" /></div>-->
+  <div id="bottonMenu" class="btnClick animated slideInUp clickable" ng-click="openMenu()"><img src="asset/img/icons/menu_bawah.png" /></div>
+
+  <div id="menu-backdrop" class="" ng-click="closeMenu()"></div>
+  <div id="gameMenu" class="animated bounceInUp" style="display:none;">
+    <div id="gameTabMenu" class="row" style="padding:0;">
+      <div class="col active" id="tab1" ng-click="setTabMenu(1)">Item</div>
+      <div class="col" id="tab2" ng-click="setTabMenu(2)">Inventory</div>
+      <div class="col" id="tab3" ng-click="setTabMenu(3)">Character</div>
+    </div>
+    <div id="gameTabContent">
+      <div id="tabcontent_1" class="tab-content">
+        <div class="section" style="">
+          <div class="section-title">Decoration List</div>
+          <div id="swiper-decoration-parent">
+            <table cellpadding="0" cellspacing="0" style="width:100%;">
+              <tr>
+                <td width="10%">
+                  <div class="btnClick" id="swiper-decoration-prev"><img ng-src="asset/img/icons/menu_item_kiri.png" style="width:100%" /></div>
+                </td>
+                <td>
+                  <!-- Slider main container -->
+                  <div class="swiper-container" id="swiper-decoration">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide" ng-repeat="decor in decorationData">
+                        <table style="width:100%" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="40%">
+                              <img ng-src="{{decor.imageUrl[0]}}" />
+                            </td>
+                            <td style="vertical-align:top;">
+                              <div class="decorItem-wrapper">
+                                <div class="decorItem-title">{{decor.name}}</div>
+                                <p>{{decor.description}}</p>
+                                <div class="purchase-button-wrapper">
+                                  <div aria-role="button" ng-click="purchaseDecoration(decor.id)" class="buy-btn">Purchase&nbsp;5&nbsp;<i class="icon-diamond"></i></div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </td>
+                <td width="10%">
+                  <div class="btnClick" id="swiper-decoration-next"><img src="asset/img/icons/menu_item_kanan.png" style="width:100%" /></div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="section" style="">
+          <div class="section-title">Equipment List</div>
+          <div id="swiper-equipment-parent">
+            <table cellpadding="0" cellspacing="0" style="width:100%;">
+              <tr>
+                <td width="10%">
+                  <div class="btnClick" ng-click="" id="swiper-equipment-prev"><img ng-src="asset/img/icons/menu_item_kiri.png" style="width:100%" /></div>
+                </td>
+                <td>
+                  <!-- Slider main container -->
+                  <div class="swiper-container" id="swiper-equipment">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide" ng-repeat="decor in equipmentData">
+                        <table style="width:100%" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="40%">
+                              <img ng-src="{{decor.imageUrl[0]}}" />
+                            </td>
+                            <td style="vertical-align:top;">
+                              <div class="decorItem-wrapper">
+                                <div class="decorItem-title">{{decor.name}}</div>
+                                <p>{{decor.description}}</p>
+                                <div class="purchase-button-wrapper">
+                                  <div ng-click="purchaseDecoration(decor.id)" class="buy-btn">Purchase&nbsp;5&nbsp;<i class="icon-diamond"></i></div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </td>
+                <td width="10%">
+                  <div class="btnClick" ng-click="" id="swiper-equipment-next"><img src="asset/img/icons/menu_item_kanan.png" style="width:100%" /></div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="tabcontent_2" class="tab-content">
+        <div class="tab-head" style="padding:0 10px;">
+          <table style="width:100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="40%">
+                <div>Slot</div>
+                <div><span>{{totalItemInSlot}}</span> / <span>{{totalAvailableSlot}}</span></div>
+              </td>
+              <td width="60%" align="right" ng-show="isCanBuySlot">
+                <span ng-click="buyInventorySlot()" class="buy-btn">Purchase 5 Slots &nbsp;20&nbsp;<i class="icon-diamond"></i></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <ion-scroll class="inner">
+          <div class="row">
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[0].id)">
+              <div><img ng-src="{{inventorySlot[0].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[1].id)">
+              <div><img ng-src="{{inventorySlot[1].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[2].id)">
+              <div><img ng-src="{{inventorySlot[2].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[3].id)">
+              <div><img ng-src="{{inventorySlot[3].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[4].id)">
+              <div><img ng-src="{{inventorySlot[4].image}}" /></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[5].id)">
+              <div><img ng-src="{{inventorySlot[5].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[6].id)">
+              <div><img ng-src="{{inventorySlot[6].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[7].id)">
+              <div><img ng-src="{{inventorySlot[7].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[8].id)">
+              <div><img ng-src="{{inventorySlot[8].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[9].id)">
+              <div><img ng-src="{{inventorySlot[9].image}}" /></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[10].id)">
+              <div><img ng-src="{{inventorySlot[10].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[11].id)">
+              <div><img ng-src="{{inventorySlot[11].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[12].id)">
+              <div><img ng-src="{{inventorySlot[12].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[13].id)">
+              <div><img ng-src="{{inventorySlot[13].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[14].id)">
+              <div><img ng-src="{{inventorySlot[14].image}}" /></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[15].id)">
+              <div><img ng-src="{{inventorySlot[15].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[16].id)">
+              <div><img ng-src="{{inventorySlot[16].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[17].id)">
+              <div><img ng-src="{{inventorySlot[17].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[18].id)">
+              <div><img ng-src="{{inventorySlot[18].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[19].id)">
+              <div><img ng-src="{{inventorySlot[19].image}}" /></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[20].id)">
+              <div><img ng-src="{{inventorySlot[20].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[21].id)">
+              <div><img ng-src="{{inventorySlot[21].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[22].id)">
+              <div><img ng-src="{{inventorySlot[22].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[23].id)">
+              <div><img ng-src="{{inventorySlot[23].image}}" /></div>
+            </div>
+            <div class="col btnClick" ng-click="swapToEnvi(inventorySlot[24].id)">
+              <div><img ng-src="{{inventorySlot[24].image}}" /></div>
+            </div>
+          </div>
+        </ion-scroll>
+      </div>
+      <div id="tabcontent_3" class="tab-content" data-tap-disable="false">
+        <div style="padding:0 10px;margin-bottom:5px;">Population {{charsInEnvi.length}} / {{limitCharsEachEnvi}}</div>
+        <div>
+          <ion-scroll scroll="y">
+              <div class="row" style="border-bottom: 1px solid #f7b81f;margin-bottom:5px;" ng-repeat="char in charsInEnvi track by $index">
+                <div class="col-20 btnClick" ng-click="">
+                  <img ng-src="asset/img/char/{{char.charId}}.png" style="width:100%" />
+                </div>
+                <div class="col">
+                  <div class="char-name" style="border-bottom: 1px solid #f7b81f;margin-bottom:5px;">{{char.nickname}}</div>
+                  <div>
+                    <div>lifespan remaining</div>
+                    <div>&nbsp;&nbsp;&nbsp; {{char.lifespanCountdownText}}</div>
+                  </div>
+                  <div>
+                    <div>Status</div>
+                    <div>&nbsp;&nbsp;&nbsp; Free Job</div>
+                  </div>
+                </div>
+                <div class="col-20 btnClick" ng-click="">
+                  <img ng-src="{{char.shareImg}}" style="width:100%" />
+                </div>
+              </div>
+          </ion-scroll>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

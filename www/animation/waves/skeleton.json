@@ -1,0 +1,51 @@
+{
+"skeleton": { "hash": "wxNSeafisvkGh78bPjYFfMqF0yc", "spine": "3.4.01", "width": 344.55, "height": 62.96, "images": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "Wave 1", "parent": "root", "length": 573.83, "x": -145.32, "y": 395.07, "scaleX": 0.476, "scaleY": 0.694 },
+	{
+		"name": "Wave 2",
+		"parent": "root",
+		"length": 523.31,
+		"rotation": 0.39,
+		"x": -140.29,
+		"y": 268.76,
+		"scaleX": 0.502,
+		"scaleY": 0.762
+	}
+],
+"slots": [
+	{ "name": "Wave 1", "bone": "Wave 1", "attachment": "Wave 1" },
+	{ "name": "Wave 2", "bone": "Wave 2", "attachment": "Wave 2" }
+],
+"skins": {
+	"default": {
+		"Wave 1": {
+			"Wave 1": { "x": 314.75, "scaleX": 5.475, "scaleY": 2.448, "width": 132, "height": 37 }
+		},
+		"Wave 2": {
+			"Wave 2": { "x": 287.81, "y": 166.27, "scaleX": 4.948, "scaleY": 2.131, "rotation": -0.39, "width": 132, "height": 7 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"Wave 1": {
+				"translate": [
+					{ "time": 0, "x": 16.09, "y": 0 },
+					{ "time": 3.3333, "x": -15.08, "y": 0 },
+					{ "time": 6.6666, "x": 16.09, "y": 0 }
+				]
+			},
+			"Wave 2": {
+				"translate": [
+					{ "time": 0, "x": -23.13, "y": 0 },
+					{ "time": 3.3333, "x": 40.23, "y": 0 },
+					{ "time": 6.6666, "x": -23.13, "y": 0 }
+				]
+			}
+		}
+	}
+}
+}

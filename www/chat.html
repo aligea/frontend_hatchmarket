@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+    <!-- * Please see the included README.md file for license terms and conditions. -->
+
+    <head>
+        <title>Hatch Market</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <!-- see http: //webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta http-equiv="Access-Control-Allow-Origin" content="*">
+        <style>
+            /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+
+            @-ms-viewport {
+                width: 100vw;
+                zoom: 100%;
+            }
+
+            @viewport {
+                width: 100vw;
+                zoom: 100%;
+            }
+
+            @-ms-viewport {
+                user-zoom: fixed;
+            }
+
+            @viewport {
+                user-zoom: fixed;
+            }
+        </style>
+        <script src="cordova.js"></script>
+        <!-- phantom library,
+        needed for Cordova api calls,
+        added during build -->
+        <!--<script src="xdk/init-dev.js"></script>-->
+        <!-- normalizes device and document ready events,
+        see README for details -->
+        <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+        <link href="asset/css/animate.css" rel="stylesheet">
+        <!--<link href="asset/fonts/Moon-Bold/styles.css" rel="stylesheet">-->
+        <link href="asset/css/style.css" rel="stylesheet">
+        <link href="asset/css/fix-style.css" rel="stylesheet">
+
+        <link href="asset/css/inject-1.css" rel="stylesheet">
+        <link href="asset/css/style-island-environtment.css" rel="stylesheet">
+        <link href="asset/css/fix-style.css" rel="stylesheet">
+        <link href="asset/css/chat.css" rel="stylesheet">
+    </head>
+
+    <body ng-app="gamesapp" data-tap-disable="true">
+        <section id="gameLayout" style="display: block;
+                 background-color:#fff;
+                 background-image:url('asset/img/Loading-white.jpg');
+                 background-size:cover;
+                 width: 100vw;
+                 height: 100vh;">
+            <div id="menu-backdrop" class="" ng-click="closeMenu()"></div>
+            <div id="side-chat">
+                <div id="char-wrapper">
+                    <div class="list">
+                        <div class="item item-input-inset">
+                            <label class="item-input-wrapper">
+                                <input type="text" placeholder="Enter a message...">
+                            </label>
+                            <button ng-click="" class="button button-small  button-icon icon ion-ios-paperplane-outline"></button>
+                        </div>
+                    </div>
+                    <ion-scroll scroll="y">
+                    <div id="chat-history">
+                        <ul>
+                            <li>
+                                <div class="cUser">Banditcoding : </div>
+                                <div class="cText">Etiam tempus orci vel odio sodales aliquet. Integer nec est purus.</div>
+                                <div class="cDate">22:15</div>
+                            </li>
+                           <li>
+                                <div class="cUser">Banditcoding : </div>
+                                <div class="cText">Etiam tempus orci vel odio sodales aliquet. Integer nec est purus.</div>
+                                <div class="cDate">22:15</div>
+                            </li>
+                            <li>
+                                <div class="cUser">Banditcoding : </div>
+                                <div class="cText">Etiam tempus orci vel odio sodales aliquet. Integer nec est purus.</div>
+                                <div class="cDate">22:15</div>
+                            </li>
+                            <li>
+                                <div class="cUser">Banditcoding : </div>
+                                <div class="cText">Etiam tempus orci vel odio sodales aliquet. Integer nec est purus.</div>
+                                <div class="cDate">22:15</div>
+                            </li>
+                            <li>
+                                <div class="cUser">Banditcoding : </div>
+                                <div class="cText">Etiam tempus orci vel odio sodales aliquet. Integer nec est purus.</div>
+                                <div class="cDate">22:15</div>
+                            </li>
+                            <li>
+                                <div class="cUser">Banditcoding : </div>
+                                <div class="cText">Etiam tempus orci vel odio sodales aliquet. Integer nec est purus.</div>
+                                <div class="cDate">22:15</div>
+                            </li>
+                            <li>
+                                <div class="cUser">Banditcoding : </div>
+                                <div class="cText">Etiam tempus orci vel odio sodales aliquet. Integer nec est purus.</div>
+                                <div class="cDate">22:15</div>
+                            </li>
+                            <li>
+                                <div class="cUser">Banditcoding : </div>
+                                <div class="cText">Etiam tempus orci vel odio sodales aliquet. Integer nec est purus.</div>
+                                <div class="cDate">22:15</div>
+                            </li>
+                            <li>
+                                <div class="cUser">Banditcoding : </div>
+                                <div class="cText">Etiam tempus orci vel odio sodales aliquet. Integer nec est purus.</div>
+                                <div class="cDate">22:15</div>
+                            </li>
+                            <li>
+                                <div class="cUser">Banditcoding : </div>
+                                <div class="cText">Etiam tempus orci vel odio sodales aliquet. Integer nec est purus.</div>
+                                <div class="cDate">22:15</div>
+                            </li>
+                            <li>
+                                <div class="cUser">Banditcoding : </div>
+                                <div class="cText">Etiam tempus orci vel odio sodales aliquet. Integer nec est purus.</div>
+                                <div class="cDate">22:15</div>
+                            </li>
+                            <li>
+                                <div class="cUser">Banditcoding : </div>
+                                <div class="cText">Etiam tempus orci vel odio sodales aliquet. Integer nec est purus.</div>
+                                <div class="cDate">22:15</div>
+                            </li>
+                            <li>
+                                <div class="cUser">Banditcoding : </div>
+                                <div class="cText">Etiam tempus orci vel odio sodales aliquet. Integer nec est purus.</div>
+                                <div class="cDate">22:15</div>
+                            </li>
+                            <li>
+                                <div class="cUser">Banditcoding : </div>
+                                <div class="cText">Etiam tempus orci vel odio sodales aliquet. Integer nec est purus.</div>
+                                <div class="cDate">22:15</div>
+                            </li>
+                            <li>
+                                <div class="cUser">Banditcoding : </div>
+                                <div class="cText">Etiam tempus orci vel odio sodales aliquet. Integer nec est purus.</div>
+                                <div class="cDate">22:15</div>
+                            </li>
+                            <li>
+                                <div class="cUser">Banditcoding : </div>
+                                <div class="cText">Etiam tempus orci vel odio sodales aliquet. Integer nec est purus.</div>
+                                <div class="cDate">22:15</div>
+                            </li>
+                            <li>
+                                <div class="cUser">Banditcoding : </div>
+                                <div class="cText">Etiam tempus orci vel odio sodales aliquet. Integer nec est purus.</div>
+                                <div class="cDate">22:15</div>
+                            </li>
+                            <li>
+                                <div class="cUser">Banditcoding : </div>
+                                <div class="cText">Etiam tempus orci vel odio sodales aliquet. Integer nec est purus.</div>
+                                <div class="cDate">22:15</div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    </ion-scroll>
+                </div>
+            </div>
+        </section>
+
+
+    </body>
+
+</html>

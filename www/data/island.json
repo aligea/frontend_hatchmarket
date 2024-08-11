@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "name": "Atea",
+    "infoImage": "",
+    "description": "Land of Forest",
+    "population": {
+      "value": 10,
+      "added": "+10"
+    },
+    "resources": {
+      "wood": {
+        "info": "3-5",
+        "min": 3,
+        "max": 5,
+        "currency": "coin"
+      },
+      "stone": {
+        "info": "3-5",
+        "min": 3,
+        "max": 5,
+        "currency": "coin"
+      },
+      "gold": {
+        "info": "3-8",
+        "min": 3,
+        "max": 8,
+        "currency": "coin"
+      }
+    },
+    "info": "-",
+    "price": {
+      "value": 0,
+      "currency": "diamond"
+    },
+    "requiredEP": 0,
+    "decorationItems": [ ],
+    "chars": [ ]
+  },
+  {
+    "id": 2,
+    "name": "Oidur",
+    "infoImage": "asset/img/island/Info_Oidur.png",
+    "description": "Land of Fire",
+    "population": {
+      "value": 20,
+      "added": "+10"
+    },
+    "resources": {
+      "wood": {
+        "info": "5-8",
+        "min": 5,
+        "max": 8,
+        "currency": "coin"
+      },
+      "stone": {
+        "info": "3-8",
+        "min": 3,
+        "max": 8,
+        "currency": "coin"
+      },
+      "gold": {
+        "info": "3-10",
+        "min": 3,
+        "max": 10,
+        "currency": "coin"
+      }
+    },
+    "info": "You need at least 200 EP to unlock this land",
+    "price": {
+      "value": 20,
+      "currency": "diamond"
+    },
+    "requiredEP": 200,
+    "decorationItems": [ ],
+    "chars": [ ]
+  },
+  {
+    "id": 3,
+    "name": "Frusht",
+    "infoImage": "asset/img/island/Info_Frusht.png",
+    "description": "Land of Snow",
+    "population": {
+      "value": 30,
+      "added": "+10"
+    },
+    "resources": {
+      "wood": {
+        "info": "3-10",
+        "min": 3,
+        "max": 10,
+        "currency": "coin"
+      },
+      "stone": {
+        "info": "5-10",
+        "min": 5,
+        "max": 10,
+        "currency": "coin"
+      },
+      "gold": {
+        "info": "3-12",
+        "min": 3,
+        "max": 12,
+        "currency": "coin"
+      }
+    },
+    "info": "You need at least 400 EP to unlock this land",
+    "price": {
+      "value": 40,
+      "currency": "diamond"
+    },
+    "requiredEP": 400,
+    "decorationItems": [ ],
+    "chars": [ ]
+  },
+  {
+    "id": 4,
+    "name": "Routh",
+    "infoImage": "asset/img/island/Info_Routh.png",
+    "description": "Land of Gold",
+    "population": {
+      "value": 40,
+      "added": "+10"
+    },
+    "resources": {
+      "wood": {
+        "info": "3-12",
+        "min": 3,
+        "max": 12,
+        "currency": "coin"
+      },
+      "stone": {
+        "info": "3-12",
+        "min": 3,
+        "max": 12,
+        "currency": "coin"
+      },
+      "gold": {
+        "info": "5-15",
+        "min": 5,
+        "max": 15,
+        "currency": "coin"
+      }
+    },
+    "info": "You need at least 600 EP to unlock this land",
+    "price": {
+      "value": 60,
+      "currency": "diamond"
+    },
+    "requiredEP": 600,
+    "decorationItems": [ ],
+    "chars": [ ]
+  }
+]

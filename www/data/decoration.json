@@ -1,0 +1,173 @@
+[
+  {
+    "id": 1,
+    "name": "Hut of Solon",
+    "imageUrl": [ "asset/img/island/decorations/HutofSolon.png", "asset/img/island/decorations/environtments/de-01.png" ],
+    "description": "Solon, one of monster tribes form Iceland built this hut during the autumn to warm their selves from the cold weather. Horns will absorb the light of the sun, and give the warmth to the entire family inside it.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "land"
+  },
+  {
+    "id": 2,
+    "name": "Delusion Pond",
+    "imageUrl": [ "asset/img/island/decorations/DelusionalPond.png", "asset/img/island/decorations/environtments/de-05.png" ],
+    "description": "A magical pond that will grant your wish when you bring two monster souls. Many monsters said that there is a magical creature, lives in here that looks similar with Aquila, mother of all sea creature.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "land"
+  },
+  {
+    "id": 3,
+    "name": "Monument of Nictis",
+    "imageUrl": [ "asset/img/island/decorations/MonumentofNictis.png", "asset/img/island/decorations/environtments/de-02.png" ],
+    "description": "Built about 3000 years ago, this triumphal statue is build to celebrate the heroic legendary monster which managed to save hundreds of monster during a natural disaster.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "land"
+  },
+  {
+    "id": 4,
+    "name": "The Dreaded Cave",
+    "imageUrl": [ "asset/img/island/decorations/TheDreadedCave.png", "asset/img/island/decorations/environtments/de-03.png" ],
+    "description": "A mysterious cave that appeared after the natural disaster happened about 3000 years ago. Many monsters believe that inside this cave, lives the most evil monster which being caged by Nictis.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "land"
+  },
+  {
+    "id": 5,
+    "name": "Divinity Torii",
+    "imageUrl": [ "asset/img/island/decorations/DivinityTorii.png", "asset/img/island/decorations/environtments/de-04.png" ],
+    "description": "A gate that being lies in Atea which is believed by all monsters as connector from monster world to heaven.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "land"
+  },
+  {
+    "id": 6,
+    "name": "Item 6",
+    "imageUrl": [ "asset/img/island/decorations/icondecor-06.png", "asset/img/island/decorations/environtments/de-06.png" ],
+    "description": "Etiam tempus orci vel odio sodales aliquet. Integer nec est purus. Cras eget molestie lorem. Quisque hendrerit, urna vitae laoreet tempor, augue lacus congue orci, ut posuere urna lectus ac neque. Aliquam erat volutpat.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "land"
+  },
+  {
+    "id": 7,
+    "name": "Item 7",
+    "imageUrl": [ "asset/img/island/decorations/icondecor-07.png", "asset/img/island/decorations/environtments/de-07.png" ],
+    "description": "Etiam tempus orci vel odio sodales aliquet. Integer nec est purus. Cras eget molestie lorem. Quisque hendrerit, urna vitae laoreet tempor, augue lacus congue orci, ut posuere urna lectus ac neque. Aliquam erat volutpat.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "land"
+  },
+  {
+    "id": 8,
+    "name": "Item 8",
+    "imageUrl": [ "asset/img/island/decorations/icondecor-08.png", "asset/img/island/decorations/environtments/de-09.png" ],
+    "description": "Etiam tempus orci vel odio sodales aliquet. Integer nec est purus. Cras eget molestie lorem. Quisque hendrerit, urna vitae laoreet tempor, augue lacus congue orci, ut posuere urna lectus ac neque. Aliquam erat volutpat.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "air"
+  },
+  {
+    "id": 9,
+    "name": "Item 9",
+    "imageUrl": [ "asset/img/island/decorations/icondecor-09.png", "asset/img/island/decorations/environtments/de-10-2.png", "asset/img/island/decorations/environtments/de-10.png" ],
+    "description": "Etiam tempus orci vel odio sodales aliquet. Integer nec est purus. Cras eget molestie lorem. Quisque hendrerit, urna vitae laoreet tempor, augue lacus congue orci, ut posuere urna lectus ac neque. Aliquam erat volutpat.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "land"
+  },
+  {
+    "id": 10,
+    "name": "Item 10",
+    "imageUrl": [ "asset/img/island/decorations/icondecor-10.png", "asset/img/island/decorations/environtments/de-08.png" ],
+    "description": "Etiam tempus orci vel odio sodales aliquet. Integer nec est purus. Cras eget molestie lorem. Quisque hendrerit, urna vitae laoreet tempor, augue lacus congue orci, ut posuere urna lectus ac neque. Aliquam erat volutpat.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "land"
+  },
+  {
+    "id": 11,
+    "name": "Item 11",
+    "imageUrl": [ "asset/img/island/decorations/icondecor-11.png", "asset/img/island/decorations/environtments/de-13.png" ],
+    "description": "Etiam tempus orci vel odio sodales aliquet. Integer nec est purus. Cras eget molestie lorem. Quisque hendrerit, urna vitae laoreet tempor, augue lacus congue orci, ut posuere urna lectus ac neque. Aliquam erat volutpat.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "land"
+  },
+  {
+    "id": 12,
+    "name": "Item 12",
+    "imageUrl": [ "asset/img/island/decorations/icondecor-12.png", "asset/img/island/decorations/environtments/de-12.png" ],
+    "description": "Etiam tempus orci vel odio sodales aliquet. Integer nec est purus. Cras eget molestie lorem. Quisque hendrerit, urna vitae laoreet tempor, augue lacus congue orci, ut posuere urna lectus ac neque. Aliquam erat volutpat.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "land"
+  },
+  {
+    "id": 13,
+    "name": "Item 13",
+    "imageUrl": [ "asset/img/island/decorations/icondecor-13.png", "asset/img/island/decorations/environtments/de-15.png" ],
+    "description": "Etiam tempus orci vel odio sodales aliquet. Integer nec est purus. Cras eget molestie lorem. Quisque hendrerit, urna vitae laoreet tempor, augue lacus congue orci, ut posuere urna lectus ac neque. Aliquam erat volutpat.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "land"
+  },
+  {
+    "id": 14,
+    "name": "Item 14",
+    "imageUrl": [ "asset/img/island/decorations/icondecor-14.png", "asset/img/island/decorations/environtments/de-11.png" ],
+    "description": "Etiam tempus orci vel odio sodales aliquet. Integer nec est purus. Cras eget molestie lorem. Quisque hendrerit, urna vitae laoreet tempor, augue lacus congue orci, ut posuere urna lectus ac neque. Aliquam erat volutpat.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "land"
+  },
+  {
+    "id": 15,
+    "name": "Item 15",
+    "imageUrl": [ "asset/img/island/decorations/icondecor-15.png", "asset/img/island/decorations/environtments/de-14.png" ],
+    "description": "Etiam tempus orci vel odio sodales aliquet. Integer nec est purus. Cras eget molestie lorem. Quisque hendrerit, urna vitae laoreet tempor, augue lacus congue orci, ut posuere urna lectus ac neque. Aliquam erat volutpat.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "air"
+  },
+  {
+    "id": 16,
+    "name": "Item 16",
+    "imageUrl": [ "asset/img/island/decorations/icondecor-16.png", "asset/img/island/decorations/environtments/de-16.png" ],
+    "description": "Etiam tempus orci vel odio sodales aliquet. Integer nec est purus. Cras eget molestie lorem. Quisque hendrerit, urna vitae laoreet tempor, augue lacus congue orci, ut posuere urna lectus ac neque. Aliquam erat volutpat.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "land"
+  },
+  {
+    "id": 17,
+    "name": "Item 17",
+    "imageUrl": [ "asset/img/island/decorations/icondecor-17.png", "asset/img/island/decorations/environtments/de-19.png" ],
+    "description": "Etiam tempus orci vel odio sodales aliquet. Integer nec est purus. Cras eget molestie lorem. Quisque hendrerit, urna vitae laoreet tempor, augue lacus congue orci, ut posuere urna lectus ac neque. Aliquam erat volutpat.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "land"
+  },
+  {
+    "id": 18,
+    "name": "Item 7",
+    "imageUrl": [ "asset/img/island/decorations/icondecor-18.png", "asset/img/island/decorations/environtments/de-18.png" ],
+    "description": "Etiam tempus orci vel odio sodales aliquet. Integer nec est purus. Cras eget molestie lorem. Quisque hendrerit, urna vitae laoreet tempor, augue lacus congue orci, ut posuere urna lectus ac neque. Aliquam erat volutpat.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "land"
+  },
+  {
+    "id": 19,
+    "name": "Item 19",
+    "imageUrl": [ "asset/img/island/decorations/icondecor-19.png", "asset/img/island/decorations/environtments/de-17.png" ],
+    "description": "Etiam tempus orci vel odio sodales aliquet. Integer nec est purus. Cras eget molestie lorem. Quisque hendrerit, urna vitae laoreet tempor, augue lacus congue orci, ut posuere urna lectus ac neque. Aliquam erat volutpat.",
+    "price": 5,
+    "currency": "diamond",
+    "area": "land"
+  }
+]

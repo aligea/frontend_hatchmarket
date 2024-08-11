@@ -1,0 +1,48 @@
+
+skeleton.png
+size: 1089,1089
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Back
+  rotate: false
+  xy: 2, 127
+  size: 540, 960
+  orig: 540, 960
+  offset: 0, 0
+  index: -1
+Front
+  rotate: false
+  xy: 547, 289
+  size: 540, 798
+  orig: 540, 798
+  offset: 0, 0
+  index: -1
+Mountain
+  rotate: false
+  xy: 547, 64
+  size: 364, 220
+  orig: 364, 220
+  offset: 0, 0
+  index: -1
+Snow1
+  rotate: false
+  xy: 2, 108
+  size: 13, 14
+  orig: 13, 14
+  offset: 0, 0
+  index: -1
+Snow2
+  rotate: false
+  xy: 916, 274
+  size: 10, 10
+  orig: 10, 10
+  offset: 0, 0
+  index: -1
+Snow3
+  rotate: false
+  xy: 2, 95
+  size: 7, 8
+  orig: 7, 8
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,90 @@
+<div ng-controller="CharCtrl">
+    <section class="titleWrapper">Character</section>
+
+    <div class="pageCharNavWrapper" align="center">
+        <ul class="pageNavChar" id="charPageNav">
+            <li class="active" id="charTab-ALL" ng-click="fetchChar('ALL')"><a class="playSound" >ALL</a></li>
+            <li id="charTab-COMMON" ng-click="fetchChar('COMMON')"><a class="playSound" >COMMON</a></li>
+            <li id="charTab-RARE" ng-click="fetchChar('RARE')"><a class="playSound" >RARE</a> </li>
+            <li id="charTab-EPIC" ng-click="fetchChar('EPIC')"><a class="playSound" >EPIC</a></li>
+            <li id="charTab-LEGEND" ng-click="fetchChar('LEGEND')"><a class="playSound">LEGEND</a></li>
+        </ul>
+    </div>
+
+    <!-- Character Layout -->
+    <!-- Page All Character : Start -->
+    <section class="charAreaBorder" id="charAreaBorder" align="center">
+        <div ng-controller="HelpCharCtrl"><div class="clicked" id="help" ng-click="helpChar()"><img src="asset/img/icons/icon_help.png"></div></div>
+        <div id="charPage-1" class="charPageContent" align="center">
+            <div class="charAreaBorder" align="center">
+                <table align="center">
+                    <tr>
+                        <td style="width:48%" class="">
+                            <!--style="display: table-row;"-->
+                            <div class="charAreaBorder">
+                                <div class="charAreaBorderImage" align="center">
+                                    <!--<img class="fill animatederp" id="charInfoImage" ng-src="{{activeChar.infoImage}}" />-->
+                                    <canvas id="rendererActiveChar" ng-click="changeAnimationStyle()" style="max-width:120px; height: 120px; position:center;" ></canvas>  <!--  width="112" height="140"--> 
+                                    <div class="charText" align="center">{{activeChar.name}}</div>
+                                    <div class="levelWrapper" align="center">
+                                        <img ng-src="{{activeChar.level}}" style="line-height: 1vh" />
+                                    </div>
+                                    <div class="charType" style="line-height: 1vh" align="center" id="charType">{{activeChar.type}}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="width:52%">
+                            <div id="AttributeHeader">
+                                <table border="0">
+                                    <tr>
+                                        <td>
+                                            <div class="" align="center">
+                                                <div class="charAttributeHeader" style="text-align: right">ATTRIBUTE:</div>
+                                                <ul class="DetailsChar">
+                                                    <li class="active" id="0"><a class="top" style="padding-left: 25%">LIFESPAN</a></li>
+                                                    <li id="lifespan"><a class="top2" style="padding-left: 5px;">{{activeChar.lifespan}}</a></li>
+                                                </ul>
+                                                <ul class="DetailsCharTarget">
+                                                    <li class="active" id="1"><a class="top" style="padding-left: 25%">TARGET</a></li>
+                                                    <li id="target"><a class="top2" style="padding-left: 5px;">{{activeChar.target}}</a></li>
+                                                </ul>
+                                                <ul class="DetailsCharAbility">
+                                                    <li class="active" id="2"><a class="top" style="padding-left: 25%">ABILITY</a></li>
+                                                    <li id="ability"><a class="top2" style="padding-left: 5px">{{activeChar.ability}}</a></li>
+                                                </ul>
+                                                <ul class="DetailsCharSpeed">
+                                                    <li class="active" id="3"><a class="top" style="padding-left: 25%">SPEED</a></li>
+                                                    <li id="speed"><a class="top2" style="padding-left: 5px">{{activeChar.speed}}</a></li>
+                                                </ul>
+                                                <div class="charAttributeHeader" style="text-align: right">SPECIALITY:</div>
+                                                <div class="charBorder" style="line-height: 1">{{activeChar.speciality}}</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="charItemPage" align="center">
+                <table class="charItemPage" style="width:100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr class="row" ng-repeat="(idx, dataRow) in dataToView" id="row_{{idx}}">
+                        <td width="20%" ng-class="charWrapper" class="charWrapper" ng-repeat="char in dataRow.dataColumn">
+                            <div class="charWrapper" align="center" id="charWrapper{{char.id}}">
+                                <img ng-click="setActiveChar({{char.id}})" ng-src="asset/img/char/{{char.id}}.png" alt="{{char.name}}" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="row" ng-repeat="(idx, dataRow) in dataToView" id="row_{{idx}}">
+                        <td width="20%" ng-class="charWrapper" class="charWrapper" ng-repeat="char in dataRow.dataColumn">
+                            <div class="charWrapper" align="center" id="charWrapper{{char.id}}">
+                                <img ng-click="" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>

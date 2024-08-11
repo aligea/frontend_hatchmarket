@@ -1,0 +1,54 @@
+﻿<style>
+    .popup-body {
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        font-family: inherit;
+    }
+
+    div.button {
+        border-radius: 5px;
+    }
+
+    button.ok-button, button.cancel-button {
+        line-height: unset;
+    }
+
+        button.ok-button[disabled] {
+            opacity: 0.6;
+            animation: none;
+        }
+
+            button.ok-button[disabled]:hover,
+            button.ok-button[disabled]:hover {
+                animation: none;
+                transform: none;
+            }
+
+    .title {
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 11px;
+    }
+    #buttonrow button{
+        /*border:1px solid #FEBB2F;*/
+        background-color:#FEBB2F;
+        color:#fff;
+        width:100px;
+    }
+    #buttonrow button:disabled{
+        background-color:#e6e7e9;
+        
+    }
+</style>
+
+<section id="buttonrow">
+   <div class="row">
+       <div class="col"><button class="button" ng-disabled="!regionList[0].isAvailable" on-tap="chooseRegion(regionList[0].id)">ATEA</button></div>
+       <div class="col"><button class="button" ng-disabled="!regionList[1].isAvailable" on-tap="chooseRegion(regionList[1].id)" >OIDUR</button></div>
+   </div>
+    <div class="row">
+        <div class="col"><button class="button" ng-disabled="!regionList[2].isAvailable" on-tap="chooseRegion(regionList[2].id)">FRUSHT</button></div>
+        <div class="col"><button class="button" ng-disabled="!regionList[3].isAvailable" on-tap="chooseRegion(regionList[3].id)">ROUTH</button></div>
+    </div>
+</section>
+

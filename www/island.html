@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html>
+    <!-- * Please see the included README.md file for license terms and conditions. -->
+
+    <head>
+        <title>Hatch Market</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <!-- see http: //webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta http-equiv="Access-Control-Allow-Origin" content="*">
+        <style>
+            /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+
+            @-ms-viewport {
+                width: 100vw;
+                zoom: 100%;
+            }
+
+            @viewport {
+                width: 100vw;
+                zoom: 100%;
+            }
+
+            @-ms-viewport {
+                user-zoom: fixed;
+            }
+
+            @viewport {
+                user-zoom: fixed;
+            }
+        </style>
+        <script src="cordova.js"></script>
+        <!-- phantom library,
+        needed for Cordova api calls,
+        added during build -->
+        <!--<script src="xdk/init-dev.js"></script>-->
+        <!-- normalizes device and document ready events,
+        see README for details -->
+        <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+        <link href="asset/css/animate.css" rel="stylesheet">
+        <!--<link href="asset/fonts/Moon-Bold/styles.css" rel="stylesheet">-->
+        <link href="asset/css/style.css" rel="stylesheet">
+        <link href="asset/css/fix-style.css" rel="stylesheet">
+
+        <link href="asset/css/inject-1.css" rel="stylesheet">
+        <link href="asset/css/style-island-environtment.css" rel="stylesheet">
+        <link href="asset/css/chat.css" rel="stylesheet">
+        <script>
+            window.GameApp = window.GameApp || {};
+            (function () {
+                //oldConsoleLog = console.log;
+                //window['console']['log'] = function() {};
+            })();
+
+        </script>
+
+
+        <style>
+            #loadertrans {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 26;
+                display: -webkit-box;
+                /*display: -webkit-flex;*/
+                display: -moz-box;
+                /*display: -moz-flex;*/
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                /*-webkit-justify-content: center;
+                -moz-justify-content: center;*/
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                /*-webkit-align-items: center;
+                -moz-align-items: center;*/
+                align-items: center;
+                -webkit-transition: 0.2s opacity linear;
+                transition: 0.2s opacity linear;
+                visibility: visible;
+                opacity: 1;
+                background-color:#fff;
+                background-image:url('asset/img/Loading-white.jpg');
+                background-size:cover;
+            }
+
+            #gameLayout {
+                background-image:url('asset/img/Loading-white.jpg');
+                background-size:cover;
+            }
+        </style>
+    </head>
+
+    <body ng-app="gamesapp" data-tap-disable="true">
+        <div class="container">
+            <div id="loadertrans">
+                <div style="color:#000;text-align:center;">
+                    <img style="width:70px;border:none;" src="asset/img/loading-layout/drawable-xxxhdpi-icon.png" />
+                    <br />
+                    <span style="font-size:12px;">LOADING...</span>
+                </div> 
+            </div>
+            <section ng-include="'templates/environtment.html'"
+                     class="container" id="gameLayout"
+                     style="display:block;" data-tap-disable="true"></section>
+
+            <div class="loading-container active backdrop" id="gmLoader" data-tap-disable="true">
+
+                <div class="loading">
+                    <!--<img ng-src="asset/img/hourglass.svg" />-->
+                </div>
+            </div>
+
+            <div class="loading-container active" id="enviLoader" style="background:rgba(0,0,0,0.1)" data-tap-disable="true">
+                <div class="loading" data-tap-disabled="true">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ionic/angularjs js -->
+        <script src="lib/Swiper-master/dist/js/swiper.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="lib/Swiper-master/dist/css/swiper.min.css" />
+
+        <link href="asset/css/fix-style.css" rel="stylesheet">
+
+        <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+        <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+        <script src="asset/js/jquery.min.js"></script>
+        <!--<script src="asset/js/interact.min.js"></script> <script src="lib/ngDraggable/ngDraggable.js"></script>-->
+        <!--<script src="lib/angular-dragula/dist/angular-dragula.min.js"></script> <link href="lib/angular-dragula/dist/dragula.css" rel="stylesheet">-->
+        <!--<script src="lib/dragula.js/dist/dragula.min.js"></script> <link rel="stylesheet" href="lib/dragula.js/dist/dragula.css" />-->
+        <script src="lib/kjua/dist/kjua.min.js"></script>
+        <!--<script src="lib/phaser/phaser.min.js"></script>-->
+        <!--<script src="lib/spine-js/spine.js"></script> <script src="lib/spine-js/spine-canvas.js"></script>-->
+        <script src="lib/pixi.js/dist/pixi.min.js"></script>
+        <script src="lib/pixi.js/pixi-display.js"></script>
+        <script src="lib/pixi-spine/bin/pixi-spine.js"></script>
+        <!--<script src="lib/pixi-dragonbones-master/bin/pixi-dragonbones.min.js"></script> <script src="lib/pixi-spine-master/bin/pixi-spine.min.js"></script> <script src="lib/dragonbones/dragonBones.js"></script> <script src="lib/dragonbones/dragonBonesPixi.js"></script>-->
+        <!--<script src="lib/DragonBonesJS-master/build/dragonbones-pixi.min.js"></script> <script src="lib/DragonBonesJS-master/demo/utils.js"></script>-->
+        <script src="lib/image-map-resizer-master/js/imageMapResizer.js"></script>
+
+
+        <!-- your app's js -->
+        <script src="script/md5.js"></script>
+        <script src="script/island.js"></script>
+        <script src="script/app-global-functions.js"></script>
+
+        <script src="script/controller.js"></script>
+        <script src="script/controller-page-char.js"></script>
+        <script src="script/controller-page-main.js"></script>
+        <script src="script/controller-page-shop.js"></script>
+        <script src="script/controller-page-redeem.js"></script>
+
+        <script src="script/controller-page-island.js"></script>
+        <script src="script/controller-page-egg.js"></script>
+        <script src="script/controller-page-share.js"></script>
+
+        <script src="script/services.js"></script>
+        <script src="script/service-inventoryslot.js"></script>
+        <script src="script/hatching-slot-service.js"></script>
+        <script src="script/app-service.js"></script>
+
+        <script src="script/game.js"></script>
+        <script src="script/game-iap.js"></script>
+        <script src="script/game-island-environtment.js"></script>
+        <script src="script/game-island-business.js"></script>
+        <script src="script/game-animation.js"></script>
+        <script src="script/game-char-service.js"></script>
+        <script src="script/game-island-service.js"></script>
+        <script src="script/game-stage.js"></script>
+        <script src="script/game-init-data.js"></script>
+
+        <script src="script/local-notification.js"></script>
+
+        <script src="script/game-account-services.js"></script>
+        <script src="script/sounds.js"></script>
+        <script src="script/walkingChar.js"></script>
+        
+        <script src="http://hatchmarket.southeastasia.cloudapp.azure.com:8080/socket.io/socket.io.js"></script>
+        <script src="script/chatting.js"></script>
+    </body>
+
+</html>

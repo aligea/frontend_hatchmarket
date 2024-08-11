@@ -1,0 +1,118 @@
+
+skeleton.png
+size: 364,364
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: true
+  xy: 2, 8
+  size: 79, 125
+  orig: 79, 125
+  offset: 0, 0
+  index: -1
+Disc1
+  rotate: true
+  xy: 277, 212
+  size: 150, 39
+  orig: 150, 39
+  offset: 0, 0
+  index: -1
+Disc2
+  rotate: true
+  xy: 321, 212
+  size: 150, 39
+  orig: 150, 39
+  offset: 0, 0
+  index: -1
+Disc3
+  rotate: false
+  xy: 132, 48
+  size: 150, 39
+  orig: 150, 39
+  offset: 0, 0
+  index: -1
+Disc4
+  rotate: false
+  xy: 132, 4
+  size: 150, 39
+  orig: 150, 39
+  offset: 0, 0
+  index: -1
+Fire1
+  rotate: false
+  xy: 310, 68
+  size: 15, 15
+  orig: 15, 17
+  offset: 0, 1
+  index: -1
+Fire2
+  rotate: false
+  xy: 335, 147
+  size: 14, 24
+  orig: 14, 25
+  offset: 0, 0
+  index: -1
+Fire3
+  rotate: false
+  xy: 335, 176
+  size: 15, 31
+  orig: 15, 33
+  offset: 0, 1
+  index: -1
+Fire4
+  rotate: false
+  xy: 277, 167
+  size: 10, 40
+  orig: 11, 40
+  offset: 1, 0
+  index: -1
+Fire5
+  rotate: true
+  xy: 2, 2
+  size: 1, 38
+  orig: 1, 40
+  offset: 0, 1
+  index: -1
+Frame
+  rotate: false
+  xy: 2, 92
+  size: 270, 270
+  orig: 270, 270
+  offset: 0, 0
+  index: -1
+LeftFoot1
+  rotate: false
+  xy: 335, 119
+  size: 18, 23
+  orig: 18, 23
+  offset: 0, 0
+  index: -1
+LeftFoot2
+  rotate: false
+  xy: 287, 44
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+RightFoot1
+  rotate: false
+  xy: 335, 91
+  size: 17, 23
+  orig: 17, 23
+  offset: 0, 0
+  index: -1
+RightFoot2
+  rotate: false
+  xy: 287, 66
+  size: 18, 17
+  orig: 18, 17
+  offset: 0, 0
+  index: -1
+Rocket
+  rotate: true
+  xy: 292, 88
+  size: 119, 38
+  orig: 119, 38
+  offset: 0, 0
+  index: -1

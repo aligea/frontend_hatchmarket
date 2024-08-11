@@ -1,0 +1,294 @@
+<style>
+    .pageNavWrapper {
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    #sharePageNav {
+        display: block;
+        width: 100%;
+        list-style: none;
+    }
+
+        #sharePageNav li {
+            float: left;
+            display: inline-block;
+            border: 1px solid #fff;
+            border-collapse: separate;
+            border-left: none;
+            width: 50%;
+        }
+
+            #sharePageNav li:first-child {
+                border-left: 1px solid #fff;
+                border-top-left-radius: 3em;
+                border-bottom-left-radius: 3em;
+            }
+
+                #sharePageNav li:first-child a {
+                    border-top-left-radius: 3em;
+                    border-bottom-left-radius: 3em;
+                }
+
+            #sharePageNav li:last-child {
+                border-right: 1px solid #fff;
+                border-top-right-radius: 3em;
+                border-bottom-right-radius: 3em;
+            }
+
+                #sharePageNav li:last-child a {
+                    border-top-right-radius: 3em;
+                    border-bottom-right-radius: 3em;
+                }
+
+            #sharePageNav li a {
+                float: left;
+                color: #fff;
+                font-size: 12px;
+                line-height: 1;
+                text-align: center;
+                display: block;
+                width: 100%;
+                padding: 7px 5px;
+            }
+
+            #sharePageNav li.active a {
+                background: #f7b81f;
+            }
+
+            #sharePageNav li,
+            #sharePageNav li:last-child,
+            #sharePageNav li:first-child {
+                border-width: 2px;
+            }
+
+    .box-title {
+        display: block;
+        background: #f7b81f;
+        padding: 5px;
+        line-height: 10px;
+        font-size: 10px;
+        margin: 0 20px;
+        border-radius: 5px;
+        margin-top: -160px;
+    }
+
+    .imgFrame {
+        height: 150px;
+        background-color: #f5eec4;
+        border-radius: 10px;
+        padding-top: 10px;
+    }
+
+    #changeIslandButton, #saveImgBtn {
+        display: inline-block;
+        padding: 5px 25px;
+        background: #FEBB2F;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 12px;
+        line-height: 1;
+        border-color: none;
+        box-shadow: none;
+    }
+
+    button, .button {
+        font-family: inherit;
+        background: none;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .share_container {
+        text-align: center;
+    }
+
+    .shareItemList {
+        text-align: center;
+    }
+
+        .shareItemList ul {
+            color: #000;
+            display: inline-block;
+            list-style: none;
+            width: 250px;
+            height: 250px;
+            margin-left: auto;
+            margin-right: auto;
+            margin: 0;
+        }
+
+            .shareItemList ul li {
+                display: flex;
+                background: #F7B81F;
+                text-align: left;
+                height: 10%;
+                line-height: 1;
+                font-size: 12px;
+                justify-content: center;
+                flex-direction: column;
+                padding: 0 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                border-radius: 25px;
+            }
+
+                .shareItemList ul li:nth-child(2n+1) {
+                    background-color: #F5EEC4;
+                }
+
+    share_container .activated {
+        transform: scale(0.9);
+    }
+
+    #shareRenderer, #shareRenderer2 {
+        width: 250px;
+        height: 250px;
+        background-color: none;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .socmedIconWrapper {
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+        .socmedIconWrapper img {
+            width: 30px;
+            margin: 0 5px;
+        }
+
+    .reward {
+        background-color: white;
+    }
+
+    ul.Char {
+        font-size: 9px;
+        width: 70%;
+        height: 15px;
+        list-style-type: none;
+        margin: 0;
+        overflow: hidden;
+        background-color: #F7B81F;
+        display: inline-block;
+        border-radius: 2em;
+        font-size: 80%;
+        padding-left: 3%;
+    }
+
+        ul.Char li {
+            text-align: left;
+            float: left;
+            margin: 0;
+            display: inline;
+            border-right: none;
+        }
+
+            ul.char li.active {
+                height: 3.35vh;
+                color: #fff;
+                background-color: #F7B81F;
+            }
+
+    .reward .icon-coin {
+        width: 12px;
+        height: 12px;
+        display: block;
+        background: url('asset/img/icons/Coin.png') no-repeat;
+        background-size: cover;
+        line-height: 1;
+    }
+</style>
+<link href="asset/css/fix-style.css" rel="stylesheet">
+<div ng-controller="ShareCtrl">
+    <section class="titleWrapper">
+        <table cellpadding="1" cellspacing="1" style="width:100%;">
+            <tr>
+                <td style="vertical-align:middle">Share</td>
+                <td style="text-align:right;">
+                    <img class="clickable" src="minigame/assets/trophy_fix.png"  style="height:7vh;vertical-align:bottom"
+                         ng-click="showRanking()" />
+                </td>
+            </tr>
+        </table>
+
+
+    </section>
+
+    <div class="pageNavWrapper" align="center">
+        <ul class="pageNav" id="sharePageNav">
+            <li class="active" id="shareTab-1" ng-click="setPage(1)"><a >Spread</a></li>
+            <li id="shareTab-2" ng-click="setPage(2)"><a >Reward</a></li>
+        </ul>
+        <div style="clear:both;"></div>
+    </div>
+    <div class="share" style="color:#fff;margin-bottom:10px;margin-top:10px; text-align: center;">
+        Select Region <span>&nbsp;</span> <span id="changeIslandButton" ng-click="changeIsland()">{{selectedIsland.name}}</span>
+    </div>
+
+
+    <div id="sharePage-1" class="sharePageContent" style="padding:5px 10px;">
+
+        <div class="share_container">
+            <div id="shareRenderer" ng-show="isDisplayCode" on-tap="showCharList()">
+
+            </div>
+            <div class="shareItemList" ng-show="!isDisplayCode">
+                <ul class="shareCharList">
+                    <li ng-repeat="char in shareChars track by $index" ng-click="showEggCode(char.code)">
+                        <div>{{char.nickname}}</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="socmedIconWrapper">
+            <div>Share to your social media </div>
+            <img src="asset/img/share/icon_fb.png" class="clickable" ng-click="spreadingSocmed('facebook')" />
+            <img src="asset/img/share/icon_ig.png" class="clickable" ng-click="spreadingSocmed('instagram')" />
+            <img src="asset/img/share/icon_twitter.png" class="clickable" ng-click="spreadingSocmed('twitter')" />
+            <img src="asset/img/share/icon_path.png" class="clickable" ng-click="spreadingSocmed('path')" />
+            <img src="asset/img/share/icon_wa.png" class="clickable" ng-click="spreadingSocmed('whatsapp')" />
+            <img src="asset/img/share/icon_other.png" class="clickable" ng-click="spreadingSocmed('via')" />
+            <div style="margin:0px;">
+                <button style="margin:0;" type="button" id="saveImgBtn" ng-click="spreadingSocmed('savetodevice')">Save To Gallery</button>
+            </div>
+        </div>
+    </div>
+    <div id="sharePage-2" class="sharePageContent" style="padding:5px 10px;display:none;">
+        <div id="shareRenderer2" ng-show="isDisplayReward" on-tap="showCharList2()">
+
+        </div>
+        <div id="shareReward-1">
+            <div class="share_container">
+                <div class="shareItemList" ng-show="!isDisplayReward">
+                    <ul class="shareCharList">
+                        <li ng-repeat="char in shareChars track by $index" ng-click="showReward(char.code)"><div>{{char.nickname}}</div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="socmedIconWrapper">
+            <div>Share to your social media </div>
+            <img src="asset/img/share/icon_fb.png" class="clickable" ng-click="spreadRewardTo('facebook')" />
+            <img src="asset/img/share/icon_ig.png" class="clickable" ng-click="spreadRewardTo('instagram')" />
+            <img src="asset/img/share/icon_twitter.png" class="clickable" ng-click="spreadRewardTo('twitter')" />
+            <img src="asset/img/share/icon_path.png" class="clickable" ng-click="spreadRewardTo('path')" />
+            <img src="asset/img/share/icon_wa.png" class="clickable" ng-click="spreadRewardTo('whatsapp')" />
+            <img src="asset/img/share/icon_other.png" class="clickable" ng-click="spreadRewardTo('via')" />
+            <div style="margin:0;">
+                <button style="margin:0;" type="button" id="saveImgBtn" ng-click="spreadRewardTo('savetodevice')">Save To Gallery</button>
+            </div>
+        </div>
+    </div>
+</div>

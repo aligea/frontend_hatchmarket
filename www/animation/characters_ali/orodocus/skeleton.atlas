@@ -1,0 +1,146 @@
+
+skeleton.png
+size: 1408,1408
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body1
+  rotate: false
+  xy: 2, 678
+  size: 565, 728
+  orig: 565, 728
+  offset: 0, 0
+  index: -1
+Body2
+  rotate: false
+  xy: 2, 2
+  size: 551, 671
+  orig: 552, 671
+  offset: 0, 0
+  index: -1
+Body3
+  rotate: false
+  xy: 572, 941
+  size: 415, 465
+  orig: 415, 465
+  offset: 0, 0
+  index: -1
+Face1
+  rotate: false
+  xy: 992, 976
+  size: 332, 430
+  orig: 334, 430
+  offset: 1, 0
+  index: -1
+Face2
+  rotate: false
+  xy: 558, 194
+  size: 333, 390
+  orig: 333, 390
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 572, 589
+  size: 347, 406
+  orig: 347, 406
+  offset: 0, 0
+  index: -1
+LeftFoot1
+  rotate: false
+  xy: 983, 676
+  size: 128, 184
+  orig: 128, 184
+  offset: 0, 0
+  index: -1
+LeftFoot2
+  rotate: true
+  xy: 896, 203
+  size: 132, 206
+  orig: 132, 206
+  offset: 0, 0
+  index: -1
+LeftFoot3
+  rotate: false
+  xy: 1251, 704
+  size: 124, 171
+  orig: 125, 171
+  offset: 1, 0
+  index: -1
+Lefthand1
+  rotate: false
+  xy: 1194, 880
+  size: 121, 91
+  orig: 121, 91
+  offset: 0, 0
+  index: -1
+Lefthand2
+  rotate: true
+  xy: 1251, 578
+  size: 121, 151
+  orig: 122, 151
+  offset: 1, 0
+  index: -1
+Lefthand3
+  rotate: true
+  xy: 558, 28
+  size: 161, 193
+  orig: 161, 193
+  offset: 0, 0
+  index: -1
+RightFoot1
+  rotate: true
+  xy: 907, 66
+  size: 132, 206
+  orig: 132, 206
+  offset: 0, 0
+  index: -1
+RightFoot2
+  rotate: false
+  xy: 756, 8
+  size: 146, 181
+  orig: 147, 182
+  offset: 0, 1
+  index: -1
+RightFoot3
+  rotate: false
+  xy: 1095, 402
+  size: 125, 171
+  orig: 125, 171
+  offset: 0, 0
+  index: -1
+Righthand1
+  rotate: false
+  xy: 1225, 354
+  size: 121, 87
+  orig: 121, 88
+  offset: 0, 1
+  index: -1
+Righthand2
+  rotate: false
+  xy: 1225, 446
+  size: 149, 127
+  orig: 149, 127
+  offset: 0, 0
+  index: -1
+Righthand3
+  rotate: false
+  xy: 1116, 683
+  size: 130, 177
+  orig: 131, 177
+  offset: 1, 0
+  index: -1
+tail
+  rotate: true
+  xy: 992, 865
+  size: 106, 197
+  orig: 106, 197
+  offset: 0, 0
+  index: -1
+tail2
+  rotate: true
+  xy: 896, 340
+  size: 244, 194
+  orig: 245, 194
+  offset: 1, 0
+  index: -1

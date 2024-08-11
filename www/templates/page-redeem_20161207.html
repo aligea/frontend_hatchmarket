@@ -1,0 +1,183 @@
+<html>
+    <head></head>
+    <body>
+        <style>
+            #RedeemPage{
+                font-size:12px;
+            }
+            .sectionTitle{
+                color:#fff;
+                display:flex;
+                padding-left:10px;
+                font-size:10px;
+                border-radius:10px;
+                margin-top: -2%;
+
+            }
+            .redeem-gold,
+            .redeemPhoneBalance,
+            .redeemMerchandise{
+                text-align:center;
+                font-size:12px;
+                color:#994e08;
+            }
+            .redeem-gold img, 
+            .redeemPhoneBalance img,
+            .redeemMerchandise img{
+                height:50px;
+                width:auto;
+            }
+            .rounded-box{
+                width: 83%;
+                border: 1px solid #fff;
+                border-radius: 10px;
+                margin: 0 auto;
+                line-height: 16px;
+                font-size: 85%;
+                background: url(asset/img/icons/Coin.png);
+                background-repeat: no-repeat;
+                background-position: 92% 49%;
+                background-size: 15% auto;
+            }
+
+            .rounded-box2{
+                width: 65%;
+                border: 1px solid #fff;
+                border-radius: 10px;
+                margin: 0 auto;
+                line-height: 16px;
+                font-size: 85%;
+                background: url(asset/img/icons/Coin.png);
+                background-repeat: no-repeat;
+                background-position: 73% 49%;
+                background-size: 11% auto;
+            }
+
+            #RedeemPage .icon-coin{
+                background: url(asset/img/icons/Coin.png) no-repeat bottom left;
+                background-size:cover;
+                display:inline-block;
+                width:10px;
+                height:10px;
+                line-height:10px;
+            }
+            #RedeemPage .subtitle{
+                text-align:center;
+                color:#fff;
+            }
+            #merchanInfo{
+                margin: 0 auto;
+                background-color:#f5eec4;
+                color:#994e08;
+                padding:5px;
+                text-align:center;
+                border-radius:5px;
+                box-shadow:rgba(255,255,255,0.1) 5px 5px;
+                width:86%;
+            }
+            #merchanInfo img{
+                height:50px;
+                width:auto;
+            }
+            #merchanInfo p{
+                text-align:justify;font-size:8px;
+                line-height:1;
+            }
+
+
+        </style>
+        <link href="asset/css/fix-style.css" rel="stylesheet">
+        <div ng-controller="RedeemCtrl">
+            <section class="titleWrapper">Redeem</section>
+            <div style="height: 79vh">
+                <div id="parent">
+                    <div id="child">
+                        <div>
+                            <section id="redeemGold">
+                                <div class="sectionTitle">Antam Certified Fine Gold</div>
+                                <div class="line"></div>
+                                <div id="redeemrow" class="row row-center" style="height: 21vh">
+                                    <div class="col col-center"><img class="gold" src="asset/img/redeem/Fine_Gold.png" /></div>
+                                    <div class="col col-center">
+                                        <div class="clickable redeem-gold" ng-click="redeemGold(1)">
+                                            <div class="gtext">1G</div><div class="gtext2">Antam<br>Fine Gold</div>
+                                            <div class="rounded-box">6.500 <i class="icon-coin"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-center">
+                                        <div class="clickable redeem-gold" ng-click="redeemGold(2)">
+                                            <div class="gtext">2G</div><div class="gtext2">Antam<br>Fine Gold</div>
+                                            <div class="rounded-box">12.800 <i class="icon-coin"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-center">
+                                        <div class="clickable redeem-gold" ng-click="redeemGold(3)">
+                                            <div class="gtext">5G</div><div class="gtext2">Antam<br>Fine Gold</div>
+                                            <div class="rounded-box">31.000 <i class="icon-coin"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section id="redeemPhoneBalance">
+                                <div class="sectionTitle">Phone Balance</div>
+                                <div class="line"></div>
+                                <div id="redeemrow" class="row row-center" style="height: 17vh">
+                                    <div class="col col-center"><img class="pulsa" src="asset/img/redeem/pulsa.png" /></div>
+                                    <div class="col col-center">
+                                        <div class="clickable redeemPhoneBalance" ng-click="redeemPhoneBalance(4)">
+                                            <div class="gtext">10K</div><div class="gtext2">All Provider</div>
+                                            <div class="rounded-box">150 <i class="icon-coin"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-center">
+                                        <div class="clickable redeemPhoneBalance" ng-click="redeemPhoneBalance(5)">
+                                            <div class="gtext">50K</div><div class="gtext2">All Provider</div>
+                                            <div class="rounded-box">550 <i class="icon-coin"></i></div>
+                                        </div>   
+                                    </div>
+                                    <div class="col col-center">
+                                        <div class="clickable redeemPhoneBalance" ng-click="redeemPhoneBalance(6)">
+                                            <div class="gtext">100K</div><div class="gtext2">All Provider</div>
+                                            <div class="rounded-box">1.050 <i class="icon-coin"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="redeemMerchandise">
+                                <div class="sectionTitle">Redeem and Donate</div>
+                                <div class="line"></div>
+                                <div id="redeemrow" class="row row-center" style="height: 32vh">
+                                    <div class="col col-67">
+                                        <div id="merchanInfo">
+                                            <img ng-src="asset/img/redeem/donation.png" />
+                                            <p style="">
+                                                <br/>
+                                                Hatch market is committed to end hunger and food insecurity. 
+                                                We are also dedicated to help children in need to live a better life. 
+                                                For every redemption that you do, <strong>IDR 10,000</strong> will automatically be donated to underprivileged and impoverished citizen. 
+                                                Let's join us in our attempt to give them a better life for a brighter future !
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col col-33">
+                                        <div class="clickable redeemMerchandise" ng-click="redeemMerchandise(7)">
+                                            <img ng-src="asset/img/redeem/GantunganKunci.png" />
+                                            <div class="gtext3">Orodocus Keychain</div>
+                                            <div class="rounded-box2">700</div>
+                                        </div> 
+                                        <div class="clickable redeemMerchandise" ng-click="redeemMerchandise(8)" style="margin-top:5px;">
+                                            <img ng-src="asset/img/redeem/Boneka.png" />
+                                            <div class="gtext3">Orodocus Doll</div>
+                                            <div class="rounded-box2">700</div>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,342 @@
+[
+    {
+        "id": 1,
+        "name": "ERP",
+        "level": "asset/img/char/level/Lv.1.png",
+        "type": "COMMON",
+        "infoImage": "asset/img/char/details/1.gif",
+        "lifespan": "3 DAYS",
+        "target": "WOOD",
+        "ability": "PLANTING",
+        "speed": "MEDIUM",
+        "speciality": "Give 1 Day Additional Life to One Character",
+        "stats": {
+            "grade": "D",
+            "job": "explorer",
+            "lifespanday": "3"
+        }
+    },
+    {
+        "id": 2,
+        "name": "SCOLOCLAW",
+        "level": "asset/img/char/level/Lv.1.png",
+        "type": "COMMON",
+        "infoImage": "asset/img/char/details/2.gif",
+        "lifespan": "3 DAYS",
+        "target": "GOLD",
+        "ability": "EXPLORER",
+        "speed": "MEDIUM",
+        "speciality": "Get Diamonds When Mining",
+        "stats": {
+            "grade": "D",
+            "job": "explorer",
+            "lifespanday": "3"
+        }
+    },
+    {
+        "id": 3,
+        "name": "THOROD",
+        "level": "asset/img/char/level/Lv.1.png",
+        "type": "COMMON",
+        "infoImage": "asset/img/char/details/3.gif",
+        "lifespan": "3 DAYS",
+        "target": "GOLD",
+        "ability": "EXPLORING",
+        "speed": "MEDIUM",
+        "speciality": "Bonus 15% Reward After Hatching 15 Eggs",
+        "stats": {
+            "grade": "D",
+            "job": "explorer",
+            "lifespanday": "3"
+        }
+    },
+    {
+        "id": 4,
+        "name": "LIOTH",
+        "level": "asset/img/char/level/Lv.1.png",
+        "type": "COMMON",
+        "infoImage": "asset/img/char/details/4.gif",
+        "lifespan": "4 DAYS",
+        "target": "WOOD",
+        "ability": "LOGGING",
+        "speed": "SLOW",
+        "speciality": "Bonus 10% Rewards After Hatching 10 Eggs",
+        "stats": {
+            "grade": "D",
+            "job": "destroyer",
+            "lifespanday": "3"
+        }
+    },
+    {
+        "id": 5,
+        "name": "EOS",
+        "level": "asset/img/char/level/Lv.1.png",
+        "type": "COMMON",
+        "infoImage": "asset/img/char/details/5.gif",
+        "lifespan": "3 DAYS",
+        "target": "STONE",
+        "ability": "MINING",
+        "speed": "RAPID",
+        "speciality": "Bonus 20% Reward After Hatching 20 Eggs",
+        "stats": {
+            "grade": "D",
+            "job": "destroyer",
+            "lifespanday": "3"
+        }
+    },
+    {
+        "id": 6,
+        "name": "KAYERITH",
+        "level": "asset/img/char/level/Lv.1.png",
+        "type": "COMMON",
+        "infoImage": "asset/img/char/details/6.gif",
+        "lifespan": "4 DAYS",
+        "target": "GOLD",
+        "ability": "MINING",
+        "speed": "SLOW",
+        "speciality": "Get One Holy Incubator After Hatching 20 Eggs",
+        "stats": {
+            "grade": "D",
+            "job": "destroyer",
+            "lifespanday": "4"
+        }
+    },
+    {
+        "id": 7,
+        "name": "STARKAD",
+        "level": "asset/img/char/level/Lv.1.png",
+        "type": "COMMON",
+        "infoImage": "asset/img/char/details/7.gif",
+        "lifespan": "4 DAYS",
+        "target": "GOLD",
+        "ability": "EXPLORING",
+        "speed": "SLOW",
+        "speciality": "Give 2 Day Additional LIfe to ONe Character After hatching 10 Eggs",
+        "stats": {
+            "grade": "D",
+            "job": "explorer",
+            "lifespanday": "4"
+        }
+    },
+    {
+        "id": 8,
+        "name": "ASKETIL",
+        "level": "asset/img/char/level/Lv.1.png",
+        "type": "COMMON",
+        "infoImage": "asset/img/char/details/8.gif",
+        "lifespan": "5 DAYS",
+        "target": "WOOD",
+        "ability": "PLANTING",
+        "speed": "SLOW",
+        "speciality": "Get One Mini Incubator",
+        "stats": {
+            "grade": "D",
+            "job": "explorer",
+            "lifespanday": "5"
+        }
+    },
+    {
+        "id": 9,
+        "name": "GLAUCA",
+        "level": "asset/img/char/level/Lv.1.png",
+        "type": "COMMON",
+        "infoImage": "asset/img/char/details/9.gif",
+        "lifespan": "3 DAYS",
+        "target": "WOOD",
+        "ability": "LOGGING",
+        "speed": "MEDIUM",
+        "speciality": "Get One Item in Logging",
+        "stats": {
+            "grade": "D",
+            "job": "destroyer",
+            "lifespanday": "3"
+        }
+    },
+    {
+        "id": 10,
+        "name": "GNUPI",
+        "level": "asset/img/char/level/Lv.1.png",
+        "type": "COMMON",
+        "infoImage": "asset/img/char/details/10.gif",
+        "lifespan": "4 DAYS",
+        "target": "WOOD",
+        "ability": "LOGGING",
+        "speed": "SLOW",
+        "speciality": "Get One Lava Incubator After Hatching 15 Eggs",
+        "stats": {
+            "grade": "D",
+            "job": "destroyer",
+            "lifespanday": "4"
+        }
+    },
+    {
+        "id": 11,
+        "name": "KRYTENITES",
+        "level": "asset/img/char/level/Lv.1.png",
+        "type": "COMMON",
+        "infoImage": "asset/img/char/details/11.gif",
+        "lifespan": "4 DAYS",
+        "target": "STONE",
+        "ability": "MINING",
+        "speed": "SLOW",
+        "speciality": "Get Diamonds in Mining",
+        "stats": {
+            "grade": "D",
+            "job": "destroyer",
+            "lifespanday": "4"
+        }
+    },
+    {
+        "id": 12,
+        "name": "ORODOCUS",
+        "level": "asset/img/char/level/Lv.1.png",
+        "type": "COMMON",
+        "infoImage": "asset/img/char/details/12.gif",
+        "lifespan": "4 DAYS",
+        "target": "STONE",
+        "ability": "EXPLORING",
+        "speed": "MEDIUM",
+        "speciality": "Get Diamonds When Mining",
+        "stats": {
+            "grade": "D",
+            "job": "explorer",
+            "lifespanday": "4"
+        }
+    },
+    {
+        "id": 13,
+        "name": "AEREL",
+        "level": "asset/img/char/level/Lv.2.png",
+        "type": "RARE",
+        "infoImage": "asset/img/char/details/13.gif",
+        "lifespan": "6 DAYS",
+        "target": "STONE & GOLD",
+        "ability": "MINING",
+        "speed": "RAPID",
+        "speciality": "Bonus 25% Reward After Hatching 10 Eggs",
+        "stats": {
+            "grade": "C",
+            "job": "destroyer",
+            "lifespanday": "6"
+        }
+    },
+    {
+        "id": 14,
+        "name": "EROGLU",
+        "level": "asset/img/char/level/Lv.2.png",
+        "type": "RARE",
+        "infoImage": "asset/img/char/details/14.png",
+        "lifespan": "6 DAYS",
+        "target": "STONE & GOLD",
+        "ability": "MINING",
+        "speed": "RAPID",
+        "speciality": "Bonus 20% Reward After Hatching 5 Eggs",
+        "stats": {
+            "grade": "C",
+            "job": "destroyer",
+            "lifespanday": "6"
+        }
+    },
+    {
+        "id": 15,
+        "name": "RHADON",
+        "level": "asset/img/char/level/Lv.2.png",
+        "type": "RARE",
+        "infoImage": "asset/img/char/details/15.gif",
+        "lifespan": "8 DAYS",
+        "target": "WOOD",
+        "ability": "LOGGING",
+        "speed": "SLOW",
+        "speciality": "Get 2 Items Decorations",
+        "stats": {
+            "grade": "C",
+            "job": "destroyer",
+            "lifespanday": "8"
+        }
+    },
+    {
+        "id": 16,
+        "name": "CHIRON",
+        "level": "asset/img/char/level/Lv.2.png",
+        "type": "RARE",
+        "infoImage": "asset/img/char/details/16.gif",
+        "lifespan": "7 DAYS",
+        "target": "GOLD",
+        "ability": "MINING",
+        "speed": "MEDIUM",
+        "speciality": "Give 2 Days Additional Life One Character",
+        "stats": {
+            "grade": "C",
+            "job": "destroyer",
+            "lifespanday": "7"
+        }
+    },
+    {
+        "id": 17,
+        "name": "LYTH",
+        "level": "asset/img/char/level/Lv.2.png",
+        "type": "RARE",
+        "infoImage": "asset/img/char/details/17.gif",
+        "lifespan": "7 DAYS",
+        "target": "STONE",
+        "ability": "MINING",
+        "speed": "MEDIUM",
+        "speciality": "Bonus 30% Reward After Hatching 15 Eggs",
+        "stats": {
+            "grade": "C",
+            "job": "destroyer",
+            "lifespanday": "6"
+        }
+    },
+    {
+        "id": 18,
+        "name": "DRAKKER",
+        "level": "asset/img/char/level/Lv.3.png",
+        "type": "EPIC",
+        "infoImage": "asset/img/char/details/18.png",
+        "lifespan": "11 DAYS",
+        "target": "WOOD",
+        "ability": "BOTH",
+        "speed": "MEDIUM",
+        "speciality": "Bonus 35% Reward After Hatching 10 Eggs",
+        "stats": {
+            "grade": "B",
+            "job": "both",
+            "lifespanday": "11"
+        }
+    },
+    {
+        "id": 19,
+        "name": "AQUILA",
+        "level": "asset/img/char/level/Lv.3.png",
+        "type": "EPIC",
+        "infoImage": "asset/img/char/details/19.png",
+        "lifespan": "10 DAYS",
+        "target": "STONE & GOLD",
+        "ability": "EXPLORING",
+        "speed": "RAPID",
+        "speciality": "Bonus 35% Reward After Hatching 10 Eggs",
+        "stats": {
+            "grade": "B",
+            "job": "explorer",
+            "lifespanday": "10"
+        }
+    },
+    {
+        "id": 20,
+        "name": "NICTIS",
+        "level": "asset/img/char/level/Lv.4.png",
+        "type": "LEGEND",
+        "infoImage": "asset/img/char/details/20.png",
+        "lifespan": "13 DAYS",
+        "target": "ALL",
+        "ability": "ALL",
+        "speed": "RAPID",
+        "speciality": "Bonus 50% Reward After Hatching 10 Eggs, Give 3 Days Additional Life to One Character",
+        "stats": {
+            "grade": "A",
+            "job": "both",
+            "lifespanday": "13"
+        }
+    }
+]

@@ -1,0 +1,99 @@
+{
+"skeleton": { "hash": "I0mImd3x3kTdjFlVgkZihMg3GjA", "spine": "3.4.01", "width": 65, "height": 21, "images": "" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "Awan 1", "bone": "root", "attachment": "Awan 4" }
+],
+"skins": {
+	"default": {
+		"Awan 1": {
+			"Awan 1": { "width": 162, "height": 64 },
+			"Awan 2": { "width": 104, "height": 35 },
+			"Awan 3": { "width": 92, "height": 29 },
+			"Awan 4": { "width": 65, "height": 21 }
+		}
+	}
+},
+"animations": {
+	"Awan_1": {
+		"slots": {
+			"Awan 1": {
+				"attachment": [
+					{ "time": 0, "name": "Awan 1" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"rotate": [
+					{ "time": 6.6333, "angle": 0.25 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 1.6666, "x": 3.26, "y": 0 },
+					{ "time": 3.3333, "x": 0, "y": 0 },
+					{ "time": 5, "x": -2.5, "y": 0 },
+					{ "time": 6.6666, "x": 0, "y": 0 }
+				]
+			}
+		}
+	},
+	"Awan_2": {
+		"slots": {
+			"Awan 1": {
+				"attachment": [
+					{ "time": 0, "name": "Awan 2" },
+					{ "time": 1.8666, "name": "Awan 2" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 2.5, "x": 2.76, "y": 0 },
+					{ "time": 5, "x": 0, "y": 0 }
+				]
+			}
+		}
+	},
+	"Awan_3": {
+		"slots": {
+			"Awan 1": {
+				"attachment": [
+					{ "time": 0, "name": "Awan 3" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 2.5, "x": 1.75, "y": 0 },
+					{ "time": 5, "x": 0, "y": 0 }
+				]
+			}
+		}
+	},
+	"Awan_4": {
+		"slots": {
+			"Awan 1": {
+				"attachment": [
+					{ "time": 0, "name": "Awan 4" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 2.5, "x": -2.76, "y": 0 },
+					{ "time": 5, "x": 0, "y": 0 }
+				]
+			}
+		}
+	}
+}
+}

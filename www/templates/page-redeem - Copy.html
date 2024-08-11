@@ -1,0 +1,157 @@
+<html>
+    <head><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"></head>
+    <body>
+<style>
+#RedeemPage{
+font-size:12px;
+}
+.sectionTitle{
+background-color:#F7B81F;
+color:#fff;
+display:flex;
+padding-left:10px;
+font-size:12px;
+border-radius:10px;
+}
+.redeem-gold,
+.redeemPhoneBalance,
+.redeemMerchandise{
+text-align:center;
+font-size:12px;
+color:#994e08;
+}
+.redeem-gold img, 
+.redeemPhoneBalance img,
+.redeemMerchandise img{
+height:50px;
+width:auto;
+}
+.rounded-box{
+border:1px solid #fff;
+border-radius:10px;
+margin-left:5px;
+margin-right:5px;
+line-height:16px;
+}
+
+#RedeemPage .icon-coin{
+background: url(asset/img/icons/Coin.png) no-repeat bottom left;
+background-size:cover;
+display:inline-block;
+width:10px;
+height:10px;
+line-height:10px;
+}
+#RedeemPage .subtitle{
+text-align:center;
+color:#fff;
+}
+#merchanInfo{
+background-color:#f5eec4;
+color:#994e08;
+padding:5px;
+text-align:center;
+border-radius:5px;
+box-shadow:rgba(255,255,255,0.1) 5px 5px;
+}
+#merchanInfo img{
+height:50px;
+width:auto;
+}
+#merchanInfo p{
+text-align:justify;font-size:8px;
+line-height:1;
+}
+
+
+</style>
+
+<div ng-controller="RedeemCtrl">
+    <section class="titleWrapper">Redeem</section>
+
+    <!--<ion-scroll scroll="x" style="padding:5px 10px;" id="RedeemPage">-->
+
+        <section id="redeemGold">
+            <div class="sectionTitle">Fine Gold</div>
+            <div class="row">
+                <div class="col">
+                    <div class="clickable redeem-gold" ng-click="redeemGold(1)">
+                        <img ng-src="asset/img/redeem/gold.1.png" />
+                        <div class="rounded-box">6.500 <i class="icon-coin"></i></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="clickable redeem-gold" ng-click="redeemGold(2)">
+                        <img ng-src="asset/img/redeem/gold.2.png" />
+                        <div class="rounded-box">12.800 <i class="icon-coin"></i></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="clickable redeem-gold" ng-click="redeemGold(3)">
+                        <img ng-src="asset/img/redeem/gold.5.png" />
+                        <div class="rounded-box">31.000 <i class="icon-coin"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="redeemPhoneBalance">
+            <div class="sectionTitle">Phone Balance</div>
+            <div class="row">
+                <div class="col">
+                    <div class="clickable redeemPhoneBalance" ng-click="redeemPhoneBalance(4)">
+                        <img ng-src="asset/img/redeem/pulsa.png" />
+                        <div class="subtitle">IDR 20.000</div>
+                        <div class="rounded-box">300 <i class="icon-coin"></i></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="clickable redeemPhoneBalance" ng-click="redeemPhoneBalance(5)">
+                        <img ng-src="asset/img/redeem/pulsa.png" />
+                        <div class="subtitle">IDR 50.000</div>
+                        <div class="rounded-box">600 <i class="icon-coin"></i></div>
+                    </div>   
+                </div>
+                <div class="col">
+                    <div class="clickable redeemPhoneBalance" ng-click="redeemPhoneBalance(6)">
+                        <img ng-src="asset/img/redeem/pulsa.png" />
+                        <div class="subtitle">IDR 100.000</div>
+                        <div class="rounded-box">1.100 <i class="icon-coin"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="redeemMerchandise">
+            <div class="sectionTitle">Merchandise</div>
+            <div class="row">
+                <div class="col col-67">
+                    <div id="merchanInfo">
+                        <img ng-src="asset/img/redeem/donation.png" />
+                        <p style="">
+                            Hatch market is committed to end hunger and food insecurity. 
+                            We are also dedicated to help children in need to live a better life. 
+                            For every redemption that you do, <strong>IDR 10,000</strong> will automatically be donated to underprivileged and impoverished citizen. 
+                            Let's join us in our attempt to give them a better life for a brighter future !
+                        </p>
+                    </div>
+                </div>
+                <div class="col col-33">
+                    <div class="clickable redeemMerchandise" ng-click="redeemMerchandise(7)">
+                        <img ng-src="asset/img/redeem/GantunganKunci.png" />
+                        <div class="rounded-box">700 <i class="icon-coin"></i></div>
+                    </div> 
+                    <div class="clickable redeemMerchandise" ng-click="redeemMerchandise(8)" style="margin-top:5px;">
+                        <img ng-src="asset/img/redeem/Boneka.png" />
+                        <div class="rounded-box">700 <i class="icon-coin"></i></div>
+                    </div> 
+                </div>
+                
+
+            </div>
+        </section>
+        
+
+    </ion-scroll>
+</div>
+</body>
+</html>

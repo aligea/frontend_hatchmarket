@@ -1,0 +1,167 @@
+
+skeleton.png
+size: 449,449
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 389, 109
+  size: 57, 63
+  orig: 57, 63
+  offset: 0, 0
+  index: -1
+FrontLeft
+  rotate: false
+  xy: 244, 57
+  size: 18, 50
+  orig: 18, 50
+  offset: 0, 0
+  index: -1
+FrontLeft2
+  rotate: false
+  xy: 419, 262
+  size: 18, 50
+  orig: 18, 50
+  offset: 0, 0
+  index: -1
+FrontRight
+  rotate: false
+  xy: 215, 38
+  size: 17, 52
+  orig: 17, 52
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 375, 177
+  size: 72, 79
+  orig: 72, 79
+  offset: 0, 0
+  index: -1
+Head1
+  rotate: false
+  xy: 2, 9
+  size: 72, 79
+  orig: 72, 79
+  offset: 0, 0
+  index: -1
+LeftWing1
+  rotate: false
+  xy: 93, 95
+  size: 146, 74
+  orig: 146, 74
+  offset: 0, 0
+  index: -1
+LeftWing2
+  rotate: false
+  xy: 107, 255
+  size: 52, 111
+  orig: 52, 111
+  offset: 0, 0
+  index: -1
+LeftWing3
+  rotate: true
+  xy: 267, 30
+  size: 83, 117
+  orig: 83, 117
+  offset: 0, 0
+  index: -1
+LeftWing4
+  rotate: true
+  xy: 179, 314
+  size: 133, 100
+  orig: 133, 100
+  offset: 0, 0
+  index: -1
+LeftWing5
+  rotate: false
+  xy: 2, 371
+  size: 172, 76
+  orig: 172, 76
+  offset: 0, 0
+  index: -1
+LeftWing6
+  rotate: true
+  xy: 2, 93
+  size: 135, 86
+  orig: 135, 86
+  offset: 0, 0
+  index: -1
+LeftWing7
+  rotate: true
+  xy: 178, 258
+  size: 51, 131
+  orig: 51, 131
+  offset: 0, 0
+  index: -1
+RearLeft
+  rotate: false
+  xy: 164, 325
+  size: 9, 41
+  orig: 9, 41
+  offset: 0, 0
+  index: -1
+RearRight
+  rotate: false
+  xy: 164, 279
+  size: 9, 41
+  orig: 9, 41
+  offset: 0, 0
+  index: -1
+RigthWing1
+  rotate: false
+  xy: 284, 373
+  size: 147, 74
+  orig: 147, 74
+  offset: 0, 0
+  index: -1
+RigthWing2
+  rotate: true
+  xy: 314, 261
+  size: 51, 100
+  orig: 51, 100
+  offset: 0, 0
+  index: -1
+RigthWing3
+  rotate: true
+  xy: 93, 7
+  size: 83, 117
+  orig: 83, 117
+  offset: 0, 0
+  index: -1
+RigthWing4
+  rotate: true
+  xy: 2, 233
+  size: 133, 100
+  orig: 133, 100
+  offset: 0, 0
+  index: -1
+RigthWing5
+  rotate: false
+  xy: 107, 174
+  size: 172, 76
+  orig: 172, 76
+  offset: 0, 0
+  index: -1
+RigthWing6
+  rotate: true
+  xy: 284, 118
+  size: 135, 86
+  orig: 135, 86
+  offset: 0, 0
+  index: -1
+RigthWing7
+  rotate: true
+  xy: 284, 317
+  size: 51, 131
+  orig: 51, 131
+  offset: 0, 0
+  index: -1
+Tail
+  rotate: false
+  xy: 244, 112
+  size: 18, 57
+  orig: 18, 57
+  offset: 0, 0
+  index: -1

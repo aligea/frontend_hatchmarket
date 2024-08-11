@@ -1,0 +1,140 @@
+<style>
+    .popup-body {
+        background: rgba(255, 255, 255, 0.5);
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    #expandIsland {
+        width: 30vw;
+        display: inline-block;
+        padding: 1px 5px;
+        background: #FEBB2F;
+        border-radius: 15px;
+        color: #fff;
+    }
+
+        #expandIsland.activated, #cancelExpandIsland.activated {
+            transform: scale(0.9);
+        }
+
+    #cancelExpandIsland {
+        width: 30vw;
+        display: inline-block;
+        padding: 5px;
+        color: #FEBB2F;
+    }
+
+    .col .icon-coin {
+        width: 10px;
+        height: 10px;
+        text-align: center;
+        background: url('asset/img/icons/Coin.png') no-repeat top left;
+        background-size: cover;
+        display: inline-block;
+    }
+
+    .icon-coins {
+        width: 10px;
+        height: 10px;
+        text-align: center;
+        background: url('asset/img/icons/Coin.png') no-repeat top left;
+        background-size: cover;
+        display: inline-block;
+    }
+
+    .icon-diamond {
+        width: 10px;
+        height: 10px;
+        text-align: center;
+        background: url('asset/img/icons/Diamond.png') no-repeat;
+        background-size: cover;
+        display: inline-block;
+        background-position: 46% left;
+    }
+
+    .icon-char {
+        width: 10px;
+        height: 10px;
+        text-align: center;
+        background: url('asset/img/icons/IconChar.png') no-repeat top right;
+        background-position: 0 50%;
+        background-size: cover;
+        display: inline-block;
+    }
+
+    .icon-time {
+        width: 10px;
+        height: 10px;
+        text-align: center;
+        background: url('asset/img/icons/IconTime.png') no-repeat top right;
+        background-position: 0 50%;
+        background-size: cover;
+        display: inline-block;
+    }
+
+    .popup-body .col {
+        padding: 1px;
+        border: 1px solid #FEBB2F;
+        display: inline-block;
+        margin: 1px 2px;
+        border-radius: 10px;
+    }
+
+    .rounded-outline {
+        border: 1px solid #FEBB2F;
+        display: inline-block;
+        padding: 1px 5px;
+        border-radius: 15px;
+        width: 35vw;
+        height: 4vh;
+        margin: -9px 0 0;
+    }
+
+    .rounded-outlineChar {
+        border: 1px solid #FEBB2F;
+        display: inline-block;
+        padding: 1px 5px;
+        border-radius: 15px;
+        width: 40vw;
+        height: 4vh;
+        background: url('asset/img/icons/IconChar.png') no-repeat;
+        background-position: 4% 46%;
+        background-size: 15px 15px;
+        margin: -9px 0 0 0;
+    }
+
+    .rounded-outlineTime {
+        border: 1px solid #FEBB2F;
+        display: inline-block;
+        padding: 1px 5px;
+        border-radius: 15px;
+        width: 40vw;
+        height: 4vh;
+        background: url('asset/img/icons/IconTime.png') no-repeat;
+        background-position: 4% 48%;
+        background-size: 15px 15px;
+        margin: -9px 0 0 0;
+    }
+</style>
+
+
+<div class="" style="align-content:center;text-align:center;">
+    <div style="width:130px; height:130px; margin-left:auto;margin-right:auto; margin-top:10px;">
+        <img ng-src="{{activeIncubator.image_Source}}" style="width:auto; height:130px" />
+    </div>
+</div>
+<div style="position:relative; margin-top:10px;" align="center">
+    <div>CHARACTER</div>
+    <span class="rounded-outlineChar" style="line-height:1.7vh; padding-left:3vw; padding-right:3vw;">{{activeIncubator.characterPosibility}}</span> <!--p></p>-->
+    <div style="margin-top:10px;">TIME</div>
+    <div style="position:relative;" align="center">
+        <span class="rounded-outlineTime">{{activeIncubator.durationDetails}}</span>
+    </div>
+</div>
+<div class="" style="margin-top:20px;">
+    <span id="cancelExpandIsland" ng-click="myPopup.close()">try later</span>
+    <span id="expandIsland" ng-clik="onPurchaseIncubators">PURCHASE {{activeIncubator.priceInDiamond}}  <i class="icon-coins"></i></span>
+</div>

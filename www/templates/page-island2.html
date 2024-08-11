@@ -1,0 +1,197 @@
+<style>
+    #islandLayout{
+        display:block;
+        width:100%;
+        height:100%;
+        position:absolute;
+        background:url('asset/img/island/bg-island.png') no-repeat top left;
+        background-size:cover;
+    }
+    #populationInfoWrapper {
+        background-color:#f7b81f;
+        color:#fff;
+        display:block;
+        position:absolute;
+        right:10px;
+        top:10px;
+        padding:5px 10px;
+        border-radius:10px;
+        z-index:10;
+    }
+    #compassWrapper{
+        display:block;
+        width:70px;
+        height:70px;
+        position:absolute;
+        margin-top:10px;
+        margin-left:10px;
+        background:url('animation/compass/Compass.png') no-repeat center center;
+        background-size:cover;
+        text-align:center;
+    }
+    #compassWrapper img{
+        animation:compassAnimation 40s linear infinite;
+        -webkit-animation:compassAnimation 40s linear infinite;
+        -moz-animation:compassAnimation 40s linear infinite;
+        -o-animation:compassAnimation 40s linear infinite;
+        
+        width:100%;
+        margin-left:1.5px;
+        margin-top:1px;
+    }
+    #epInfo{
+        width:150px;
+        position:absolute;
+        margin-top:5px;
+        margin-right:5px;
+        right:0;
+        z-index:1;
+    }
+    #epInfo img{
+        width:100%;
+    }
+    #islandView {
+        height:90%;
+        width:100%;
+        padding-top:10px;
+        position:relative;
+        text-align:center;
+        vertical-align:middle;
+        display:block;
+        max-width:568px;
+        margin:auto;
+    
+    }
+    #islandView img{
+        height:100%;
+        width:auto;
+        margin:auto;
+        position:relative;
+        display:inline-block;
+        vertical-align:middle;
+    }
+
+
+
+    @keyframes compassAnimation {
+        0% {
+            -webkit-transform: rotate(0deg); /* Safari */
+            transform: rotate(0deg);
+        }
+        25% {
+            -webkit-transform: rotate(-60deg); /* Safari */
+            transform: rotate(-60deg);
+        }
+        40%{
+            -webkit-transform: rotate(10deg); /* Safari */
+            transform: rotate(10deg);
+        }
+        50%{
+            -webkit-transform: rotate(0deg); /* Safari */
+            transform: rotate(0deg);
+        }
+        60%{
+            -webkit-transform: rotate(-10deg); /* Safari */
+            transform: rotate(-10deg);
+        }
+        75% {
+            -webkit-transform: rotate(60deg); /* Safari */
+            transform: rotate(60deg);
+        }
+        100% {
+            -webkit-transform: rotate(0deg); /* Safari */
+            transform: rotate(0deg);
+        }
+    }
+
+
+.islandAnimation {
+    position:absolute;
+    /*border:1px solid #fff;*/
+    display:block;
+    width:40px;
+    height:20px;
+}
+.islandWave {
+    position:absolute;
+    /*border:1px solid #fff;*/
+    display:block;
+    width:50px;
+    height:14px;
+}
+</style>
+<div  style="" id="islandCtrl" >
+    <section class="titleWrapper" id="islandTitleLayout" ng-controller="IslandCtrl">
+        <div class="row">
+            <div class="col">Island</div>
+            <!--<div class="col"></div>-->
+            <!--<div class="col" style="text-align:right;font-size:10px;">Population : {{playerInfo.totalChars}} / {{playerInfo.maxPopulation}}</div>-->
+        
+                <select ng-model="dataform.previewCharId" class="input">
+                    <option value="" selected="selected">Default</option>
+
+                    <option ng-repeat="ch in charMasterData" value="{{ch.id}}">{{ch.name}}</option>
+                </select>
+        </div>
+    
+    </section>
+    <div id="islandLayout">
+        <div id="compassWrapper"><img src="animation/compass/Jarum.png" /></div>
+        <!--<div id="populationInfoWrapper">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>Population</td>
+                    <td>:</td>
+                    <td>40/40</td>
+                </tr>
+                <tr>
+                    <td>Unlocked Island</td>
+                    <td>:</td>
+                    <td align="right">1</td>
+                </tr>
+            </table>
+        </div>-->
+        <div id="epInfo" ng-click="openPopover($event)"><img id="epImage" /></div>
+        <div id="islandView">
+            <img id="imgIsland"  usemap="#Map" />
+            <map name="Map" id="Map">
+                <area alt="island1" title="island1" href="javascript:void(0)" ng-click="openEnvirontment(1)" shape="poly" coords="682,1081,639,1083,556,1157,462,1141,457,1116,481,1080,457,1058,380,1076,297,1051,241,1077,113,978,155,926,214,883,262,882,299,846,306,824,321,821,375,830,458,887,482,888,511,893,526,880,557,891,619,948,663,999" />
+                <area alt="island2" title="island2" href="javascript:void(0)" ng-click="openEnvirontment(2)" shape="poly" coords="315,605,296,675,231,666,209,640,182,639,170,618,126,606,120,620,108,613,16,658,41,673,70,719,72,737,103,757,95,771,80,765,68,764,51,781,32,778,28,785,9,777,2,783,10,792,4,801,3,811,24,809,39,814,36,828,32,854,52,869,70,897,131,908,148,908,183,902,206,877,224,875,233,875,248,877,287,847,304,822,320,814,328,816,333,820,375,828,386,834,446,876,460,886,471,879,487,884,510,890,518,881,527,876,546,884,555,876,555,864,573,827,590,779,588,754,580,738,537,698,439,640" />
+                <area alt="island3" title="island3" href="javascript:void(0)" ng-click="openEnvirontment(3)" shape="poly" coords="296,676,232,667,207,637,190,639,170,615,122,604,112,590,96,600,83,597,61,591,55,590,56,580,93,546,157,484,176,485,190,466,236,492,224,463,262,425,237,387,238,382,274,371,280,357,300,360,310,344,362,334,382,343,382,331,429,267,460,264,470,271,514,266,506,325,448,439,444,479" />
+                <area alt="island4" title="island4" href="javascript:void(0)" ng-click="openEnvirontment(4)" shape="poly" coords="421,48,371,62,320,96,298,90,277,101,254,151,242,161,216,158,180,190,186,199,196,216,167,240,172,251,174,262,196,264,198,280,242,277,310,341,357,338,384,344,424,267,463,264,482,262,514,272,528,241,576,208,590,192,569,89" />
+            </map>
+            <div class="islandAnimation" id="cloud_1" cloudtype="Awan_2" posX="20" posY="12" style="top:10%;left:25%;"></div>
+            <div class="islandAnimation" id="cloud_2" cloudtype="Awan_4" posX="20" posY="12" style="top:10%;left:50%;"></div>
+            <div class="islandAnimation" id="cloud_3" cloudtype="Awan_3" posX="14" posY="16" style="top:14%;left:60%;"></div>
+            <div class="islandAnimation" id="cloud_4" cloudtype="Awan_1" posX="20" posY="12" style="top:21%;left:20%;"></div>
+            <div class="islandAnimation" id="cloud_5" cloudtype="Awan_3" posX="20" posY="12" style="top:21%;left:75%;"></div>
+            <div class="islandAnimation" id="cloud_6" cloudtype="Awan_2" posX="20" posY="12" style="top:30%;left:10%;"></div>
+            <div class="islandAnimation" id="cloud_7" cloudtype="Awan_2" posX="20" posY="12" style="top:32%;left:38%;width:20px;height:10px"></div>
+            <div class="islandAnimation" id="cloud_8" cloudtype="Awan_1" posX="20" posY="12" style="top:33%;left:75%;"></div>
+            <div class="islandAnimation" id="cloud_9" cloudtype="Awan_1" posX="20" posY="12" style="top:38%;left:25%;"></div>
+            <div class="islandAnimation" id="cloud_10" cloudtype="Awan_1" posX="20" posY="12" style="top:45%;left:10%;"></div>
+            <div class="islandAnimation" id="cloud_11" cloudtype="Awan_1" posX="20" posY="12" style="top:45%;left:65%;"></div>
+            <div class="islandAnimation" id="cloud_12" cloudtype="Awan_3" posX="20" posY="12" style="top:64%;left:7%;"></div>
+            <div class="islandAnimation" id="cloud_13" cloudtype="Awan_2" posX="20" posY="12" style="top:63%;left:40%;width:25px;height:15px"></div>
+            <div class="islandAnimation" id="cloud_14" cloudtype="Awan_3" posX="20" posY="12" style="top:65%;left:50%;width:25px;height:15px"></div>
+            <div class="islandAnimation" id="cloud_15" cloudtype="Awan_2" posX="20" posY="12" style="top:60%;left:60%;width:25px;height:15px"></div>
+            <div class="islandAnimation" id="cloud_16" cloudtype="Awan_2" posX="20" posY="12" style="top:75%;left:38%;width:25px;height:15px"></div>
+            <div class="islandAnimation" id="cloud_17" cloudtype="Awan_2" posX="20" posY="12" style="top:72%;left:71%;width:25px;height:15px"></div>
+            <div class="islandAnimation" id="cloud_18" cloudtype="Awan_2" posX="20" posY="12" style="top:72%;left:79%;"></div>
+            <div class="islandAnimation" id="cloud_19" cloudtype="Awan_1" posX="20" posY="12" style="top:79%;left:68%;width:25px;height:15px"></div>
+            <div class="islandAnimation" id="cloud_20" cloudtype="Awan_1" posX="20" posY="12" style="top:78%;left:50%;width:25px;height:15px"></div>
+
+            <div class="islandWave" id="wave_1" style="top:17%;left:75%;"></div>
+            <div class="islandWave" id="wave_2" style="top:38%;left:71%;"></div>
+            <div class="islandWave" id="wave_3" style="top:40%;left:8%;"></div>
+            <div class="islandWave" id="wave_4" style="top:68%;left:79%;"></div>
+            <div class="islandWave" id="wave_5" style="top:78%;left:10%;"></div>
+
+        
+        </div>
+        
+    </div>
+    
+</div>
+
+

@@ -1,0 +1,39 @@
+/**-- for island page &  environtment */
+.infoIcon {
+display: inline-block;
+width: 20px;
+height: 20px;
+}
+
+.infoIcon.icon-life {
+background: url('../img/icons/Icon_Life.png') no-repeat center center;
+background-size: cover;
+}
+
+.infoIcon.icon-speed {
+background: url('../img/icons/Icon_Speed.png') no-repeat center center;
+background-size: cover;
+}
+
+.infoIcon.icon-status {
+background: url('../img/icons/Icon_Status.png') no-repeat center center;
+background-size: cover;
+}
+
+.infoIcon.icon-target {
+background: url('../img/icons/Icon_Target.png') no-repeat center center;
+background-size: cover;
+}
+
+.activeCharInfo {
+width: 100%;
+font-size:10px;
+line-height:1;
+}
+
+.activeCharInfo tr td {
+vertical-align: middle;
+padding: 3px;
+}
+
+/**-- */

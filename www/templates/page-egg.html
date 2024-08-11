@@ -1,0 +1,618 @@
+<style type="text/css">
+    .pageNavWrapper {
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    #eggPageNav {
+        display: block;
+        width: 100%;
+        list-style: none;
+    }
+
+        #eggPageNav li {
+            float: left;
+            display: inline-block;
+            border: 1px solid #fff;
+            border-collapse: separate;
+            border-left: none;
+            width: 50%;
+        }
+
+            #eggPageNav li:first-child {
+                border-left: 1px solid #fff;
+                border-top-left-radius: 3em;
+                border-bottom-left-radius: 3em;
+            }
+
+                #eggPageNav li:first-child a {
+                    border-top-left-radius: 3em;
+                    border-bottom-left-radius: 3em;
+                }
+
+            #eggPageNav li:last-child {
+                border-right: 1px solid #fff;
+                border-top-right-radius: 3em;
+                border-bottom-right-radius: 3em;
+            }
+
+                #eggPageNav li:last-child a {
+                    border-top-right-radius: 3em;
+                    border-bottom-right-radius: 3em;
+                }
+
+            #eggPageNav li a {
+                float: left;
+                color: #fff;
+                font-size: 12px;
+                line-height: 1;
+                text-align: center;
+                display: block;
+                width: 100%;
+                padding: 7px 5px;
+            }
+
+            #eggPageNav li, #eggPageNav li:last-child, #eggPageNav li:first-child {
+                border-width: 2px;
+            }
+
+                #eggPageNav li.active a {
+                    background: #f7b81f;
+                }
+
+    @media only screen and (min-width: 768px) {
+
+
+        #eggPageNav li, #eggPageNav li:last-child, #eggPageNav li:first-child {
+            border-width: 4px;
+        }
+    }
+
+    #incubator-egg-container {
+        width: 320px;
+        height: 345px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+        #incubator-egg-container img {
+            width: 100%;
+            height: auto;
+        }
+
+    #main-egg-wrapper {
+        width: 134px;
+        height: 158px;
+        position: absolute;
+        margin: 0;
+        top: 94px;
+        left: 97px;
+        background: url('asset/img/mainegg-wrapper.png') top left;
+        background-size: cover;
+    }
+
+    #incubator-egg-container span.activated {
+        transform: scale(0.8);
+    }
+
+    #incubator-lv-1-wrapper {
+        width: 88px;
+        height: 88px;
+        position: absolute;
+        margin: 0;
+        top: 255px;
+        left: 108px;
+        border-radius: 50%;
+    }
+
+    #incubator-lv-2-wrapper {
+        width: 97px;
+        height: 97px;
+        position: absolute;
+        margin: 0;
+        bottom: 57px;
+        right: 0;
+        border-radius: 50%;
+    }
+
+    #incubator-lv-3-wrapper {
+        width: 102px;
+        height: 102px;
+        position: absolute;
+        margin: 0;
+        bottom: 64px;
+        left: 0;
+        border-radius: 50%;
+    }
+
+    #incubator-lv-4-wrapper {
+        width: 122px;
+        height: 122px;
+        position: absolute;
+        margin: 0;
+        top: 12px;
+        left: 17px;
+        border-radius: 50%;
+    }
+
+    #incubator-lv-5-wrapper {
+        width: 134px;
+        height: 134px;
+        position: absolute;
+        margin: 0;
+        top: 0;
+        right: 0;
+        border-radius: 50%;
+    }
+
+    #incubator-egg-container span.true canvas {
+        display: none;
+    }
+
+    #inputCodeWrapper {
+        margin: 5px auto;
+    }
+
+    #inputCodeButton, #cancelCodeButton {
+        font-size: larger;
+        background-color: #ce864d;
+        padding: 2px 20px;
+        border-radius: 15px;
+        /*box-shadow:#fff 1px 1px inset;*/
+        display: inline-block;
+    }
+
+    #cancelCodeButton {
+        /*background-color: #F7B81F !important;*/
+        background-color: #EF473A;
+    }
+
+    #inputCodeButton.activated {
+        box-shadow: none;
+        transform: scale(0.9);
+    }
+
+    .incubators {
+        background: url('animation/incubators/assets/Frame.png') no-repeat center center;
+        background-size: cover;
+    }
+
+        .incubators.true {
+            background: url('animation/incubators/assets/Frame2.png') no-repeat center center;
+            background-size: cover;
+        }
+
+
+    .blinking {
+        -webkit-animation: blinking 10s linear infinite;
+        animation: blinking 5s linear infinite, rollIn;
+    }
+
+    @keyframes blinking {
+        0% {
+            opacity: 1.0;
+            transform: scale(1);
+        }
+
+        50% {
+            opacity: 0.5;
+            transform: scale(1.08);
+        }
+
+        100% {
+            opacity: 1.0;
+            transform: scale(1);
+        }
+    }
+
+    #incubatorSlots .borderBox {
+        background-color: transparent;
+        border: 1px solid #fff;
+        text-align: center;
+        display: inline-block;
+        max-width: 100%;
+        min-width: 90%;
+        padding: 5px;
+        margin: 0 auto;
+        color: #c8780a;
+        font-size: 10px;
+        line-height: 10px;
+        border-radius: 10px;
+    }
+
+        #incubatorSlots .borderBox.done {
+            color: #fff;
+            background-color: #f7b81f;
+        }
+
+    #incubatorSlots .icon-diamond {
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        margin: auto;
+    }
+
+    #incubatorSlots .hatchingDuration {
+        /*border:1px solid yellow;*/
+        display: block;
+        padding: 0;
+        margin: 0;
+        height: 20px;
+        margin-bottom: 5px;
+        font-size: 12px;
+        line-height: 12px;
+        text-align: center;
+    }
+
+    .fill-round {
+        display: inline-block;
+        background-color: #f7b81f;
+        padding: 4px;
+        border-radius: 50%;
+    }
+
+    .hatchingDuration .complete {
+        display: inline-block;
+        margin: 5px auto;
+    }
+</style>
+
+<style>
+    .progress {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        cursor: pointer;
+    }
+
+    .progress-svg {
+        transform: rotate(270deg);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .circle-back {
+        stroke: #d59b61;
+        stroke-width: 5px;
+        fill: none;
+    }
+
+    .circle-progress {
+        stroke: #f7b81f;
+        stroke-width: 5px;
+        stroke-dasharray: 284,999;
+        stroke-dashoffset: 0px;
+        fill: none;
+    }
+
+    .hatchingImageHolder {
+        position: relative;
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        padding: 10%;
+    }
+
+        .hatchingImageHolder.fill-egg {
+            padding: 20%;
+        }
+
+        .hatchingImageHolder img {
+            width: auto;
+        }
+
+    #incubatorSlots img {
+        width: auto;
+        height: 100%;
+    }
+
+    #incubatorSlots .row {
+        padding: unset;
+        margin: 35px 0;
+    }
+
+        #incubatorSlots .row .col {
+            padding: unset;
+        }
+</style>
+<link href="asset/css/fix-style.css" rel="stylesheet">
+<div ng-controller="EggCtrl">
+    <section class="" id="hatchingAreaHeader">
+        <table>
+            <tr>
+                <td width="60%" style="font-size: 16px">Hatching Area</td>
+                <td width="40%">
+                    <div class="freeIncubatorWrapper">
+                        <table border="0" style="background-color: #F0B363;" ng-show="freeIncubator.isShowCountdown">
+                            <tr>
+                                <td width="40%">
+                                    <img src="asset/img/incubators/emptyslot.png" />
+                                </td>
+                                <td>
+                                    <div style="text-align:center;font-size:smaller;display:inline-block;line-height:1.2;margin:auto;">
+                                        Free Incubator <br />
+                                        {{freeIncubator.countdown}}
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table border="0" class="clickable" style="background-color: #c8780a;width:100%;" ng-show="!freeIncubator.isShowCountdown" ng-click="openFreeIncubator()">
+                            <tr>
+                                <td width="40%" class="blink_me">
+                                    <img ng-src="asset/img/incubators/icon-free-incubator.png" />
+                                </td>
+                                <td width="60%" class="blink_me">
+                                    <div style="text-align:center;font-size:smaller;display:inline-block;line-height:1.2;margin:auto;">
+                                        Free Incubator <br />
+                                        Get Now !
+                                    </div>
+
+                                    <!--<div class="clickable blink_me" style="display:block;" ng-click="openFreeIncubator()" ng-show="!freeIncubator.isShowCountdown">Open this now </div>-->
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <div class="pageNavWrapper" align="center">
+        <ul class="pageNav" id="eggPageNav">
+            <li class="active" id="eggTab-1"><a ng-click="setPage(1)">Egg &amp; Incubators</a></li>
+            <li id="eggTab-2"><a ng-click="setPage(2)">Slot</a></li>
+        </ul>
+        <div style="clear:both;"></div>
+    </div>
+
+
+    <div id="" align="center">
+        <div id="eggPage-1" class="eggPageContent">
+            <div ng-controller="HelpEggCtrl"><div class="clicked" id="help" ng-click="helpEgg()"><img src="asset/img/icons/icon_help.png" style="position: absolute;
+    margin-top: -2.4%;"></div></div>
+            <div id="inputCodeWrapper">
+                <div class="" id="inputCodeButton" ng-click="enterCode()">Enter Code</div>
+                <div class="clickable" id="cancelCodeButton" ng-click="onCancelCode()" style="display:none;">Discard Egg</div>
+            </div>
+
+            <div style="height: 62vh;">
+                <div id="parent">
+                    <div id="child">
+                        <div>
+                            <div id="incubator-egg-container">
+                                <div id="main-egg-wrapper">
+                                    <img id="egg-fill" class="fill" ng-src="asset/img/mainegg.png" style="display:none;" ng-click="playEggAnimation()" />
+                                    <!--<img id="egg-outline" class="main-egg" ng-src="asset/img/mainegg-wrapper.png" />-->
+                                </div>
+
+                                <div id="incubator-lv-1-wrapper" class="incubators {{incubators[0].isAvailable}} animated fadeInUp" ng-click="openDetailIncubatorPopup(1)" is-available="{{incubators[0].isAvailable}}">
+                                    <img class="fill animationIncubator1" ng-src="animation/incubators/assets/Lv.1.png" ng-show="incubators[0].isAvailable" />
+                                    <span></span>
+                                </div>
+                                <div id="incubator-lv-2-wrapper" class="incubators {{incubators[1].isAvailable}} animated fadeInUp" ng-click="openDetailIncubatorPopup(2)" is-available="{{incubators[1].isAvailable}}">
+                                    <img class="fill animationIncubator2" ng-src="animation/incubators/assets/Lv.2.png" ng-show="incubators[1].isAvailable" />
+                                    <span></span>
+                                </div>
+                                <div id="incubator-lv-3-wrapper" class="incubators  {{incubators[2].isAvailable}} animated fadeInUp" ng-click="openDetailIncubatorPopup(3)" is-available="{{incubators[2].isAvailable}}">
+                                    <img class="fill animationIncubator3" ng-src="animation/incubators/assets/Lv.3.png" ng-show="incubators[2].isAvailable" />
+                                    <span></span>
+                                </div>
+                                <div id="incubator-lv-4-wrapper" class="incubators  {{incubators[3].isAvailable}} animated fadeInUp" ng-click="openDetailIncubatorPopup(4)" is-available="{{incubators[3].isAvailable}}">
+                                    <img class="fill animationIncubator4" ng-src="animation/incubators/assets/Lv.4.png" ng-show="incubators[3].isAvailable" />
+                                    <span></span>
+                                </div>
+                                <div id="incubator-lv-5-wrapper" class="incubators  {{incubators[4].isAvailable}} animated fadeInUp" ng-click="openDetailIncubatorPopup(5)" is-available="{{incubators[4].isAvailable}}">
+                                    <img class="fill animationIncubator5" ng-src="animation/incubators/assets/Lv.5.png" ng-show="incubators[4].isAvailable" />
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="eggPage-2" class="eggPageContent" style="display:none;" align="center">
+            <div style="height: 56vh;">
+                <div id="parent">
+                    <div id="child">
+                        <div>
+                            <div id="incubatorSlots">
+                                <div class="row">
+                                    <div class="col" ng-click="actionButtonIncubatorSlot(1)">
+                                        <div class="slotWrapper" is-hatching="{{hatchingSlot[0].isHatching}}" id="slot-1" start="{{hatchingSlot[0].hatchingStart}}" end="{{hatchingSlot[0].hatchingEnd}}" slot-id="1">
+                                            <div class="progress" ng-show="!hatchingSlot[0].isHatching">
+                                                <img ng-src="{{hatchingSlot[0].imageToShow}}" />
+                                            </div>
+                                            <div class="progress" ng-show="hatchingSlot[0].isHatching && !hatchingSlot[0].isComplete">
+                                                <div class="hatchingImageHolder">
+                                                    <img ng-src="{{hatchingSlot[0].imageToShow}}" />
+                                                </div>
+                                                <svg class="progress-svg" width="100px" height="100px" xmlns="http://www.w3.org/2000/svg" style="">
+                                                    <circle class="circle-back" cx="50" cy="50" r="45"></circle>
+                                                    <circle class="circle-progress" id="testprogress" cx="50" cy="50" r="45" style="stroke-dasharray: {{hatchingSlot[0].progress}},999;"></circle>
+                                                </svg>
+                                            </div>
+                                            <div class="progress" ng-show="hatchingSlot[0].isHatching && hatchingSlot[0].isComplete">
+                                                <div class="hatchingImageHolder fill-egg">
+                                                    <img ng-src="asset/img/mainegg.png" />
+                                                </div>
+                                                <svg class="progress-svg" width="100px" height="100px" xmlns="http://www.w3.org/2000/svg" style="">
+                                                    <circle class="circle-back" cx="50" cy="50" r="45"></circle>
+                                                    <circle class="circle-progress" cx="50" cy="50" r="45"></circle>
+                                                </svg>
+                                            </div>
+
+                                            <div class="hatchingDuration" ng-bind-html="hatchingSlot[0].countDown"></div>
+
+                                            <div class="borderBox actionButton done" ng-show="hatchingSlot[0].isComplete" ng-bind-html="hatchingSlot[0].buttonText"></div>
+                                            <div class="borderBox actionButton" ng-show="!hatchingSlot[0].isComplete" ng-bind-html="hatchingSlot[0].buttonText"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col" ng-click="actionButtonIncubatorSlot(2)">
+                                        <div class="slotWrapper" is-hatching="{{hatchingSlot[1].isHatching}}" id="slot-2" start="{{hatchingSlot[1].hatchingStart}}" end="{{hatchingSlot[1].hatchingEnd}}" slot-id="2">
+                                            <div class="progress" ng-show="!hatchingSlot[1].isHatching">
+                                                <img ng-src="{{hatchingSlot[1].imageToShow}}" />
+                                            </div>
+                                            <div class="progress" ng-show="hatchingSlot[1].isHatching && !hatchingSlot[1].isComplete">
+                                                <div class="hatchingImageHolder">
+                                                    <img ng-src="{{hatchingSlot[1].imageToShow}}" />
+                                                </div>
+                                                <svg class="progress-svg" width="100px" height="100px" xmlns="http://www.w3.org/2000/svg" style="">
+                                                    <circle class="circle-back" cx="50" cy="50" r="45"></circle>
+                                                    <circle class="circle-progress" id="testprogress" cx="50" cy="50" r="45" style="stroke-dasharray: {{hatchingSlot[1].progress}},999;"></circle>
+                                                </svg>
+                                            </div>
+                                            <div class="progress" ng-show="hatchingSlot[1].isHatching && hatchingSlot[1].isComplete">
+                                                <div class="hatchingImageHolder fill-egg">
+                                                    <img ng-src="asset/img/mainegg.png" />
+                                                </div>
+                                                <svg class="progress-svg" width="100px" height="100px" xmlns="http://www.w3.org/2000/svg" style="">
+                                                    <circle class="circle-back" cx="50" cy="50" r="45"></circle>
+                                                    <circle class="circle-progress" cx="50" cy="50" r="45"></circle>
+                                                </svg>
+                                            </div>
+
+                                            <div class="hatchingDuration" ng-bind-html="hatchingSlot[1].countDown"></div>
+
+                                            <div class="borderBox actionButton done" ng-show="hatchingSlot[1].isComplete" ng-bind-html="hatchingSlot[1].buttonText"></div>
+                                            <div class="borderBox actionButton" ng-show="!hatchingSlot[1].isComplete" ng-bind-html="hatchingSlot[1].buttonText"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col" ng-click="actionButtonIncubatorSlot(3)">
+                                        <div class="slotWrapper" is-hatching="{{hatchingSlot[2].isHatching}}" id="slot-3" start="{{hatchingSlot[2].hatchingStart}}" end="{{hatchingSlot[2].hatchingEnd}}" slot-id="3">
+                                            <div class="progress" ng-show="!hatchingSlot[2].isHatching">
+                                                <img ng-src="{{hatchingSlot[2].imageToShow}}" />
+                                            </div>
+                                            <div class="progress" ng-show="hatchingSlot[2].isHatching && !hatchingSlot[2].isComplete">
+                                                <div class="hatchingImageHolder">
+                                                    <img ng-src="{{hatchingSlot[2].imageToShow}}" />
+                                                </div>
+                                                <svg class="progress-svg" width="100px" height="100px" xmlns="http://www.w3.org/2000/svg" style="">
+                                                    <circle class="circle-back" cx="50" cy="50" r="45"></circle>
+                                                    <circle class="circle-progress" id="testprogress" cx="50" cy="50" r="45" style="stroke-dasharray: {{hatchingSlot[2].progress}},999;"></circle>
+                                                </svg>
+                                            </div>
+                                            <div class="progress" ng-show="hatchingSlot[2].isHatching && hatchingSlot[2].isComplete">
+                                                <div class="hatchingImageHolder fill-egg">
+                                                    <img ng-src="asset/img/mainegg.png" />
+                                                </div>
+                                                <svg class="progress-svg" width="100px" height="100px" xmlns="http://www.w3.org/2000/svg" style="">
+                                                    <circle class="circle-back" cx="50" cy="50" r="45"></circle>
+                                                    <circle class="circle-progress" cx="50" cy="50" r="45"></circle>
+                                                </svg>
+                                            </div>
+
+                                            <div class="hatchingDuration" ng-bind-html="hatchingSlot[2].countDown"></div>
+
+                                            <div class="borderBox actionButton done" ng-show="hatchingSlot[2].isComplete" ng-bind-html="hatchingSlot[2].buttonText"></div>
+                                            <div class="borderBox actionButton" ng-show="!hatchingSlot[2].isComplete" ng-bind-html="hatchingSlot[2].buttonText"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col" ng-click="actionButtonIncubatorSlot(4)">
+                                        <div class="slotWrapper" is-hatching="{{hatchingSlot[3].isHatching}}" id="slot-4" start="{{hatchingSlot[3].hatchingStart}}" end="{{hatchingSlot[3].hatchingEnd}}" slot-id="4">
+                                            <div class="progress" ng-show="!hatchingSlot[3].isHatching">
+                                                <img ng-src="{{hatchingSlot[3].imageToShow}}" />
+                                            </div>
+                                            <div class="progress" ng-show="hatchingSlot[3].isHatching && !hatchingSlot[3].isComplete">
+                                                <div class="hatchingImageHolder">
+                                                    <img ng-src="{{hatchingSlot[3].imageToShow}}" />
+                                                </div>
+                                                <svg class="progress-svg" width="100px" height="100px" xmlns="http://www.w3.org/2000/svg" style="">
+                                                    <circle class="circle-back" cx="50" cy="50" r="45"></circle>
+                                                    <circle class="circle-progress" id="testprogress" cx="50" cy="50" r="45" style="stroke-dasharray: {{hatchingSlot[3].progress}},999;"></circle>
+                                                </svg>
+                                            </div>
+                                            <div class="progress" ng-show="hatchingSlot[3].isHatching && hatchingSlot[3].isComplete">
+                                                <div class="hatchingImageHolder fill-egg">
+                                                    <img ng-src="asset/img/mainegg.png" />
+                                                </div>
+                                                <svg class="progress-svg" width="100px" height="100px" xmlns="http://www.w3.org/2000/svg" style="">
+                                                    <circle class="circle-back" cx="50" cy="50" r="45"></circle>
+                                                    <circle class="circle-progress" cx="50" cy="50" r="45"></circle>
+                                                </svg>
+                                            </div>
+
+                                            <div class="hatchingDuration" ng-bind-html="hatchingSlot[3].countDown"></div>
+
+                                            <div class="borderBox actionButton done" ng-show="hatchingSlot[3].isComplete" ng-bind-html="hatchingSlot[3].buttonText"></div>
+                                            <div class="borderBox actionButton" ng-show="!hatchingSlot[3].isComplete" ng-bind-html="hatchingSlot[3].buttonText"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col" ng-click="actionButtonIncubatorSlot(5)">
+                                        <div class="slotWrapper" is-hatching="{{hatchingSlot[4].isHatching}}" id="slot-5" start="{{hatchingSlot[4].hatchingStart}}" end="{{hatchingSlot[4].hatchingEnd}}" slot-id="5">
+                                            <div class="progress" ng-show="!hatchingSlot[4].isHatching">
+                                                <img ng-src="{{hatchingSlot[4].imageToShow}}" />
+                                            </div>
+                                            <div class="progress" ng-show="hatchingSlot[4].isHatching && !hatchingSlot[4].isComplete">
+                                                <div class="hatchingImageHolder">
+                                                    <img ng-src="{{hatchingSlot[4].imageToShow}}" />
+                                                </div>
+                                                <svg class="progress-svg" width="100px" height="100px" xmlns="http://www.w3.org/2000/svg" style="">
+                                                    <circle class="circle-back" cx="50" cy="50" r="45"></circle>
+                                                    <circle class="circle-progress" id="testprogress" cx="50" cy="50" r="45" style="stroke-dasharray: {{hatchingSlot[4].progress}},999;"></circle>
+                                                </svg>
+                                            </div>
+                                            <div class="progress" ng-show="hatchingSlot[4].isHatching && hatchingSlot[4].isComplete">
+                                                <div class="hatchingImageHolder fill-egg">
+                                                    <img ng-src="asset/img/mainegg.png" />
+                                                </div>
+                                                <svg class="progress-svg" width="100px" height="100px" xmlns="http://www.w3.org/2000/svg" style="">
+                                                    <circle class="circle-back" cx="50" cy="50" r="45"></circle>
+                                                    <circle class="circle-progress" cx="50" cy="50" r="45"></circle>
+                                                </svg>
+                                            </div>
+
+                                            <div class="hatchingDuration" ng-bind-html="hatchingSlot[4].countDown"></div>
+
+                                            <div class="borderBox actionButton done" ng-show="hatchingSlot[4].isComplete" ng-bind-html="hatchingSlot[4].buttonText"></div>
+                                            <div class="borderBox actionButton" ng-show="!hatchingSlot[4].isComplete" ng-bind-html="hatchingSlot[4].buttonText"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col" ng-click="actionButtonIncubatorSlot(6)">
+                                        <div class="slotWrapper" is-hatching="{{hatchingSlot[5].isHatching}}" id="slot-6" start="{{hatchingSlot[5].hatchingStart}}" end="{{hatchingSlot[5].hatchingEnd}}" slot-id="6">
+                                            <div class="progress" ng-show="!hatchingSlot[5].isHatching">
+                                                <img ng-src="{{hatchingSlot[5].imageToShow}}" />
+                                            </div>
+                                            <div class="progress" ng-show="hatchingSlot[5].isHatching && !hatchingSlot[5].isComplete">
+                                                <div class="hatchingImageHolder">
+                                                    <img ng-src="{{hatchingSlot[5].imageToShow}}" />
+                                                </div>
+                                                <svg class="progress-svg" width="100px" height="100px" xmlns="http://www.w3.org/2000/svg" style="">
+                                                    <circle class="circle-back" cx="50" cy="50" r="45"></circle>
+                                                    <circle class="circle-progress" id="testprogress" cx="50" cy="50" r="45" style="stroke-dasharray: {{hatchingSlot[5].progress}},999;"></circle>
+                                                </svg>
+                                            </div>
+                                            <div class="progress" ng-show="hatchingSlot[5].isHatching && hatchingSlot[5].isComplete">
+                                                <div class="hatchingImageHolder fill-egg">
+                                                    <img ng-src="asset/img/mainegg.png" />
+                                                </div>
+                                                <svg class="progress-svg" width="100px" height="100px" xmlns="http://www.w3.org/2000/svg" style="">
+                                                    <circle class="circle-back" cx="50" cy="50" r="45"></circle>
+                                                    <circle class="circle-progress" cx="50" cy="50" r="45"></circle>
+                                                </svg>
+                                            </div>
+
+                                            <div class="hatchingDuration" ng-bind-html="hatchingSlot[5].countDown"></div>
+
+                                            <div class="borderBox actionButton done" ng-show="hatchingSlot[5].isComplete" ng-bind-html="hatchingSlot[5].buttonText"></div>
+                                            <div class="borderBox actionButton" ng-show="!hatchingSlot[5].isComplete" ng-bind-html="hatchingSlot[5].buttonText"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

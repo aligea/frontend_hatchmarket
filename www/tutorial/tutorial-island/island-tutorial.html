@@ -1,0 +1,18 @@
+﻿<style>
+
+</style>
+
+<ion-modal-view style="background: url('asset/img/Loading-white.jpg') no-repeat top left fixed;
+            background-size: cover;">
+    <div style="position:fixed;text-align:center;z-index:14;width:100%;">
+        <button class="button button-small button-assertive ion-close "
+                ng-click="closeTutorialPopup()"> Close</button>
+    </div>
+    
+    
+    <ion-slide-box show-pager="false" active-slide="0" delegate-handle="islandTutorial">
+        <ion-slide class="__slideContent" ng-repeat="img in tutorialAssets">
+            <img ng-src="{{img}}" style="width:100%;" />
+        </ion-slide>
+    </ion-slide-box>
+</ion-modal-view>

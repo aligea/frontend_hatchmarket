@@ -1,0 +1,139 @@
+
+skeleton.png
+size: 588,588
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Coin1
+  rotate: false
+  xy: 158, 311
+  size: 136, 130
+  orig: 136, 130
+  offset: 0, 0
+  index: -1
+Coin2
+  rotate: false
+  xy: 314, 456
+  size: 120, 130
+  orig: 120, 130
+  offset: 0, 0
+  index: -1
+Coin3
+  rotate: false
+  xy: 127, 17
+  size: 102, 134
+  orig: 102, 134
+  offset: 0, 0
+  index: -1
+Coin4
+  rotate: false
+  xy: 299, 311
+  size: 30, 130
+  orig: 30, 130
+  offset: 0, 0
+  index: -1
+Coin5
+  rotate: false
+  xy: 234, 47
+  size: 102, 134
+  orig: 102, 134
+  offset: 0, 0
+  index: -1
+Coin6
+  rotate: false
+  xy: 2, 21
+  size: 120, 130
+  orig: 120, 130
+  offset: 0, 0
+  index: -1
+Diamond1
+  rotate: false
+  xy: 158, 186
+  size: 129, 120
+  orig: 129, 120
+  offset: 0, 0
+  index: -1
+Diamond9
+  rotate: false
+  xy: 158, 186
+  size: 129, 120
+  orig: 129, 120
+  offset: 0, 0
+  index: -1
+Diamond2
+  rotate: false
+  xy: 439, 466
+  size: 129, 120
+  orig: 129, 120
+  offset: 0, 0
+  index: -1
+Diamond3
+  rotate: false
+  xy: 292, 186
+  size: 129, 120
+  orig: 129, 120
+  offset: 0, 0
+  index: -1
+Diamond4
+  rotate: true
+  xy: 341, 52
+  size: 129, 120
+  orig: 129, 120
+  offset: 0, 0
+  index: -1
+Diamond5
+  rotate: true
+  xy: 466, 332
+  size: 129, 120
+  orig: 129, 120
+  offset: 0, 0
+  index: -1
+Diamond6
+  rotate: true
+  xy: 466, 198
+  size: 129, 120
+  orig: 129, 120
+  offset: 0, 0
+  index: -1
+Diamond7
+  rotate: true
+  xy: 466, 64
+  size: 129, 120
+  orig: 129, 120
+  offset: 0, 0
+  index: -1
+Diamond8
+  rotate: true
+  xy: 334, 322
+  size: 129, 120
+  orig: 129, 120
+  offset: 0, 0
+  index: -1
+Item1
+  rotate: false
+  xy: 2, 446
+  size: 151, 140
+  orig: 151, 140
+  offset: 0, 0
+  index: -1
+Item2
+  rotate: false
+  xy: 2, 301
+  size: 151, 140
+  orig: 151, 140
+  offset: 0, 0
+  index: -1
+Item3
+  rotate: false
+  xy: 158, 446
+  size: 151, 140
+  orig: 151, 140
+  offset: 0, 0
+  index: -1
+Item4
+  rotate: false
+  xy: 2, 156
+  size: 151, 140
+  orig: 151, 140
+  offset: 0, 0
+  index: -1

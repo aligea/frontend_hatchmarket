@@ -1,0 +1,48 @@
+﻿<style>
+    .popup-body {
+        background: rgba(255, 255, 255, 0.5);
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        font-size: 10px;
+        padding: 5px;
+        background-color: #fff;
+    }
+
+    #expandIsland {
+        width: 35%;
+        display: inline-block;
+        padding: 1px 5px;
+        background: #FEBB2F;
+        border-radius: 15px;
+        color: #fff;
+    }
+
+    #expandIsland.activated, #cancelExpandIsland.activated {
+        transform: scale(0.9);
+    }
+
+    #cancelExpandIsland {
+        width: 35%;
+        display: inline-block;
+        padding: 5px;
+        color: #FEBB2F;
+    }
+
+    .popup-body .col {
+        padding: 1px;
+        border: 1px solid #FEBB2F;
+        display: inline-block;
+        margin: 1px 2px;
+        border-radius: 10px;
+    }
+
+</style>
+
+
+<div style="position:relative; margin-top:10px;" align="center">
+    <div style="font-size: 12px;">REDEEM {{selecteddata.name}} WITH {{selecteddata.price}} COINS?  </div>
+</div>
+<div class="" style="margin-top:20px;">
+    <span id="cancelExpandIsland" ng-click="PopupGold.close()">maybe later</span>
+    <span id="expandIsland" on-tap="showPopupDataGold()">CONFIRM</span>
+</div>

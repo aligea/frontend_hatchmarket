@@ -1,0 +1,18 @@
+{
+  "name": "hatcmarket-frontend",
+  "version": "1.0.0",
+  "description": "ini adalah sourcecode aplikasi hatchmarket yang sedang direwrite dengan mengambil feature yang berguna",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs"
+  ],
+  "author": "Ali Bangun Gea",
+  "license": "ISC",
+  "dependencies": {
+    "expressjs": "^1.0.1"
+  }
+}

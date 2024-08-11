@@ -1,0 +1,193 @@
+﻿<style>
+    .headerWrapper {
+        width: 100%;
+        height: 144px;
+        height: 7.5vh;
+        display: block;
+        position: relative;
+    }
+
+    #playerInfoWrapper {
+        width: 99%;
+        height: 100%;
+        font-size: 12px;
+        position: absolute;
+    }
+
+    #playerInfoWrapper td {
+        vertical-align: middle;
+        text-align: center;
+        align-content: center;
+    }
+
+    #inputNicknameForm .input-label {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        color: #fff;
+        font-size: 60%;
+        padding: unset;
+        margin-top: 0px;
+    }
+
+    #inputNicknameForm input[type=text],
+    #inputNicknameForm select {
+        text-transform: uppercase;
+        margin: 0 auto;
+        padding-right: 5px;
+        width: 200px;
+        text-align: center;
+        border-radius: 20px;
+        border: 2px solid #fff;
+        background: none;
+        color: #fff;
+        padding-left: 20px;
+        text-align: left;
+    }
+
+    #inputNicknameForm #stageSelect {
+        display: block;
+        height: 34px;
+        color: #111;
+        vertical-align: middle;
+        font-size: 14px;
+        line-height: 16px;
+        color: #fff;
+    }
+
+    #inputNicknameForm button {
+        background-color: #f7b721;
+        color: #fff;
+        margin-top: 10px;
+    }
+
+    #inputNicknameForm.onKeyboardShow {
+        position: absolute;
+        top: 25%;
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    button.ok-button[disabled] {
+        opacity: 0.6;
+        animation: none;
+    }
+
+    #updateCharError{
+        font-size: 10px;
+        line-height: 1;
+    }
+    
+    #availableRegionChooser .col{
+     border: 1px solid #F7B81F;
+     border-left:none;
+     padding:unset;
+     max-width: 50%;
+     padding-top: 2px;
+     padding-bottom: 2px;
+    }
+    #availableRegionChooser .col:first-child{
+        border-left: 1px solid #F7B81F;
+        border-top-left-radius:2em;
+        border-bottom-left-radius:2em;
+    }
+    #availableRegionChooser .col:last-child{
+        border-right: 1px solid #F7B81F;
+        border-top-right-radius:2em;
+        border-bottom-right-radius:2em;
+    }
+    #availableRegionChooser .activeRegion{
+         background-color: #F7B81F;
+         color: #fff;
+    }
+    #availableRegionChooser .__cantChoose{
+         background-color: #e6e7e9;
+         color: #aaabaf;
+         border-color: #e6e7e9;
+    }
+</style>
+<ion-modal-view>
+    <div id="modalChar" class="bg-gradient" style="position: absolute;height:100%;text-align:center;padding-top:10px;">
+
+        <section class="titleWrapper" style="margin:0;">Well done Hatcher !</section>
+        <table>
+            <tr>
+                <td style="width:80%; vertical-align: middle;
+                    padding-left: 4%;">
+                    <div style="text-align: left; margin-top:10px;margin-bottom:5px;
+                         font-size: 80%;">{{hatchedChar.name}}</div>
+                </td>
+                <td style="width: 20%;padding-right: 5%;margin: 0 auto;">
+                    <div style="font-size:50%;">Rarity</div>
+                    <img ng-src="{{hatchedChar.level}}" style="width:auto;height:14px;display: block;margin: 0 auto;" />
+                    <div style="font-size:60%;">{{hatchedChar.type}}</div>
+                </td>
+            </tr>
+        </table>
+        <form name="myForm" id="inputNicknameForm" class="" ng-submit="submitUpdateChar()" novalidate>
+            <div class="input-label">Set Nickname :</div>
+            <input style="background: url(asset/img/icons/Set_Nickname.png) no-repeat right 10px center;
+                   background-size: 15px auto;" type="text" placeholder="Nickname" ng-trim="false" ng-change="data.nickname = data.nickname.split(' ').join('')"
+                   id="nicknameInputText" ng-model="data.nickname" maxlength="12" ng-minlength="4" ng-maxlength="12" required>
+
+            <img id="hatchedCharImg" ng-src="{{hatchedChar.infoImage}}" style="width:auto;height:100px;" />
+
+            <div style="text-align:center;margin-bottom:10px;">
+                <div style="">
+                    <div style="font-size: 53%;">eggcode</div>
+                    <div style="border: 2px solid #fff;
+                         border-radius: 20px;
+                         width: 50%;
+                         height: 30px;
+                         margin: 0 auto;
+                         background-color: #F7B81F;
+                         padding-top: 1%;">{{hatchedChar.code}}</div>
+                    <div style="font-size:8px;line-height:15px;">Expired:</div>
+                    <div style="font-size: 70%;">{{hatchedChar.expiredDate}}</div>
+                </div>
+
+                <div class="input-label">Select Region :</div>
+                <!--<select id="stageSelect" ng-model="data.stage">
+                    <option ng-repeat="region in availableRegion" ng-value="region.id" ng-selected="selected"> {{region.name}} </option>
+                </select>-->
+                <div class="row" id="availableRegionChooser">
+                    <div ng-repeat="region in availableRegion" 
+                         ng-click="changeSelectedRegion(region.id)"
+                         class="col {{region.isActiveRegion}} {{region.isCanChoose}}" 
+                         value="{{region.id}}" >{{region.name}}</div>
+                    
+                    <!--<div ng-click="changeSelectedRegion(1)"
+                         class="col activeRegion" 
+                         value="1" >Atea</div>
+                    <div ng-click="changeSelectedRegion(2)"
+                         class="col " 
+                         value="2" >Oidur</div>
+                    <div ng-click="changeSelectedRegion(3)"
+                         class="col cantChoose" 
+                         value="3" >Frusht</div>
+                    <div ng-click="changeSelectedRegion(4)"
+                         class="col cantChoose" 
+                         value="4" >Routh</div>-->
+                </div>
+
+                <div id="updateCharError" class="assertive">&nbsp;</div>
+
+                <button class="ok-button" type="submit" style="padding-top:2px;padding-bottom:2px;display:inline-block;line-height:20px;"
+                        ng-disabled="myForm.$invalid">Submit &#10003; </button>
+
+            </div>
+            <div class="socmedIconWrapper">
+                <div style="line-height:1;font-size:12px;margin-bottom:5px;">Lets Spread 'Em</div>
+
+                <img src="asset/img/share/icon_fb.png" class="clickable" ng-click="shareTo('facebook')" />
+                <img src="asset/img/share/icon_ig.png" class="clickable" ng-click="shareTo('instagram')" />
+                <img src="asset/img/share/icon_twitter.png" class="clickable" ng-click="shareTo('twitter')" />
+                <img src="asset/img/share/icon_path.png" class="clickable" ng-click="shareTo('path')" />
+                <img src="asset/img/share/icon_wa.png" class="clickable" ng-click="shareTo('whatsapp')" />
+                <img src="asset/img/share/icon_other.png" class="clickable" ng-click="shareTo('default')" />
+            </div>
+        </form>
+
+    </div>
+</ion-modal-view>

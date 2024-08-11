@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "1 Gram Fine Gold",
+        "price": 6500,
+        "type": "fineGold"
+    },
+    {
+        "id": 2,
+        "name": "2 Gram Fine Gold",
+        "price": 12800,
+        "type": "fineGold"
+    },
+    {
+        "id": 3,
+        "name": "5 Gram Fine Gold",
+        "price": 31000,
+        "type": "fineGold"
+    },
+    {
+        "id": 4,
+        "name": "20K Phone Balance",
+        "price": 300,
+        "type": "phoneBalance"
+    },
+    {
+        "id": 5,
+        "name": "50K Phone Balance",
+        "price": 600,
+        "type": "phoneBalance"
+    },
+    {
+        "id": 6,
+        "name": "100K Phone Balance",
+        "price": 1100,
+        "type": "phoneBalance"
+    },
+    {
+        "id": 7,
+        "name": "Orodocus Keychain",
+        "price": 700,
+        "type": "merchandise"
+    },
+    {
+        "id": 8,
+        "name": "Orodocus Doll",
+        "price": 700,
+        "type": "merchandise"
+    }
+]

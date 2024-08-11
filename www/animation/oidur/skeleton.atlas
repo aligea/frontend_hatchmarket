@@ -1,0 +1,153 @@
+
+skeleton.png
+size: 967,967
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BG
+  rotate: false
+  xy: 2, 5
+  size: 540, 960
+  orig: 540, 960
+  offset: 0, 0
+  index: -1
+Cloud1
+  rotate: true
+  xy: 662, 115
+  size: 158, 62
+  orig: 158, 62
+  offset: 0, 0
+  index: -1
+Cloud2
+  rotate: true
+  xy: 719, 677
+  size: 288, 47
+  orig: 288, 47
+  offset: 0, 0
+  index: -1
+Lava1
+  rotate: true
+  xy: 662, 278
+  size: 231, 29
+  orig: 231, 29
+  offset: 0, 0
+  index: -1
+Lava2
+  rotate: true
+  xy: 883, 734
+  size: 231, 29
+  orig: 231, 29
+  offset: 0, 0
+  index: -1
+Lava3
+  rotate: true
+  xy: 917, 734
+  size: 231, 29
+  orig: 231, 29
+  offset: 0, 0
+  index: -1
+Lava4
+  rotate: true
+  xy: 696, 278
+  size: 231, 29
+  orig: 231, 29
+  offset: 0, 0
+  index: -1
+LavaBubble
+  rotate: false
+  xy: 662, 57
+  size: 10, 11
+  orig: 10, 11
+  offset: 0, 0
+  index: -1
+LavaPop
+  rotate: false
+  xy: 647, 45
+  size: 10, 7
+  orig: 10, 7
+  offset: 0, 0
+  index: -1
+Lightning
+  rotate: true
+  xy: 547, 514
+  size: 451, 167
+  orig: 454, 172
+  offset: 2, 2
+  index: -1
+MeteorFlame0
+  rotate: false
+  xy: 605, 22
+  size: 37, 30
+  orig: 37, 30
+  offset: 0, 0
+  index: -1
+MeteorFlame1
+  rotate: false
+  xy: 547, 13
+  size: 53, 39
+  orig: 54, 39
+  offset: 0, 0
+  index: -1
+MeteorFlame2
+  rotate: true
+  xy: 719, 624
+  size: 48, 38
+  orig: 48, 38
+  offset: 0, 0
+  index: -1
+MeteorFlame3
+  rotate: false
+  xy: 662, 73
+  size: 52, 37
+  orig: 52, 37
+  offset: 0, 0
+  index: -1
+MeteorStone
+  rotate: false
+  xy: 941, 707
+  size: 24, 22
+  orig: 24, 22
+  offset: 0, 0
+  index: -1
+MeteorTail1
+  rotate: false
+  xy: 863, 738
+  size: 3, 2
+  orig: 3, 2
+  offset: 0, 0
+  index: -1
+MeteorTail2
+  rotate: false
+  xy: 719, 611
+  size: 10, 8
+  orig: 10, 8
+  offset: 0, 0
+  index: -1
+Smoke1
+  rotate: true
+  xy: 771, 657
+  size: 83, 87
+  orig: 143, 117
+  offset: 30, 0
+  index: -1
+Smoke2
+  rotate: false
+  xy: 863, 657
+  size: 73, 72
+  orig: 127, 104
+  offset: 27, 0
+  index: -1
+VolcanoBack
+  rotate: true
+  xy: 771, 745
+  size: 220, 107
+  orig: 220, 107
+  offset: 0, 0
+  index: -1
+VolcanoFront
+  rotate: true
+  xy: 547, 57
+  size: 452, 110
+  orig: 452, 110
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,70 @@
+﻿<style>
+    .popup-body {
+        background: rgba(255, 255, 255, 0.5);
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    #expandIsland {
+        width: 35%;
+        display: inline-block;
+        padding: 1px 5px;
+        background: #FEBB2F;
+        border-radius: 15px;
+        color: #fff;
+        box-shadow:none;
+        border:none;
+        font-size: 100%;
+    }
+
+    #expandIsland.activated, #cancelExpandIsland.activated {
+        transform: scale(0.9);
+    }
+
+    #cancelExpandIsland {
+        width: 35%;
+        display: inline-block;
+        padding: 5px;
+        color: #FEBB2F;
+    }
+
+    .popup-body .col {
+        padding: 1px;
+        border: 1px solid #FEBB2F;
+        display: inline-block;
+        margin: 1px 2px;
+        border-radius: 10px;
+    }
+
+    .select {
+        text-align:center; 
+        border: 1px solid #FEBB2F; 
+        width: 83%; 
+        height: 4%; 
+        border-radius: 15px; 
+        text-align-last: center; 
+        text-align: center; 
+        -ms-text-align-last: center; 
+        -moz-text-align-last: center; 
+        text-align-last: center;
+        text-transform: uppercase;
+    }
+
+    button.ok-button[disabled]{
+        opacity:0.6;
+        animation:none;
+    }
+</style>
+<body>
+
+        <div>Do you really want to change language?</div>
+        <div><br/></div>
+        <!--<div><span class="ok-button" id="expandIsland" on-tap="languagechange()" ng-click="languagepopup.close()">Confirm</span></div>
+        <div><span id="cancelExpandIsland" ng-click="languagepopup.close()">Maybe Later</span></div>-->
+
+    <!--<script src="script/country.js"></script>
+    <script src="lib/state/dist/jquery.crs.min"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>-->
+</body>

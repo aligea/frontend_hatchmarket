@@ -1,0 +1,62 @@
+
+skeleton.png
+size: 676,676
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+POHON-02
+  rotate: false
+  xy: 2, 75
+  size: 220, 297
+  orig: 220, 297
+  offset: 0, 0
+  index: -1
+POHON-03
+  rotate: false
+  xy: 228, 378
+  size: 221, 296
+  orig: 221, 297
+  offset: 0, 0
+  index: -1
+POHON-04
+  rotate: false
+  xy: 454, 377
+  size: 220, 297
+  orig: 220, 297
+  offset: 0, 0
+  index: -1
+POHON-05
+  rotate: false
+  xy: 2, 377
+  size: 221, 297
+  orig: 221, 297
+  offset: 0, 0
+  index: -1
+gantungan-02
+  rotate: false
+  xy: 227, 137
+  size: 122, 235
+  orig: 220, 297
+  offset: 35, 46
+  index: -1
+gantungan-03
+  rotate: false
+  xy: 354, 138
+  size: 121, 234
+  orig: 221, 297
+  offset: 36, 46
+  index: -1
+gantungan-04
+  rotate: false
+  xy: 480, 139
+  size: 122, 233
+  orig: 220, 297
+  offset: 33, 46
+  index: -1
+gantungan-05
+  rotate: true
+  xy: 227, 12
+  size: 120, 233
+  orig: 221, 297
+  offset: 35, 46
+  index: -1

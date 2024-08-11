@@ -1,0 +1,115 @@
+
+skeleton.png
+size: 1984,1984
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Attack1
+  rotate: false
+  xy: 2, 636
+  size: 1009, 1346
+  orig: 1009, 1347
+  offset: 0, 0
+  index: -1
+Attack5
+  rotate: false
+  xy: 1016, 636
+  size: 966, 1346
+  orig: 966, 1346
+  offset: 0, 0
+  index: -1
+Tail2
+  rotate: true
+  xy: 1643, 125
+  size: 506, 324
+  orig: 506, 325
+  offset: 0, 0
+  index: -1
+Wings1
+  rotate: false
+  xy: 2, 351
+  size: 920, 280
+  orig: 921, 281
+  offset: 0, 0
+  index: -1
+Wings2
+  rotate: false
+  xy: 927, 159
+  size: 711, 472
+  orig: 711, 473
+  offset: 0, 0
+  index: -1
+Wings3
+  rotate: false
+  xy: 2, 13
+  size: 832, 333
+  orig: 832, 333
+  offset: 0, 0
+  index: -1
+
+skeleton2.png
+size: 1984,1984
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Attack4
+  rotate: false
+  xy: 2, 636
+  size: 1009, 1346
+  orig: 1009, 1347
+  offset: 0, 0
+  index: -1
+Attack6
+  rotate: false
+  xy: 1016, 636
+  size: 966, 1346
+  orig: 966, 1346
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 535, 271
+  size: 497, 360
+  orig: 497, 360
+  offset: 0, 0
+  index: -1
+Tail1
+  rotate: false
+  xy: 1037, 323
+  size: 445, 308
+  orig: 445, 309
+  offset: 0, 1
+  index: -1
+Tail3
+  rotate: false
+  xy: 2, 242
+  size: 528, 389
+  orig: 529, 390
+  offset: 0, 0
+  index: -1
+
+skeleton3.png
+size: 1311,1311
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Attack2
+  rotate: false
+  xy: 2, 2
+  size: 1009, 1307
+  orig: 1009, 1308
+  offset: 0, 0
+  index: -1
+
+skeleton4.png
+size: 1311,1311
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Attack3
+  rotate: false
+  xy: 2, 2
+  size: 1009, 1307
+  orig: 1009, 1308
+  offset: 0, 0
+  index: -1

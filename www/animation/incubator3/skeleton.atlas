@@ -1,0 +1,132 @@
+
+skeleton.png
+size: 477,477
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 2, 6
+  size: 158, 153
+  orig: 158, 153
+  offset: 0, 0
+  index: -1
+Disc1
+  rotate: true
+  xy: 362, 293
+  size: 182, 39
+  orig: 183, 39
+  offset: 1, 0
+  index: -1
+Disc2
+  rotate: true
+  xy: 406, 293
+  size: 182, 39
+  orig: 183, 39
+  offset: 1, 0
+  index: -1
+Disc3
+  rotate: true
+  xy: 318, 292
+  size: 183, 39
+  orig: 183, 39
+  offset: 0, 0
+  index: -1
+Disc4
+  rotate: false
+  xy: 165, 120
+  size: 182, 39
+  orig: 183, 39
+  offset: 1, 0
+  index: -1
+Frame
+  rotate: false
+  xy: 2, 164
+  size: 311, 311
+  orig: 311, 311
+  offset: 0, 0
+  index: -1
+Lava1
+  rotate: false
+  xy: 450, 442
+  size: 25, 33
+  orig: 25, 33
+  offset: 0, 0
+  index: -1
+Lava2
+  rotate: true
+  xy: 188, 2
+  size: 10, 11
+  orig: 10, 11
+  offset: 0, 0
+  index: -1
+Lava3
+  rotate: false
+  xy: 318, 250
+  size: 14, 13
+  orig: 14, 13
+  offset: 0, 0
+  index: -1
+Lava4
+  rotate: false
+  xy: 165, 11
+  size: 18, 19
+  orig: 18, 19
+  offset: 0, 0
+  index: -1
+Lava5
+  rotate: false
+  xy: 318, 268
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+Lava6
+  rotate: false
+  xy: 342, 273
+  size: 13, 14
+  orig: 13, 14
+  offset: 0, 0
+  index: -1
+Lava7
+  rotate: false
+  xy: 450, 417
+  size: 15, 20
+  orig: 15, 20
+  offset: 0, 0
+  index: -1
+Lava8
+  rotate: false
+  xy: 188, 17
+  size: 14, 13
+  orig: 14, 14
+  offset: 0, 1
+  index: -1
+Lava9
+  rotate: true
+  xy: 204, 2
+  size: 10, 11
+  orig: 10, 11
+  offset: 0, 0
+  index: -1
+Smoke1
+  rotate: false
+  xy: 300, 35
+  size: 48, 80
+  orig: 82, 115
+  offset: 34, 0
+  index: -1
+Smoke2
+  rotate: false
+  xy: 165, 35
+  size: 76, 80
+  orig: 130, 113
+  offset: 27, 0
+  index: -1
+Smoke3
+  rotate: false
+  xy: 246, 35
+  size: 49, 80
+  orig: 82, 115
+  offset: 0, 0
+  index: -1

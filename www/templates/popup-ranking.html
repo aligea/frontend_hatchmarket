@@ -1,0 +1,111 @@
+<style>
+.popup-body {
+border-bottom-left-radius: 1em;
+border-bottom-right-radius: 1em;
+font-family: inherit;
+}
+
+#layout_ranking img {
+max-width: 100%;
+}
+
+#layout_ranking {
+border-radius: 10%;
+}
+
+#layout_ranking table td {
+vertical-align: top;
+}
+
+#layout_ranking .ranking-title {
+font-size: larger;
+font-weight: bold;
+display: block;
+margin-bottom: 5px;
+}
+
+#layout_ranking table.ranking-data {
+width: 100%;
+font-size:smaller;
+font-stretch:narrower;
+}
+
+#layout_ranking table.ranking-data thead th {
+border-spacing: 2px;
+border-collapse: separate;
+text-align: left;
+text-decoration: underline;
+}
+
+#layout_ranking table.ranking-data tbody td {
+text-align: left;
+padding: 0 0;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+</style>
+
+<div id="layout_ranking">
+
+    <table id="">
+        <tr>
+            <td width="10%" id="swiper-ranking-prev"
+                ng-click="page.prev()">
+                <img ng-src="asset/img/icons/menu_item_kiri.png" />
+            </td>
+            <td>
+                <div class="swiper-slide">
+                    <div class="ranking-title">{{ranking.title}}</div>
+                    <!--<table class="ranking-data" cellpadding="1" cellspacing="1">
+                        <thead>
+                            <tr>
+                                <th>Player</th>
+                                <th>Coins</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BanditCoding</td>
+                                <td>2000</td>
+                            </tr>
+                            <tr>
+                                <td>BanditCoding</td>
+                                <td>2000</td>
+                            </tr>
+                            <tr>
+                                <td>BanditCoding</td>
+                                <td>2000</td>
+                            </tr>
+                            <tr>
+                                <td>BanditCoding</td>
+                                <td>2000</td>
+                            </tr>
+                            <tr>
+                                <td>BanditCoding</td>
+                                <td>2000</td>
+                            </tr>
+                        </tbody>
+                    </table>-->
+                    <div ng-bind-html="ranking.data"></div>
+                </div>
+
+                
+
+            </td>
+            <td width="10%" id="swiper-ranking-next"
+                ng-click="page.next()">
+                <img ng-src="asset/img/icons/menu_item_kanan.png" />
+            </td>
+        </tr>
+    </table>
+
+    <div style="color: #F7B81F; font-size: 9px; margin-top:10px;">
+        <button class="button button-outline button-energized"
+                ng-click="popup.close()">
+            I got it
+        </button>
+    </div>
+
+</div>

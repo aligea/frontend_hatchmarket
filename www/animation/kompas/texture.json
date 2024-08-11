@@ -1,0 +1,17 @@
+{
+    "imagePath": "texture.png",
+    "name": "CompassAssets",
+    "SubTexture": [{
+            "width": 225,
+            "y": 1,
+            "height": 219,
+            "name": "Kompas",
+            "x": 1
+        }, {
+            "width": 129,
+            "y": 222,
+            "height": 139,
+            "name": "Jarum",
+            "x": 1
+        }]
+}

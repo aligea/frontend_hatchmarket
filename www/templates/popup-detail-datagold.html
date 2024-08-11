@@ -1,0 +1,120 @@
+﻿<style>
+    .popup-body {
+        background: rgba(255, 255, 255, 0.5);
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    #expandIsland {
+        width: 35%;
+        display: inline-block;
+        padding: 1px 5px;
+        background: #FEBB2F;
+        border-radius: 15px;
+        color: #fff;
+        box-shadow:none;
+        border:none;
+        font-size: 100%;
+    }
+
+    #expandIsland.activated, #cancelExpandIsland.activated {
+        transform: scale(0.9);
+    }
+
+    #cancelExpandIsland {
+        width: 35%;
+        display: inline-block;
+        padding: 5px;
+        color: #FEBB2F;
+    }
+
+    .popup-body .col {
+        padding: 1px;
+        border: 1px solid #FEBB2F;
+        display: inline-block;
+        margin: 1px 2px;
+        border-radius: 10px;
+    }
+
+    .select {
+        text-align:center; 
+        border: 1px solid #FEBB2F; 
+        width: 83%; 
+        height: 4%; 
+        border-radius: 15px; 
+        text-align-last: center; 
+        text-align: center; 
+        -ms-text-align-last: center; 
+        -moz-text-align-last: center; 
+        text-align-last: center;
+        text-transform: uppercase;
+    }
+
+    button.ok-button[disabled]{
+        opacity:0.6;
+        animation:none;
+    }
+</style>
+
+    <form id="datagold" ng-submit="showPopupConfirmGold()" name="myForm" novalidate>
+        <div style="position:relative; margin-top:10px;" align="center">
+            <div>FULL NAME</div>
+            <input type="text" name="name" id="fullname" ng-model="dataUserGold.name" 
+                   style="text-transform: uppercase;text-align:center; border: 1px solid #FEBB2F; width: 83%; height: 4%; border-radius: 15px;" 
+                   required />
+            <div style="position:relative; margin-top:10px;" align="center">
+                <div>EMAIL</div>
+                <input type="email" id="useremail" ng-model="dataUserGold.email" 
+                       style="text-transform: uppercase;text-align:center; border: 1px solid #FEBB2F; width: 83%; height: 4%; border-radius: 15px;" required/>
+            </div>
+            <div style="position:relative; margin-top:10px;" align="center">
+                <div>MOBILE NUMBER</div>
+                <input type="tel" onkeypress='return event.charCode >= 48 && event.charCode <= 57' 
+                       id="userphonenumber" ng-model="dataUserGold.phone" 
+                       style="text-transform: uppercase;text-align:center; border: 1px solid #FEBB2F; width: 83%; height: 4%; border-radius: 15px;" 
+                       maxlength="15" ng-minlength="8" ng-maxlength="15" required />
+            </div>
+            <div style="position:relative; margin-top:10px;" align="center">
+                <div>ADDRESS</div>
+                <input type="text" id="useraddress" ng-model="dataUserGold.address" 
+                       style="text-transform: uppercase;text-align:center; border: 1px solid #FEBB2F; width: 83%; height: 4%; border-radius: 15px;" 
+                       required />
+            </div>
+            <div style="position:relative; margin-top:10px;" align="center">
+                <div>STATE</div>
+                <select ng-disabled="!dataUserGold.address" class="select" 
+                        ng-model="dataUserGold.prov"
+                        ng-change="changeCityOfProv()"
+                        required >
+                
+                    <option ng-repeat="prov in provs" value="{{prov.prov_id}}">{{prov.prov_name}}</option>
+                </select>
+            </div>
+            <div style="position:relative; margin-top:10px;" align="center">
+                <div>CITY</div>
+                <select ng-disabled="!dataUserGold.prov" class="select" ng-model="dataUserGold.kota" required>
+                    <!--<option ng-repeat="city in getCities(dataUserGold.prov)">{{city}}</option>-->
+                   
+                    <option ng-repeat="city in citiesOfProv" value="{{city}}">{{city}}</option>
+                </select>
+            </div>
+            <div style="position:relative; margin-top:10px;" align="center">
+                <div>ZIP CODE</div>
+                <input type="number" onkeypress='return event.charCode >= 48 && event.charCode <= 57' 
+                       id="userzipcode" ng-model="dataUserGold.zipcode" 
+                       style="text-transform: uppercase; text-align:center; border: 1px solid #FEBB2F; width: 83%; height: 4%; border-radius: 15px;" 
+                       maxlength="5" ng-minlength="4" ng-maxlength="5" required  />
+            </div>
+            <div class="" style="margin-top:20px;">
+                <span class='cancel-button' ng-click="PopupUserGold.close()">Cancel</span>
+                <button class="ok-button" type="submit"  ng-disabled="myForm.$invalid">Next</button>
+            </div>
+    </div>
+            </form>
+
+    <!--<script src="script/country.js"></script>
+    <script src="lib/state/dist/jquery.crs.min"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>-->
+

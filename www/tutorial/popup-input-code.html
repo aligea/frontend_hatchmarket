@@ -1,0 +1,56 @@
+﻿<style>
+    .popup-body{ border-bottom-left-radius:1em;border-bottom-right-radius:1em;font-family:inherit;}
+    div.button { border-radius:5px;}
+    button.ok-button, button.cancel-button{
+        line-height:unset;
+    }
+    
+    button.ok-button[disabled]{
+        opacity:0.6;
+        animation:none;
+    }
+    
+    button.ok-button[disabled]:hover,
+    button.ok-button[disabled]:hover{
+        animation:none;
+        transform:none;
+    }
+    
+    #expandIsland {
+        width: 45%;
+        display: inline-block;
+        padding: 1px 5px;
+        background: #FEBB2F;
+        border-radius: 15px;
+        color: #fff;
+        box-shadow:none;
+        border:none;
+        font-size: 100%;
+    }
+
+    #expandIsland.activated, #cancelExpandIsland.activated {
+        transform: scale(0.9);
+    }
+    
+    #cancelExpandIsland {
+        width: 45%;
+        display: inline-block;
+        padding: 5px;
+        color: #FEBB2F;
+        font-size: 100%;
+    }
+</style>
+<div style="text-align:center;">Please enter eggcode </div>
+<div><br/></div>
+<form name="inputEggCodeForm" ng-submit="onSubmitEggInput()" novalidate>
+    <input type="text" ng-model="data.eggCode" ng-trim="false" ng-change="data.eggCode = data.eggCode.split(' ').join('')" 
+           style="text-transform: uppercase;text-align:center; border: 1px solid #FEBB2F; width: 100%; height: 4%; border-radius: 15px;" maxlength="8" ng-minlength="8" ng-maxlength="8" required>
+
+    <div style="margin-top:20px;">
+        <button class="cancel-button" type="button" id="___cancelExpandIsland" ng-click="closeOpenPopup()" >Later</button>
+        <button class="ok-button" type="submit" id="___expandIsland" ng-disabled="inputEggCodeForm.$invalid">Confirm</button>
+    </div>
+</form>
+<div><br/></div>
+<div>Scan Eggcode</div>
+<div class="" ><img src="asset\img\icons\Scan.png" style="width: 45%"/></div>

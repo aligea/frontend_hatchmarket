@@ -1,0 +1,38 @@
+﻿<style>
+#promo-banner {
+width: 90vw;
+min-height: 50px;
+color: #000;
+
+background-color:#fcf7be;
+text-transform: uppercase;
+border-radius: 1em;
+box-shadow: 0.5em 0.5em 1em #000;
+}
+#promo-list{
+padding-top:5px;
+padding-bottom:5px;
+/*border:1px solid red;*/
+}
+
+#promo-banner img{
+max-width:100%;
+/*border:1px solid blue;*/
+/*box-shadow: 2px 2px 3px #000;*/
+}
+.banner-img{
+/*border:1px solid green;*/
+}
+</style>
+<section id="promo-banner">
+    <div id="promo-list">
+        <div class="banner-img" ng-repeat="obj in data">
+            <img ng-src="{{obj.img}}" ng-click="action(obj.type, obj.param)" />
+        </div>
+    </div>
+    
+    <div style="text-align:center;padding-bottom:10px;">
+        <button ng-click="closeBanner()" class="button button-energized">Ok, Thanks</button>
+    </div>
+    
+</section>

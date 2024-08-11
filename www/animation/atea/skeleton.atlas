@@ -1,0 +1,90 @@
+
+skeleton.png
+size: 964,964
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Air
+  rotate: false
+  xy: 789, 897
+  size: 62, 65
+  orig: 62, 65
+  offset: 0, 0
+  index: -1
+Atea
+  rotate: false
+  xy: 2, 2
+  size: 540, 960
+  orig: 540, 960
+  offset: 0, 0
+  index: -1
+GerakanAir
+  rotate: false
+  xy: 856, 932
+  size: 34, 30
+  orig: 34, 30
+  offset: 0, 0
+  index: -1
+Gunung1
+  rotate: false
+  xy: 682, 863
+  size: 102, 99
+  orig: 102, 99
+  offset: 0, 0
+  index: -1
+Gunung2
+  rotate: false
+  xy: 547, 863
+  size: 130, 99
+  orig: 130, 99
+  offset: 0, 0
+  index: -1
+KepulanAir
+  rotate: false
+  xy: 713, 841
+  size: 54, 17
+  orig: 54, 17
+  offset: 0, 0
+  index: -1
+KepulanAir1
+  rotate: false
+  xy: 789, 875
+  size: 54, 17
+  orig: 54, 17
+  offset: 0, 0
+  index: -1
+KepulanAir2
+  rotate: false
+  xy: 587, 788
+  size: 56, 17
+  orig: 56, 17
+  offset: 0, 0
+  index: -1
+KepulanAir3
+  rotate: true
+  xy: 547, 610
+  size: 57, 17
+  orig: 57, 17
+  offset: 0, 0
+  index: -1
+KepulanAir4
+  rotate: true
+  xy: 547, 553
+  size: 52, 11
+  orig: 52, 11
+  offset: 0, 0
+  index: -1
+Kolam
+  rotate: true
+  xy: 547, 672
+  size: 186, 35
+  orig: 186, 35
+  offset: 0, 0
+  index: -1
+Rainbow
+  rotate: false
+  xy: 587, 810
+  size: 121, 48
+  orig: 153, 94
+  offset: 32, 46
+  index: -1

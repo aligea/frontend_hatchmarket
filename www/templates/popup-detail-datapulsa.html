@@ -1,0 +1,110 @@
+﻿<style>
+    .popup-body {
+        background: rgba(255, 255, 255, 0.5);
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .popup-body .col {
+        padding: 1px;
+        border: 1px solid #FEBB2F;
+        display: inline-block;
+        margin: 1px 2px;
+        border-radius: 10px;
+    }
+
+    /*.rounded-outline {
+        border: 1px solid #FEBB2F;
+        display: inline-block;
+        padding: 1px 5px;
+        border-radius: 15px;
+        width: 35vw;
+        height: 4vh;
+        margin: -9px 0 0;
+    }*/
+
+    .select {
+        text-align:center; 
+        border: 1px solid #FEBB2F; 
+        width: 83%; 
+        height: 4%; 
+        border-radius: 15px; 
+        text-align-last: center; 
+        text-align: center; 
+        -ms-text-align-last: center; 
+        -moz-text-align-last: center; 
+        text-align-last: center;
+        text-transform: uppercase;
+    }
+
+    button.ok-button[disabled]{
+        opacity:0.6;
+        animation:none;
+    }
+    #providerlist{
+        display: block;
+       text-align: center;
+       width:200px;
+       margin:auto;
+    }
+    #providerlist li{
+        display: block;
+        width: 100px;
+        float: left;
+        text-align: left;
+    }
+    #providerlist li input{
+        width: auto;
+    }
+    #providerlist *{
+        font-size:12px;
+    }
+</style>
+<form id="datap" ng-submit="insertRPhone()" name="myForm" novalidate>
+    <div style="position:relative; margin-top:10px;" align="center">
+        <div>
+            <!--
+            <select class="select" ng-model="dataUserPhone.provider" required>
+                <option value="">--- Select Provider ---</option>
+                <option ng-repeat="provider in providers" value="{{provider.id}}">{{provider.provider}}</option>
+            </select> -->
+            
+           
+            <ul id="providerlist">
+                <li ng-repeat="provider in providers" >
+            <label>
+                <input type="radio" ng-model="dataUserPhone.provider" 
+                       ng-value="provider.id" name="provider" />
+                {{provider.provider}}
+            </label></li>
+            </ul>
+            
+            <div style="clear:both"></div>
+        </div>
+    </div>
+    <div style="position:relative; margin-top:10px;" align="center">
+        <div>PHONE NUMBER</div>
+        <input type="tel" 
+               onkeypress='return event.charCode >= 48 && event.charCode <= 57' 
+               name="phonenumber" id="phonenumber" ng-model="dataUserPhone.phone1" 
+               style="text-transform: uppercase;text-align:center; border: 1px solid #FEBB2F; width: 83%; height: 4%; border-radius: 15px;" 
+               maxlength="15" ng-minlength="10" ng-maxlength="15" required  />
+    </div>
+    <div style="position:relative; margin-top:10px;" align="center">
+        <div>RE-ENTER PHONE NUMBER</div>
+        <input type="tel" 
+               onkeypress='return event.charCode >= 48 && event.charCode <= 57' 
+               name="phonenumber2" id="re-phonenumber" ng-model="dataUserPhone.phone2" 
+               style="text-transform: uppercase;text-align:center; border: 1px solid #FEBB2F; width: 83%; height: 4%; border-radius: 15px;" 
+               maxlength="15" ng-minlength="10" ng-maxlength="15" required  />
+    </div>
+    <!--<div>{{copo}}</div>-->
+    <div><span ng-show="dataUserPhone.phone2.length && dataUserPhone.phone1 !== dataUserPhone.phone2">Number doesn't match</span></div>
+
+    <div class="" style="margin-top:20px;">
+        <span class="cancel-button" ng-click="PopupDataPulsa.close()">Cancel</span>
+        <button class="ok-button" type="submit"  ng-disabled="myForm.$invalid || dataUserPhone.phone1 !== dataUserPhone.phone2">Submit</button>
+    </div>
+</form>

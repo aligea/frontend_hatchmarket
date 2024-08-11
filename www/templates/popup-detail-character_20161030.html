@@ -1,0 +1,93 @@
+﻿<style>
+    #inputNicknameForm .input-label{
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        color: #fff;
+        font-size: 12px;
+        padding:unset;
+        margin-top:10px;
+    }
+    #inputNicknameForm input[type=text],
+    #inputNicknameForm select{
+        text-transform: uppercase;margin:0 auto;
+        padding-right:5px;width:200px;text-align:center;
+        border-radius:20px;
+        border:2px solid #fff;
+        background:none;
+        color:#fff;
+        padding-left:20px;
+        text-align:left;
+    }
+    #inputNicknameForm #stageSelect{
+        display: block;
+
+        height: 34px;
+        color: #111;
+        vertical-align: middle;
+        font-size: 14px;
+        line-height: 16px;
+        color:#fff;
+    }
+
+    #inputNicknameForm button{
+        background-color:#f7b721;
+        color:#fff;
+        margin-top:10px;
+    }
+    #inputNicknameForm.onKeyboardShow {
+        position: absolute;
+        top: 25%;
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    button.ok-button[disabled]{
+        opacity:0.6;
+        animation:none;
+    }
+    
+</style>
+<ion-modal-view>
+    <div id="modalChar" class="bg-gradient" style="position: absolute;height:100%;text-align:center;padding-top:10px;">
+        <section class="titleWrapper" style="margin:0;">Well done Hatcher !</section>
+
+        <div style="margin-top:10px;margin-bottom:5px;">{{hatchedChar.name}}</div>
+        <img ng-src="{{hatchedChar.level}}" style="width:auto;height:16px;" />
+        <div style="font-size:12px;">{{hatchedChar.type}}</div>
+
+        <img id="hatchedCharImg" style="width:auto;height:150px;" />
+
+        <div style="text-align:center;margin-bottom:10px;">
+            <div style="">
+                <div style="">{{hatchedChar.code}}</div>
+                <div style="font-size:10px;line-height:12px;">Expired:</div>
+                <div>{{hatchedChar.expiredDate}}</div>
+            </div>
+            <form name="myForm" id="inputNicknameForm" class="" ng-submit="submitUpdateChar()" novalidate>
+
+                <div class="input-label">Set Nickname :</div>
+                <input type="text" placeholder="Nickname" ng-trim="false" ng-change="data.nickname = data.nickname.split(' ').join('')"
+                       id="nicknameInputText" ng-model="data.nickname"  maxlength="10" ng-minlength="1" ng-maxlength="10" required>
+
+
+                <div class="input-label">Select Region :</div>
+                <select id="stageSelect" ng-model="data.stage">
+                    <option ng-repeat="region in availableRegion" ng-value="region.id" ng-selected="selected"> {{region.name}} </option>
+                </select>
+
+                <button class="ok-button" type="submit" ng-click="submitUpdateChar()" ng-disabled="myForm.$invalid">OK</button>
+            </form>
+        </div>
+
+        <div class="socmedIconWrapper">
+            <div style="line-height:1;font-size:12px;margin-bottom:5px;">Lets Spread 'Em</div>
+
+            <img src="asset/img/share/icon_fb.png" class="clickable" ng-click="sharetoFb()" />
+            <img src="asset/img/share/icon_ig.png" class="clickable" ng-click="sharetoIg()" />
+            <img src="asset/img/share/icon_twitter.png" class="clickable" ng-click="sharetoTwit()" />
+            <img src="asset/img/share/icon_wa.png" class="clickable" ng-click="sharetoWa()" />
+            <img src="asset/img/share/icon_other.png" class="clickable" ng-click="shareVia()" />
+        </div>
+    </div>
+</ion-modal-view>

@@ -1,0 +1,52 @@
+<div id="side-chat" ng-controller="ChatCtrl">
+    <table style="width: 100%;">
+        <tr>
+            <td>
+                <div id="chat-wrapper">
+                    <div id="chat-title">Hatcher Chit Chat</div>
+                    <div class="list" style="margin-bottom: 0;" id="chat-form">
+                        <form name="inputChatForm" ng-submit="submitChat()" novalidate>
+                            <div class="item item-input-inset">
+                                <label class="item-input-wrapper">
+                                    <input type="text" ng-model="form.text"
+                                           placeholder="Enter a message..." style="font-size: 10px;"
+                                           maxlength="80" ng-minlength="2" ng-maxlength="80" required />
+                                </label>
+                                <button type="submit"
+                                        class="button button-small  button-icon icon ion-ios-paperplane-outline"
+                                        style="padding:0;" ng-disabled="inputChatForm.$invalid" ></button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <ion-scroll scroll="y" >
+                        <div id="chat-history" style="height: 500px;">
+                            <div class="chatRow" ng-repeat="obj in chat.history| orderBy:'-id'">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="cuser balanced" ng-if="obj.pid == rtc.pid">{{obj.cuser}} : </div>
+                                        <div class="cuser assertive" ng-if="obj.pid == 0">{{obj.cuser}} : </div>
+                                        <div class="cuser positive" ng-if="obj.pid != 0 && obj.pid != rtc.pid">{{obj.cuser}} : </div>
+                                    </div>
+                                    <div class="col"><div class="cdate">{{obj.cdate}}</div></div>
+                                </div>
+                                <div class="ctext" compile="obj.ctext" > </div>
+                            </div>
+                            
+                        </div>
+                    </ion-scroll>
+                </div>
+            </td>
+            <td style="vertical-align: middle;">
+                <div id="chatButton" 
+                     class="btnClick  clickable" ng-click="sliding.toggle()">
+                    <img id="chat-icon" src="asset/img/icons/chat-icon.png" />
+                    <img id="chat-notif" src="asset/img/icons/chat-notif.png" ng-show="chat.isHaveNewMessage" />
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+
+</div>

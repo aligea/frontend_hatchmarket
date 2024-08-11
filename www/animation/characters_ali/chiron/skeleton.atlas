@@ -1,0 +1,174 @@
+
+skeleton.png
+size: 1054,1054
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Eyes1
+  rotate: true
+  xy: 2, 7
+  size: 15, 26
+  orig: 15, 26
+  offset: 0, 0
+  index: -1
+Eyes2
+  rotate: false
+  xy: 2, 27
+  size: 27, 15
+  orig: 27, 15
+  offset: 0, 0
+  index: -1
+FrontBody1
+  rotate: false
+  xy: 2, 484
+  size: 396, 568
+  orig: 396, 569
+  offset: 0, 1
+  index: -1
+FrontBody2
+  rotate: false
+  xy: 403, 609
+  size: 433, 443
+  orig: 433, 443
+  offset: 0, 0
+  index: -1
+FrontLeft1
+  rotate: true
+  xy: 403, 486
+  size: 118, 257
+  orig: 118, 257
+  offset: 0, 0
+  index: -1
+FrontLeft2
+  rotate: false
+  xy: 838, 256
+  size: 127, 225
+  orig: 127, 225
+  offset: 0, 0
+  index: -1
+FrontLeft3
+  rotate: false
+  xy: 841, 689
+  size: 147, 238
+  orig: 147, 238
+  offset: 0, 0
+  index: -1
+FrontRight1
+  rotate: false
+  xy: 380, 26
+  size: 122, 218
+  orig: 122, 219
+  offset: 0, 0
+  index: -1
+FrontRight2
+  rotate: true
+  xy: 2, 47
+  size: 161, 234
+  orig: 161, 234
+  offset: 0, 0
+  index: -1
+FrontRight3
+  rotate: true
+  xy: 874, 514
+  size: 97, 158
+  orig: 97, 158
+  offset: 0, 0
+  index: -1
+FrontRight4
+  rotate: false
+  xy: 897, 31
+  size: 106, 220
+  orig: 106, 220
+  offset: 0, 0
+  index: -1
+RearBody
+  rotate: false
+  xy: 2, 213
+  size: 306, 266
+  orig: 306, 266
+  offset: 0, 0
+  index: -1
+RearLeft1
+  rotate: false
+  xy: 313, 249
+  size: 119, 230
+  orig: 119, 231
+  offset: 0, 0
+  index: -1
+RearLeft2
+  rotate: false
+  xy: 437, 251
+  size: 132, 230
+  orig: 132, 230
+  offset: 0, 0
+  index: -1
+RearLeft3
+  rotate: false
+  xy: 636, 18
+  size: 110, 228
+  orig: 110, 228
+  offset: 0, 0
+  index: -1
+RearLeft4
+  rotate: false
+  xy: 698, 261
+  size: 135, 220
+  orig: 136, 220
+  offset: 1, 0
+  index: -1
+RearRight1
+  rotate: false
+  xy: 574, 251
+  size: 119, 230
+  orig: 119, 230
+  offset: 0, 0
+  index: -1
+RearRight2
+  rotate: true
+  xy: 665, 486
+  size: 118, 204
+  orig: 118, 204
+  offset: 0, 0
+  index: -1
+RearRight3
+  rotate: false
+  xy: 241, 27
+  size: 134, 181
+  orig: 134, 181
+  offset: 0, 0
+  index: -1
+RearRight4
+  rotate: true
+  xy: 841, 932
+  size: 120, 211
+  orig: 121, 211
+  offset: 1, 0
+  index: -1
+Tail1
+  rotate: false
+  xy: 751, 63
+  size: 141, 188
+  orig: 141, 188
+  offset: 0, 0
+  index: -1
+Tail2
+  rotate: true
+  xy: 507, 21
+  size: 225, 124
+  orig: 225, 125
+  offset: 0, 0
+  index: -1
+Tounge1
+  rotate: false
+  xy: 841, 616
+  size: 145, 68
+  orig: 146, 68
+  offset: 0, 0
+  index: -1
+Tounge2
+  rotate: true
+  xy: 970, 364
+  size: 145, 68
+  orig: 146, 68
+  offset: 0, 0
+  index: -1

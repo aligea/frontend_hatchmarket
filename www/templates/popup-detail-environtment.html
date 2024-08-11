@@ -1,0 +1,64 @@
+<style>
+.popup-body {
+background:rgba(255, 255, 255, 0.5);
+border-bottom-left-radius: 1em;
+border-bottom-right-radius: 1em;
+font-size:10px;
+padding:5px;
+}
+
+#expandIsland.activated, #cancelExpandIsland.activated{
+transform:scale(0.9);
+}
+
+.col .icon-coin {
+width: 10px;
+height: 10px;
+text-align: center;
+background: url('asset/img/icons/Coin.png') no-repeat top left;
+background-size: cover;
+display:inline-block;
+}
+
+.popup-body .col {
+padding:1px;
+border:1px solid #FEBB2F;
+display:inline-block;
+margin:1px 2px;
+border-radius:10px;
+line-height:10px;
+}
+
+.rounded-outline {
+border:1px solid #FEBB2F;
+display:inline-block;
+padding:1px 5px;
+border-radius:10px;
+line-height:10px;
+width:unset;
+height:unset;
+}
+
+</style>
+
+<div class="" style="align-content:center;text-align:center;">
+    <div style="width:100px;height:100px;margin-left:auto;margin-right:auto;">
+        <img ng-src="{{island.infoImage}}" style="width:auto; height:100px" />
+    </div>
+</div>
+<div style="position:relative;">
+    <div>Population Added</div>
+    <span class="rounded-outline">{{island.population.added}} Chars</span>
+    <div>Resources Available</div>
+    <div class="row" style="padding:unset;">
+        <div class="col">Wood {{island.resources.wood.info}} <span class="icon-coin"></span></div>
+        <div class="col">Stone {{island.resources.stone.info}} <span class="icon-coin"></span></div>
+        <div class="col">Gold {{island.resources.gold.info}} <span class="icon-coin"></span></div>
+    </div>
+    <div>{{island.info}}</div>
+</div>
+
+<div class="" style="margin-top:10px;">
+    <span class="cancel-button" ng-click="myPopup.close()">try later</span>
+    <span class="ok-button" on-tap="PurchasingIsland({{island.id}})">Unlock {{island.price.value}} <i class="icon-diamond"></i></span>
+</div>

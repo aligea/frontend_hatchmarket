@@ -1,0 +1,86 @@
+﻿<style>
+    .popup-body {
+        background: rgba(255, 255, 255, 0.5);
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    #expandIsland {
+        width: 30vw;
+        display: inline-block;
+        padding: 1px 5px;
+        background: #FEBB2F;
+        border-radius: 15px;
+        color: #fff;
+    }
+
+        #expandIsland.activated, #cancelExpandIsland.activated {
+            transform: scale(0.9);
+        }
+
+    #cancelExpandIsland {
+        width: 30vw;
+        display: inline-block;
+        padding: 5px;
+        color: #FEBB2F;
+    }
+
+    .popup-body .col {
+        padding: 1px;
+        border: 1px solid #FEBB2F;
+        display: inline-block;
+        margin: 1px 2px;
+        border-radius: 10px;
+    }
+
+    .select {
+        text-align: center;
+        border: 1px solid #FEBB2F;
+        width: 55vw;
+        height: 4vh;
+        border-radius: 15px;
+        text-align-last: center;
+        text-align: center;
+        -ms-text-align-last: center;
+        -moz-text-align-last: center;
+        text-align-last: center;
+        text-transform: uppercase;
+    }
+</style>
+<body>
+        <div style="position:relative; margin-top:10px;" align="center">
+            <div>FULL NAME</div>
+            <div>{{dataUserGold.name}}</div>
+        </div>
+        <div style="position:relative; margin-top:10px;" align="center">
+            <div>EMAIL</div>
+            <div>{{dataUserGold.email}}</div>
+        </div>
+        <div style="position:relative; margin-top:10px;" align="center">
+            <div>MOBILE NUMBER</div>
+            <div>{{dataUserGold.phone}}</div>
+        </div>
+        <div style="position:relative; margin-top:10px;" align="center">
+            <div>ADDRESS</div>
+            <div>{{dataUserGold.address}}</div>
+        </div>
+        <div style="position:relative; margin-top:10px;" align="center">
+            <div>STATE</div>
+            <div style="font-size: 12px;">{{getProvName(dataUserGold.prov)}}</div>
+        </div>
+        <div style="position:relative; margin-top:10px;" align="center">
+            <div>CITY</div>
+            <div>{{dataUserGold.kota}}</div>
+        </div>
+        <div style="position:relative; margin-top:10px;" align="center">
+            <div>ZIP CODE</div>
+            <div>{{dataUserGold.zipcode}}</div>
+        </div>
+        <div class="" style="margin-top:20px;">
+            <span class='cancel-button' ng-click="ConfirmDataGold.close()">reset</span>
+            <button ng-click="insertRGold()" class="ok-button">Confirm</button>
+            <!--<button ng-click="showPopupSuccessGold()" id="expandIsland">Confirm</button>-->
+        </div>
+</body>

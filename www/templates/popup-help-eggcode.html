@@ -1,0 +1,81 @@
+<style>
+    .popup-body {
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        font-family: inherit;
+    }
+
+    div.button {
+        border-radius: 5px;
+    }
+
+    button.ok-button, button.cancel-button {
+        line-height: unset;
+    }
+
+        button.ok-button[disabled] {
+            opacity: 0.6;
+            animation: none;
+        }
+
+            button.ok-button[disabled]:hover,
+            button.ok-button[disabled]:hover {
+                animation: none;
+                transform: none;
+            }
+
+    .title {
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 11px;
+    }
+
+    .boxes {
+        float: left;
+        width: 95px;
+        margin-left: 4%;
+    }
+
+    .boxes2 {
+        float: left;
+        width: 95px;
+        margin-left: 10%;
+    }
+
+    .popup-body img {
+        height: auto;
+        width: 96%;
+    }
+</style>
+<div style="font-size: 9px; line-height: 2;">
+    <div>
+        <div class="boxes">
+            Golden Eggcode
+            <div style="font-size: 6px">
+                Obtained through hatching with any incubators except the mini ones.
+            </div>
+        </div>
+        <div class="boxes2">
+            Silver Eggcode
+            <div style="font-size: 6px">Obtained through hatching with mini incubator.</div>
+        </div>
+        <div><img src="asset/img/icons/Golden-Silver.png"></div>
+        <div class="boxes">
+            You will receive<br /> 
+            
+            <span style="line-height:1;font-size:8px;">50 coins</span>
+            <div style="font-size: 6px">
+                if <br />
+                Your golden eggcode is hatched by other hatchers. Using any incubators except the mini ones.
+            </div>
+        </div>
+        <div class="boxes2">
+            You will receive<br /> 
+            <span style="line-height:1;font-size:8px;">A stone incubator</span>
+            <div style="font-size: 6px">
+                if <br />Your silver eggcode is hatched by other 10 hatchers(multiple applied). Using any incubator except the mini ones.
+            </div>
+        </div>
+        <div style="clear: both; color: #F7B81F; font-size: 9px"><button class="button button-outline button-energized" ng-click="egg.close()">I got it</button></div>
+    </div>
+    </div>

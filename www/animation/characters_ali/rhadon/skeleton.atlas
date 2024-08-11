@@ -1,0 +1,180 @@
+
+skeleton.png
+size: 1999,1999
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 1044, 564
+  size: 512, 391
+  orig: 512, 391
+  offset: 0, 0
+  index: -1
+FrontLeft1
+  rotate: false
+  xy: 2, 126
+  size: 274, 284
+  orig: 274, 284
+  offset: 0, 0
+  index: -1
+FrontLeft2
+  rotate: false
+  xy: 931, 113
+  size: 288, 199
+  orig: 288, 199
+  offset: 0, 0
+  index: -1
+FrontLeft3
+  rotate: false
+  xy: 1342, 306
+  size: 278, 253
+  orig: 278, 253
+  offset: 0, 0
+  index: -1
+FrontRight1
+  rotate: true
+  xy: 1512, 105
+  size: 195, 255
+  orig: 195, 255
+  offset: 0, 0
+  index: -1
+FrontRight2
+  rotate: false
+  xy: 281, 196
+  size: 336, 214
+  orig: 336, 214
+  offset: 0, 0
+  index: -1
+FrontRight3
+  rotate: false
+  xy: 622, 172
+  size: 304, 238
+  orig: 304, 239
+  offset: 0, 1
+  index: -1
+Head1
+  rotate: true
+  xy: 1044, 317
+  size: 242, 293
+  orig: 242, 293
+  offset: 0, 0
+  index: -1
+Head2
+  rotate: true
+  xy: 1625, 305
+  size: 283, 232
+  orig: 283, 232
+  offset: 0, 0
+  index: -1
+Head3
+  rotate: true
+  xy: 1573, 840
+  size: 242, 293
+  orig: 242, 293
+  offset: 0, 0
+  index: -1
+Head4
+  rotate: false
+  xy: 1224, 69
+  size: 283, 232
+  orig: 283, 232
+  offset: 0, 0
+  index: -1
+Head5
+  rotate: true
+  xy: 1561, 593
+  size: 242, 293
+  orig: 242, 293
+  offset: 0, 0
+  index: -1
+RearLeft1
+  rotate: false
+  xy: 931, 329
+  size: 96, 81
+  orig: 96, 82
+  offset: 0, 0
+  index: -1
+RearLeft2
+  rotate: false
+  xy: 1772, 125
+  size: 137, 175
+  orig: 137, 175
+  offset: 0, 0
+  index: -1
+RearLeft3
+  rotate: false
+  xy: 1871, 905
+  size: 103, 177
+  orig: 103, 177
+  offset: 0, 0
+  index: -1
+RearRight1
+  rotate: true
+  xy: 1512, 2
+  size: 98, 77
+  orig: 98, 77
+  offset: 0, 0
+  index: -1
+RearRight2
+  rotate: true
+  xy: 281, 54
+  size: 137, 175
+  orig: 137, 175
+  offset: 0, 0
+  index: -1
+RearRight3
+  rotate: true
+  xy: 461, 21
+  size: 170, 140
+  orig: 170, 140
+  offset: 0, 0
+  index: -1
+Smoke_1
+  rotate: true
+  xy: 1573, 1087
+  size: 910, 419
+  orig: 912, 419
+  offset: 1, 0
+  index: -1
+Smoke_2
+  rotate: false
+  xy: 2, 1473
+  size: 1037, 524
+  orig: 1037, 524
+  offset: 0, 0
+  index: -1
+Smoke_3
+  rotate: false
+  xy: 2, 944
+  size: 1037, 524
+  orig: 1037, 524
+  offset: 0, 0
+  index: -1
+Smoke_4
+  rotate: true
+  xy: 1044, 960
+  size: 1037, 524
+  orig: 1037, 524
+  offset: 0, 0
+  index: -1
+Smoke_5
+  rotate: false
+  xy: 2, 415
+  size: 1037, 524
+  orig: 1037, 524
+  offset: 0, 0
+  index: -1
+
+skeleton2.png
+size: 1041,1041
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Smoke_6
+  rotate: false
+  xy: 2, 515
+  size: 1037, 524
+  orig: 1037, 524
+  offset: 0, 0
+  index: -1

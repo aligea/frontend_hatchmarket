@@ -1,0 +1,89 @@
+
+
+#side-chat {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    color: #000;
+    font-size: 10px;
+    z-index: 11;
+    transition: left 1s;
+    opacity: 0;
+}
+#chat-form .item{
+    margin: 0;
+}
+#chat-title{
+    text-align: center;
+    font-size: larger;
+    padding: 5px;
+}
+#side-chat .list{
+    margin-bottom: 0;
+}
+#chat-wrapper{
+    background-color: rgba(255, 2555, 255,0.9);
+    left: -1920px;
+}
+#chat-history {
+    padding:10.66667px;
+    font-size: smaller;
+    line-height: 1em;
+}
+#chat-history li{
+    margin: 10px 0;
+}
+#chat-history .cuser{
+font-weight: bolder;
+}
+#chat-history .cdate{
+    text-align: right;
+}
+.chatRow{
+    margin-bottom: 5px;
+    width: 100%;
+}
+.chatRow .row{
+    padding-left: 0;
+    padding-bottom: 0;
+}
+.chatRow .row .col{
+    padding-left: 0;
+}
+.ctext{
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 200px;
+}
+#chat-form input{
+    width: 100%;
+}
+span.eggcode{
+    font-size: larger;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    /*text-decoration: underline;*/
+}
+#chatButton {
+    width: 10vw;
+    height: auto;
+    position: absolute;
+    /*
+    text-align: center;
+    background: url('../img/icons/menu_samping.png') no-repeat top left;
+    background-size: cover;
+    */
+}
+#chatButton img{
+    max-width: 100%;
+}
+#chatButton #chat-notif{
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 3vw;
+}
+

@@ -1,0 +1,226 @@
+﻿<style>
+    .popup-body {
+        background: rgba(255, 255, 255, 0.5);
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        font-size: 12px;
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    .block-info {
+        border: 1px solid #ac8350;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px 10px;
+        line-height: 10px;
+        min-height: 40px;
+        text-align: left;
+        font-size: 10px;
+    }
+    .block-info.clickable{
+        color:#fff;
+        background-color: #c8780a;
+    }
+
+    __.popup-body img {
+        height: auto;
+        width: 11%;
+    }
+
+    .charAction {
+        width: 90%;
+        height:100%;
+        list-style-type: none;
+        margin: auto;
+        padding: 0;
+        overflow: hidden;
+        /*border: 1px solid #AC8350;*/
+        display: block;
+        /*border-radius: 2em;*/
+        color: #ac8350;
+        text-align: center;
+        background:#000;
+    }
+
+        .charAction li {
+            float: left;
+            padding-left: 9%;
+            padding-right: 9%;
+            margin: 0;
+            display: inline-block;
+            border: 1px solid #AC8350;
+            border-collapse: separate;
+            border-left: none;
+        }
+
+            .charAction li:first-child {
+                border: 1px solid #AC8350;
+                border-bottom-left-radius: 2em;
+                border-top-left-radius: 2em;
+            }
+
+            .charAction li:last-child {
+                border-bottom-right-radius: 2em;
+                border-top-right-radius: 2em;
+            }
+
+        .charAction .activeList {
+            background-color: #AC8350;
+            color: #fff;
+        }
+
+    #actionBtn {
+        display: inline-block;
+        padding-left: 5%;
+        padding-right: 5%;
+        border-radius: 15px;
+        margin-right: 5%;
+        margin-left: 5%;
+        width: 35%;
+        font-size: 8px;
+    }
+
+    .activeAction {
+        background-color: #F7B81F;
+    }
+
+    .inactiveAction {
+        background-color: #C0C0C0;
+    }
+
+    .icon-life {
+        width: 21px;
+        height: 21px;
+        display: inline-block;
+        background: url(asset/img/icons/Icon_Life.png) no-repeat;
+        background-size: cover;
+        vertical-align: -15px;
+    }
+
+    .icon-target {
+        width: 21px;
+        height: 21px;
+        display: inline-block;
+        background: url(asset/img/icons/Icon_Target.png) no-repeat;
+        background-size: cover;
+        vertical-align: middle;
+    }
+
+    .icon-status {
+        width: 21px;
+        height: 21px;
+        display: inline-block;
+        background: url(asset/img/icons/Icon_Status.png) no-repeat;
+        background-size: cover;
+        vertical-align: -15px;
+    }
+
+    .icon-speed {
+        width: 21px;
+        height: 21px;
+        display: inline-block;
+        background: url(asset/img/icons/Icon_Speed.png) no-repeat;
+        background-size: cover;
+        vertical-align: middle;
+    }
+</style>
+
+<div class="row">
+    <div class="col" style="text-align:center;" id="selectedCharAnimatonWrapper">
+        <!--<canvas width="100" height="100" style="border:1px solid #000;"></canvas>-->
+        <div>{{selectedChar.code}}</div>
+        <img ng-src="{{selectedChar.infoImage}}" />
+    </div>
+    <div class="col">
+        <table class="activeCharInfo">
+            <tr>
+                <td><i class="icon-life"></i></td>
+                <td ng-bind-html="selectedChar.lifespanCountdownText"><div>2 day</div><div>00:00:00</div></td>
+
+            </tr>
+            <tr>
+                <td><i class="icon-target"></i></td>
+                <td>{{selectedChar.target}}</td>
+            </tr>
+            <tr>
+                <td><i class="icon-status"></i></td>
+                <td>
+                    <div>{{selectedChar.jobName}}</div>
+                    <div ng-bind-html="selectedChar.jobCountdown">&nbsp;</div>
+                </td>
+            </tr>
+            <tr>
+                <td><i class="icon-speed"></i></td>
+                <td>{{selectedChar.speed}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<section>
+    <div style="margin:0 5px;padding:0 10px;line-height:1px;text-align:left;">Speciality :</div>
+    <div ng-repeat="spc in spcData" class="{{spc.tagClass}}" is-available="{{spc.isAvailable}}" 
+         ng-click="claimSpeciality(selectedChar.code, spc.specialityName, spc.isAvailable)">
+        <p>
+            {{spc.info}}
+             
+            <strong ng-show="spc.isAvailable">Click to use it.</strong>
+        </p>
+    </div>
+   
+</section>
+
+<div class="socmedIconWrapper">
+    <div style="line-height:1;font-size:12px;margin-bottom:5px;">Spread Egg Code</div>
+    <img src="asset/img/share/icon_fb.png" class="clickable" ng-click="shareTo('facebook')" />
+    <img src="asset/img/share/icon_ig.png" class="clickable" ng-click="shareTo('instagram')" />
+    <img src="asset/img/share/icon_twitter.png" class="clickable" ng-click="shareTo('twitter')" />
+    <img src="asset/img/share/icon_path.png" class="clickable" ng-click="shareTo('path')" />
+    <img src="asset/img/share/icon_wa.png" class="clickable" ng-click="shareTo('whatsapp')" />
+    <img src="asset/img/share/icon_other.png" class="clickable" ng-click="shareTo('default')" />
+</div>
+
+<style>
+    #availableActionCharTarget .col{
+     border: 1px solid #AC8350;
+     border-left:none;
+     padding:unset;
+    }
+    #availableActionCharTarget .col:first-child{
+        border-left: 1px solid #AC8350;
+        border-top-left-radius:2em;
+        border-bottom-left-radius:2em;
+    }
+    #availableActionCharTarget .col:last-child{
+        border-right: 1px solid #AC8350;
+        border-top-right-radius:2em;
+        border-bottom-right-radius:2em;
+    }
+    #availableActionCharTarget .activeTarget{
+         background-color: #AC8350;
+            color: #fff;
+    }
+     button.ok-button[disabled]{
+        background-color: #C0C0C0;
+    }
+</style>
+<div class="row" id="availableActionCharTarget" ng-show="selectedChar.actionTarget.length > 1">
+    <div 
+         ng-repeat="target in selectedChar.actionTarget" 
+         ng-click="changeTargetChar(target.name)"
+         class="col {{target.isActiveTarget}}" 
+         value="{{target.name}}" >{{target.name}}</div>
+</div>
+
+<button class="ok-button activeAction" 
+     style="margin:5px;font-size:12px;line-height:1;"
+     ng-repeat="ability in selectedChar.actionAbility" 
+        ng-click="startFarming(ability.type, selectedChar.id)"
+        ng-disabled="{{!ability.isAvailable}}" >{{ability.name}}</button>
+
+<div class="" style="margin-top:5px;text-align:center;font-size:10px;">
+    <span class="cancel-button" ng-click="thisPopup.close()">CLOSE</span>
+    <!--<span class="ok-button" ng-click="thisPopup.close()">{{selectedChar.ability}}</span>-->
+</div>
+

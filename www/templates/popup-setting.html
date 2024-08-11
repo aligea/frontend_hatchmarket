@@ -1,0 +1,68 @@
+<style>
+    .popup-body {
+        background: rgba(255, 255, 255, 0.5);
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    #inputusername {
+        width: 90%;
+        background-image: url(asset/img/icons/Edit_Username.png);
+        background-position: 100%;
+        background-repeat: no-repeat;
+        background-size: 16%;
+        border: 1px solid rgb(254, 187, 47);
+        display: block;
+        padding-left: 10px;
+        margin: auto;
+        border-radius: 10px;
+        text-transform: uppercase;
+        text-align: left;
+    }
+
+    button.ok-button[disabled]{
+        opacity:0.6;
+        animation:none;
+    }
+    
+    button.ok-button[disabled]:hover,
+    button.ok-button[disabled]:hover{
+        animation:none;
+        transform:none;
+    }
+</style>
+<form name="settingForm" ng-submit="saveSetting()" novalidate>
+    <div>
+        <section>
+            <div>Username :</div>
+            <div>
+                <input type="text" id="inputusername"
+                       ng-model="formdata.username" maxlength="12" ng-minlength="5" ng-maxlength="12" required />
+            </div>
+        </section>
+
+        <section style="margin-top:20px;">
+            <div class="row">
+                <div class="col">
+                    <div>Music</div>
+                    <div><img ng-src="{{isMusicOn?imageMusic1:imageMusic2}}" style="max-width:75px;" on-tap="musicChange()" /></div>
+                </div>
+                <div class="col">
+                    <div>&nbsp;</div>
+                    <button type="button" class="button button-energized" ng-click="openTutorialPopup()">Tutorial</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <div>Version: {{version}}</div>
+
+    <div class="" style="margin-top:10px;margin-bottom:10px;">
+        <!--<span class="cancel-button" ng-click="closeSetting()">Close</span>-->
+        <!--<button class="ok-button" type="submit" ng-disabled="settingForm.$invalid">Save</button>-->
+        <button class="button button-clear button-energized" ng-click="closeSetting()">Close</button>
+        <button class="button button-energized" type="submit" ng-disabled="settingForm.$invalid">Save</button>
+    </div>
+</form>

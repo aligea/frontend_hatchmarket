@@ -1,0 +1,129 @@
+<style>
+.popup-body {
+background: rgba(255, 255, 255, 0.5);
+border-bottom-left-radius: 1em;
+border-bottom-right-radius: 1em;
+font-size: 12px;
+padding: 5px;
+}
+
+
+.col .icon-coin {
+width: 10px;
+height: 10px;
+text-align: center;
+background: url('asset/img/icons/Coin.png') no-repeat top left;
+background-size: cover;
+display: inline-block;
+}
+
+.icon-diamond {
+width: 10px;
+height: 10px;
+text-align: center;
+background: url('asset/img/icons/Diamond.png') no-repeat top left;
+background-size: cover;
+display: inline-block;
+}
+
+.outline-rounded{
+border: 1px solid #FEBB2F;
+display: block;
+border-radius: 15px;
+padding:5px;
+line-height:1;
+font-size:12px;
+}
+
+
+.rounded-outlineChar {
+border: 1px solid #FEBB2F;
+display: block;
+padding:5px;
+border-radius: 15px;
+background: url('asset/img/icons/IconChar.png') no-repeat;
+background-position: 3% 48%;
+background-size: 15px 15px;
+padding-left:15px;
+font-size:12px;
+line-height:1;
+}
+
+.rounded-outlineTime {
+border: 1px solid #FEBB2F;
+display: block;
+border-radius: 15px;
+background: url('asset/img/icons/IconTime.png') no-repeat;
+background-position: 3% 48%;
+background-size: 15px 15px;
+padding:5px;
+padding-left:15px;
+line-height:1;
+font-size:12px;
+}
+
+#table-popup-layout {
+width:100%;
+}
+#table-popup-layout tr td{
+vertical-align:bottom;
+padding:3px;
+text-align:center;
+}
+#cannotuse{
+display: inline-flex;
+padding: 5px 15px;
+background: rgba(254, 187, 47, 0.6);
+border-radius: 10px;
+color: #fff;
+line-height: 10px;
+}
+#canuse{
+padding: 5px 15px;
+}
+</style> 
+
+<div class="" style="align-content:center;text-align:center;">
+    <div style="width:130px;height:130px;margin-left:auto;margin-right:auto; margin-top:10px;">
+        <img ng-src="{{activeIncubator.image_Source}}" style="width:auto; height:130px" />
+    </div>
+</div>
+
+<table cellpadding="2" cellspacing="5" border="0" id="table-popup-layout">
+    <tr>
+        <td width="60%">
+            <div>CHARACTER</div>
+            <div class="rounded-outlineChar">{{activeIncubator.characterPosibility}}</div>
+        </td>
+        <td>
+            <div>AMOUNT</div>
+            <div class="outline-rounded">{{activeIncubator.playerHave}}</div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div>TIME</div>
+            <div class="rounded-outlineTime">{{activeIncubator.durationDetails}}</div>
+        </td>
+        <td>
+            <div id="cannotuse"  ng-show="!isCanHatching">USE IT !</div>
+            <div id="canuse" class="ok-button" style="display: inline-block;" ng-show="isCanHatching" ng-click="onHatchingEgg();">USE IT !</div>
+        </td>
+    </tr>
+</table>
+<div>
+
+
+</div>
+
+<div class="" style="margin-top:20px;text-align:center;font-size:12px;">
+    <span class="cancel-button" >TRY LATER</span>
+    <span class="ok-button" >PURCHASE {{activeIncubator.priceInDiamond}}  <i class="icon-diamond"> </i></span>
+</div>
+
+<!-- 
+<div style="text-align:center;padding:5px" ng-show="isCanHatching">
+   <span style="display:inline-block;background-color:#FEBB2F;padding:10px;margin:auto;border-radius:20px;box-shadow:1px 1px #fff inset;" class="clickable" ng-click="onHatchingEgg();">Use this to hatch the egg</span>
+   </div>
+</div>
+-->

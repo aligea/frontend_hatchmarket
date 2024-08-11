@@ -1,0 +1,111 @@
+
+skeleton.png
+size: 835,835
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Back
+  rotate: false
+  xy: 435, 507
+  size: 378, 326
+  orig: 378, 326
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 2, 306
+  size: 370, 234
+  orig: 372, 234
+  offset: 2, 0
+  index: -1
+Ear
+  rotate: true
+  xy: 377, 442
+  size: 98, 51
+  orig: 98, 51
+  offset: 0, 0
+  index: -1
+Face1
+  rotate: true
+  xy: 348, 4
+  size: 297, 180
+  orig: 297, 180
+  offset: 0, 0
+  index: -1
+Face2
+  rotate: false
+  xy: 533, 157
+  size: 283, 171
+  orig: 284, 171
+  offset: 1, 0
+  index: -1
+Face3
+  rotate: false
+  xy: 533, 333
+  size: 297, 169
+  orig: 297, 169
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 2, 4
+  size: 341, 297
+  orig: 341, 297
+  offset: 0, 0
+  index: -1
+Leaf
+  rotate: false
+  xy: 728, 116
+  size: 72, 36
+  orig: 72, 36
+  offset: 0, 0
+  index: -1
+LeftFront
+  rotate: false
+  xy: 533, 8
+  size: 115, 144
+  orig: 115, 144
+  offset: 0, 0
+  index: -1
+LeftRear
+  rotate: false
+  xy: 653, 35
+  size: 70, 117
+  orig: 70, 118
+  offset: 0, 0
+  index: -1
+MoveFX
+  rotate: false
+  xy: 2, 545
+  size: 428, 288
+  orig: 428, 288
+  offset: 0, 0
+  index: -1
+RightFront
+  rotate: false
+  xy: 377, 308
+  size: 117, 129
+  orig: 117, 129
+  offset: 0, 0
+  index: -1
+RightRear
+  rotate: true
+  xy: 433, 446
+  size: 56, 64
+  orig: 56, 64
+  offset: 0, 0
+  index: -1
+Seed
+  rotate: false
+  xy: 728, 71
+  size: 64, 40
+  orig: 64, 40
+  offset: 0, 0
+  index: -1
+Tail
+  rotate: false
+  xy: 797, 77
+  size: 36, 34
+  orig: 36, 34
+  offset: 0, 0
+  index: -1

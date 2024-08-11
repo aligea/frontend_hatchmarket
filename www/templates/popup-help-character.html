@@ -1,0 +1,77 @@
+﻿<style>
+    .popup-body {
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        font-family: inherit;
+    }
+
+    div.button {
+        border-radius: 5px;
+    }
+
+    button.ok-button, button.cancel-button {
+        line-height: unset;
+    }
+
+        button.ok-button[disabled] {
+            opacity: 0.6;
+            animation: none;
+        }
+
+            button.ok-button[disabled]:hover,
+            button.ok-button[disabled]:hover {
+                animation: none;
+                transform: none;
+            }
+
+    .title {
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 9px;
+    }
+</style>
+<div style="font-size: 7px; line-height: 2">
+    <div style="text-align: center;" class="title">LIFESPAN</div>
+    <div style="text-align: justify;">
+        MONSTERS' AVERAGE LENGTH OF LIFE. YOU CAN ONLY CONTROL AND
+        INTERACT WITH YOUR MONSTERS WHEN THEY ARE ACTIVE AND ALIVE.
+        PLEASE TAKE CARE OF YOUR MONSTERS BY FEEDING THEM ITEMS
+        FOUND IN THE SHOP.
+    </div>
+    <div style="text-align: center;" class="title">TARGET</div>
+    <div style="text-align: justify;">
+        A COLLECTION OF ITEMS TO BE TACKLED IN ORDER FOR YOU TO EARN
+        COINS.THERE ARE 3 TYPES OF TARGET:
+        WOOD, STONE AND GOLD.
+        EACH OF THESE TARGET PRODUCE DIFFERENT AMOUNT OF COINS AT
+        DIFFERENT REGIONS.
+    </div>
+    <div style="text-align: center;" class="title">ABILITY</div>
+    <div style="text-align: justify;">
+        EVERY MONSTERS HAVE DIFFERENT ABILITIES. THEY ARE:
+        PLANTING, LOGGING, EXPLORING, AND MINING.
+        PLANTING AND LOGGING :
+        IS ONLY FOR MONSTERS WHOSE TARGET IS WOOD, WHILE
+        EXPLORING AND MINING :
+        IS ONLY FOR THOSE WHOSE TARGETS ARE STONE OR GOLD. OF
+        COURSE, THERE ARE RARE FEW THAT HAVE SEVERAL ABILITIES AND
+        TARGETS.
+    </div>
+    <div style="text-align: center;" class="title">SPEED</div>
+    <div style="text-align: justify;">
+        THE PACE OF THE MONSTERS' ACTION. THERE ARE 3 RANGE OF
+        SPEED :
+        SLOW (4 HOURS), MEDIUM (2 HOURS) AND RAPID (1 HOUR).
+    </div>
+    <div style="text-align: center;" class="title">SPECIALITY</div>
+    <div style="text-align: justify;">
+        Speciality monsters have different specialities,
+        some will earned you bonus items while others coins or diamonds. Increase your
+        monsters' lifespan to get the extra benefit gained only after certain number of
+        eggs has been hatched by other hatchers
+    </div>
+
+    <div style="color: #F7B81F;  font-size: 9px">
+        <button class="button button-outline button-energized" ng-click="char.close()">I got it</button>
+    </div>
+</div>

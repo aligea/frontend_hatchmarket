@@ -1,0 +1,47 @@
+﻿<style>
+    .popup-body {
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        font-family: inherit;
+    }
+
+    div.button {
+        border-radius: 5px;
+    }
+
+    button.ok-button, button.cancel-button {
+        line-height: unset;
+    }
+
+        button.ok-button[disabled] {
+            opacity: 0.6;
+            animation: none;
+        }
+
+            button.ok-button[disabled]:hover,
+            button.ok-button[disabled]:hover {
+                animation: none;
+                transform: none;
+            }
+
+    .title {
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 11px;
+    }
+</style>
+
+<section>
+    <div class="share" style="color:#000;margin-bottom:5px;text-align: center;">
+        Select Region: <span>&nbsp;</span> <span id="changeIslandButton" on-tap="changeIsland()">{{selectedIsland.name}}</span>
+    </div>
+
+    <div class="shareItemList" ng-show="!isDisplayCode">
+        <ul class="shareCharList" style="width:100%;">
+            <li ng-repeat="char in enableToInject track by $index" ng-click="chooseChar(char)">
+                <div>{{char.nickname}} - {{char.lifespanCountdownText}}</div>
+            </li>
+        </ul>
+    </div>
+</section>
+
